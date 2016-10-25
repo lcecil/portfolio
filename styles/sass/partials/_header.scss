@@ -1,0 +1,21 @@
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+
+  h1 {
+    margin-left: -20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .first-name {
+    color: #fff;
+  }
+
+  .last-name {
+    color: #333;
+  }
+
+}

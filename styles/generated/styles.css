@@ -1,0 +1,230 @@
+/* ============================
+   TYPOGRAPHY PRESETS
+   ============================ */
+html {
+  font-size: 1em; }
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+  line-height: 1.35px;
+  color: #333; }
+  @media screen and (min-width: 40em) {
+    body {
+      font-size: 1.125em; } }
+  @media screen and (min-width: 50em) {
+    body {
+      font-size: 1.25em; } }
+
+p {
+  margin-bottom: 1.3em; }
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0; }
+
+h1 {
+  font-size: 3.157em; }
+
+h2 {
+  font-size: 2.369em; }
+
+h3 {
+  font-size: 1.777em; }
+
+h4 {
+  font-size: 1.333em; }
+
+small, .font_small {
+  font-size: 0.75em; }
+
+/* ============================
+   GENERAL PRESETS
+   ============================ */
+ul {
+  list-style: none; }
+
+a {
+  color: #666;
+  text-decoration: none; }
+
+/* ============================
+   LAYOUT
+   ============================ */
+* {
+  box-sizing: border-box; }
+
+main {
+  max-width: 1440px; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100vw; }
+  header h1 {
+    margin-left: -20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center; }
+  header .first-name {
+    color: #fff; }
+  header .last-name {
+    color: #333; }
+
+.panel-1 {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(/Users/lcecil/side-projects/portfolio/images/panel-1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .panel-1 section {
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+    padding: 2em 2em;
+    background-color: rgba(86, 142, 163, 0.8); }
+  .panel-1 .content-wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff; }
+  .panel-1 svg {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%; }
+  .panel-1 .text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0; }
+  .panel-1 .arrow {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round; }
+  .panel-1 .line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2; }
+  .panel-1 .arrow-circle {
+    opacity: 0;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 2;
+    transition: .2s ease-in-out; }
+  .panel-1 .arrow-circle:hover {
+    opacity: 0.5; }
+
+.l1, .l2, .l3, .l4, .l5, .l6 {
+  position: absolute;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+  -webkit-animation-duration: .4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards; }
+
+.l1 {
+  top: 0;
+  right: 50%;
+  height: 2px;
+  width: 50%;
+  -webkit-animation-name: l1;
+  -webkit-animation-delay: 0s; }
+
+.l2 {
+  top: 0;
+  left: 50%;
+  height: 2px;
+  width: 50%;
+  -webkit-animation-name: l2;
+  -webkit-animation-delay: .0s; }
+
+.l3 {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  -webkit-animation-name: l3;
+  -webkit-animation-delay: .4s; }
+
+.l4 {
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 2px;
+  -webkit-animation-name: l4;
+  -webkit-animation-delay: .4s; }
+
+.l5 {
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 50%;
+  -webkit-animation-name: l5;
+  -webkit-animation-delay: .8s; }
+
+.l6 {
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 50%;
+  -webkit-animation-name: l6;
+  -webkit-animation-delay: .8s; }
+
+@-webkit-keyframes l1 {
+  0% {
+    width: 0;
+    background: #fff; }
+  100% {
+    width: 50%;
+    background: #fff; } }
+@-webkit-keyframes l2 {
+  0% {
+    width: 0;
+    background: #fff; }
+  100% {
+    width: 50%;
+    background: #fff; } }
+@-webkit-keyframes l3 {
+  0% {
+    height: 0;
+    background: #fff; }
+  100% {
+    height: 100%;
+    background: #fff; } }
+@-webkit-keyframes l4 {
+  0% {
+    height: 0;
+    background: #fff; }
+  100% {
+    height: 100%;
+    background: #fff; } }
+@-webkit-keyframes l5 {
+  0% {
+    width: 0;
+    background: #fff; }
+  100% {
+    width: 50%;
+    background: #fff; } }
+@-webkit-keyframes l6 {
+  0% {
+    width: 0;
+    background: #fff; }
+  100% {
+    width: 50%;
+    background: #fff; } }
+
+/*# sourceMappingURL=styles.css.map */
