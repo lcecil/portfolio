@@ -94,3 +94,10 @@
   0%    { width: 0; background: #fff; }
   100%  { width: 50%; background: #fff; }
 }
+
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+
+}
