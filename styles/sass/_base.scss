@@ -3,7 +3,7 @@
    ============================ */
 
 html {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   line-height: 1.35em;
-  color: #333;
+  color: $font-color-dark;
   @media screen and (min-width: $bp-phone) {
     font-size: 1.125em;
   }
@@ -60,17 +60,77 @@ ul {
 }
 
 a {
-  color: #666;
+  color: $link-color;
   text-decoration: none;
 }
 
 /* ============================
    LAYOUT
    ============================ */
+
 * {
   box-sizing: border-box;
 }
 
 main {
   max-width: 1440px;
+}
+
+/* ============================
+   PANELS
+   ============================ */
+
+.panel {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  section {
+    float: left;
+    width: 50vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: $font-color-light;
+
+    .text-wrapper {
+      margin: 0 10%;
+    }
+  }
+
+  .secondary-header {
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left;
+  }
+
+  .primary-header {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    text-align: left;
+  }
+
+  #graphic-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vmax;
+    z-index: -1;
+
+    .stroke {
+      fill: none;
+      stroke: #666;
+      stroke-width: 2;
+      stroke-dasharray: 3345;
+      stroke-dashoffset: 3345;
+      animation: offset 10s linear forwards;
+    }
+  }
 }
