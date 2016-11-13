@@ -64,6 +64,11 @@ ul {
 a {
   color: $link-color;
   text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* ============================

@@ -51,7 +51,11 @@ ul {
 
 a {
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif; }
+  a:hover {
+    text-decoration: underline; }
 
 /* ============================
    LAYOUT
@@ -182,6 +186,8 @@ header {
   z-index: 1;
   width: 100vw;
   height: 60px; }
+  header a:hover {
+    text-decoration: none; }
   header h2 {
     margin-left: -20px;
     text-transform: uppercase;
@@ -210,25 +216,25 @@ header {
    PANEL 3
    ============================ */
 .panel-3 section {
-  background-color: rgba(50, 48, 49, 0.8); }
+  background-color: rgba(255, 177, 53, 0.8); }
 
 /* ============================
    PANEL 4
    ============================ */
 .panel-4 section {
-  background-color: rgba(112, 193, 179, 0.8); }
+  background-color: rgba(39, 48, 67, 0.8); }
 
 /* ============================
    PANEL 5
    ============================ */
 .panel-5 section {
-  background-color: rgba(7, 59, 76, 0.8); }
+  background-color: rgba(112, 193, 179, 0.8); }
 
 /* ============================
    PANEL 6
    ============================ */
 .panel-6 section {
-  background-color: rgba(255, 195, 56, 0.8); }
+  background-color: rgba(89, 60, 132, 0.8); }
 
 @keyframes offset {
   100% {
