@@ -1,29 +1,27 @@
+#menu-icon {
+  width: 44px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  .circle {
+    fill: #fff;
+    stroke: #fff;
+  }
+  .line {
+    fill: none;
+    stroke: $panel-1;
+    stroke-width:2px;
+    stroke-linecap: round;
+  }
+}
+
 header {
   position: fixed;
   z-index: 1;
   width: 100vw;
   height: 60px;
-
-  svg {
-    width: 44px;
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-  }
-
-  #menu-icon {
-      .circle {
-        fill: #fff;
-        stroke: #fff;
-      }
-      .line {
-        fill: none;
-        stroke: $panel-1;
-        stroke-width:2px;
-        stroke-linecap: round;
-      }
-  }
 
   h2 {
     margin-left: -20px;
