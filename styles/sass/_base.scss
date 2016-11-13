@@ -81,7 +81,6 @@ main {
    ============================ */
 
 .panel {
-  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -90,7 +89,14 @@ main {
     float: left;
     width: 50vw;
     height: 100vh;
-    z-index: 1;
+  }
+
+  aside {
+    position: relative;
+    width: 100vw;
+    height:100vh;
+    background: #fff;
+    z-index: -1;
   }
 
   .content-wrapper {
@@ -122,7 +128,6 @@ main {
     top: 0;
     right: 0;
     height: 100vmax;
-    z-index: -1;
 
     .stroke {
       fill: none;
