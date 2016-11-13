@@ -4,7 +4,8 @@ $(function() {
     $('.toggle-nav').click(function() {
 
           // Toggle the Body Class "show-nav"
-          $('body').toggleClass('show-nav');
+          $('.site-wrap').toggleClass('open');
+          $('.nav-wrap').toggleClass('open');
 
           // Deactivate the default behavior of going to the next page on click
           return false;

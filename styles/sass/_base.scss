@@ -57,6 +57,7 @@ small {
 
 ul {
   list-style: none;
+  margin: 0;
 }
 
 a {
@@ -70,6 +71,7 @@ a {
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 main {
