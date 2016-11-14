@@ -1,21 +1,42 @@
+#menu-icon {
+  width: 44px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  .circle {
+    fill: #fff;
+    stroke: #fff;
+  }
+  .line {
+    fill: none;
+    stroke: $panel-1;
+    stroke-width:2px;
+    stroke-linecap: round;
+  }
+}
+
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   width: 100vw;
+  height: 60px;
 
-  h1 {
+  a:hover {
+    text-decoration: none;
+  }
+
+  h2 {
     margin-left: -20px;
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
+    line-height: 60px;
   }
 
   .first-name {
     color: #fff;
-  }
-
-  .last-name {
-    color: #333;
   }
 
 }
