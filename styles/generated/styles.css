@@ -67,6 +67,9 @@ a {
 main {
   max-width: 1440px; }
 
+body {
+  overflow: hidden; }
+
 /* ============================
    PANELS
    ============================ */
@@ -112,6 +115,22 @@ main {
       stroke-dasharray: 3345;
       stroke-dashoffset: 3345;
       animation: offset 10s linear forwards; }
+
+/* ============================
+   DOT NAV
+   ============================ */
+.dot-nav {
+  position: fixed;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  text-align: center; }
+  .dot-nav li {
+    font-size: 10px;
+    opacity: 0.6; }
+  .dot-nav .active {
+    opacity: 1;
+    font-size: 12px; }
 
 /* ============================
    NAV OVERLAY
