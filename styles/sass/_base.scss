@@ -130,9 +130,13 @@ body {
   }
 
   .primary-header {
-    font-family: 'Playfair Display';
+    font-family: $serif;
     font-style: italic;
     text-align: left;
+  }
+
+  p {
+    font-family: $sans-serif;
   }
 
   #graphic-1 {

@@ -100,9 +100,11 @@ body {
     font-weight: 200;
     text-align: left; }
   .panel .primary-header {
-    font-family: 'Playfair Display';
+    font-family: "Playfair Display", serif;
     font-style: italic;
     text-align: left; }
+  .panel p {
+    font-family: "Poppins", sans-serif; }
   .panel #graphic-1 {
     position: absolute;
     top: 0;
