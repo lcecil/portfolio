@@ -12,20 +12,42 @@ $(function() {
 
 // Dot Navigation
 
-jQuery(document).ready(function($){
+$(function() {
 	var contentSections = $('.panel'),
 		  navigationItems = $('.dot-nav a');
 
 	updateNavigation();
-	$(window).on('scroll', function(){
-		updateNavigation();
-	});
 
-	//smooth scroll to the section
+  //on scroll, smooth scroll to the section
+  $(window).on('mousewheel.changePanel', changePanel);
+
+
+	//on click, smooth scroll to the section
 	navigationItems.on('click', function(event){
       event.preventDefault();
       smoothScroll($(this.hash));
   });
+
+  function changePanel(event) {
+
+    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+        console.log('up');
+        var prevPanel = $('.active-panel').prev();
+        smoothScroll($(prevPanel.hash));
+    }
+    else {
+        console.log('down');
+        var nextPanel = $('.active-panel').next();
+        smoothScroll($(nextPanel.hash));
+    }
+
+    $(this).off('mousewheel.changePanel');
+
+    setTimeout(function() {
+      $(window).on('mousewheel.changePanel', changePanel);
+    }.bind(this), 1000);
+
+  };
 
 	function updateNavigation() {
 		contentSections.each(function(){
