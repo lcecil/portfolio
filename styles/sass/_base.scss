@@ -92,18 +92,22 @@ body {
    PANELS
    ============================ */
 
-.panel {
+main{
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 
-  section {
-    float: left;
+  .panel {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 50vw;
     height: 100vh;
+
   }
 
-  aside {
+  .background-image {
     position: relative;
     width: 100vw;
     height:100vh;
@@ -139,7 +143,7 @@ body {
     font-family: $sans-serif;
   }
 
-  #graphic-1 {
+  svg {
     position: absolute;
     top: 0;
     right: 0;
@@ -166,6 +170,7 @@ body {
   left: 15px;
   transform: translateY(-50%);
   text-align: center;
+  z-index: 1;
 
   li a {
     font-size: 10px;

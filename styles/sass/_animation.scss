@@ -3,3 +3,12 @@
       stroke-dashoffset: 0;
     }
 }
+
+@keyframes color-change {
+  from {
+    background-color: $panel-1;
+  }
+  to {
+    background-color: $panel-2;
+  }
+}

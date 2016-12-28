@@ -73,44 +73,47 @@ body {
 /* ============================
    PANELS
    ============================ */
-.panel {
+main {
   width: 100vw;
   height: 100vh;
-  overflow: hidden; }
-  .panel section {
-    float: left;
+  overflow: hidden;
+  position: relative; }
+  main .panel {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 50vw;
     height: 100vh; }
-  .panel aside {
+  main .background-image {
     position: relative;
     width: 100vw;
     height: 100vh;
     background: #fff;
     z-index: -1; }
-  .panel .content-wrapper {
+  main .content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     color: #fff; }
-    .panel .content-wrapper .text-wrapper {
+    main .content-wrapper .text-wrapper {
       margin: 0 10%; }
-  .panel .secondary-header {
+  main .secondary-header {
     text-transform: uppercase;
     font-weight: 200;
     text-align: left; }
-  .panel .primary-header {
+  main .primary-header {
     font-family: "Playfair Display", serif;
     font-style: italic;
     text-align: left; }
-  .panel p {
+  main p {
     font-family: "Poppins", sans-serif; }
-  .panel #graphic-1 {
+  main svg {
     position: absolute;
     top: 0;
     right: 0;
     height: 100vmax; }
-    .panel #graphic-1 .stroke {
+    main svg .stroke {
       fill: none;
       stroke: #666;
       stroke-width: 2;
@@ -126,10 +129,12 @@ body {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
   .dot-nav li a {
     font-size: 10px;
-    opacity: 0.6; }
+    opacity: 0.6;
+    cursor: pointer; }
     .dot-nav li a:hover {
       opacity: 1;
       transition: opacity 500ms; }
@@ -225,7 +230,7 @@ header {
 /* ============================
    PANEL 1
    ============================ */
-.panel-1 section {
+main .panel-1 {
   background-color: rgba(36, 123, 160, 0.8); }
 
 .last-name {
@@ -237,17 +242,11 @@ header {
 .panel-2 section {
   background-color: rgba(245, 95, 92, 0.8); }
 
-.last-name {
-  color: rgba(245, 95, 92, 0.8); }
-
 /* ============================
    PANEL 3
    ============================ */
 .panel-3 section {
   background-color: rgba(39, 48, 67, 0.8); }
-
-.last-name {
-  color: rgba(39, 48, 67, 0.8); }
 
 /* ============================
    PANEL 4
@@ -255,17 +254,11 @@ header {
 .panel-4 section {
   background-color: rgba(237, 174, 73, 0.8); }
 
-.last-name {
-  color: rgba(237, 174, 73, 0.8); }
-
 /* ============================
    PANEL 5
    ============================ */
 .panel-5 section {
   background-color: rgba(89, 60, 132, 0.8); }
-
-.last-name {
-  color: rgba(89, 60, 132, 0.8); }
 
 /* ============================
    PANEL 6
@@ -273,11 +266,13 @@ header {
 .panel-6 section {
   background-color: rgba(81, 193, 175, 0.8); }
 
-.last-name {
-  color: rgba(81, 193, 175, 0.8); }
-
 @keyframes offset {
   100% {
     stroke-dashoffset: 0; } }
+@keyframes color-change {
+  from {
+    background-color: rgba(36, 123, 160, 0.8); }
+  to {
+    background-color: rgba(245, 95, 92, 0.8); } }
 
 /*# sourceMappingURL=styles.css.map */
