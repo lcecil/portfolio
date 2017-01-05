@@ -1,52 +1,3 @@
-// Panel colors
-var panelData = {
-  panels: [
-    {
-      color: '$panel-1',
-      header: 'UX Design',
-      sub-header: 'and Research',
-      body: 'Techniques methodologies and designs for a wide range of projects and problems.'
-    },
-    {
-      color: '$panel-2',
-      header: 'Information',
-      sub-header: 'Architecture',
-      body: 'Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century.'
-    },
-    {
-      color: '$panel-3',
-      header: '',
-      sub-header: '',
-      body: ''
-    },
-    {
-      color: '$panel-4',
-      header: '',
-      sub-header: '',
-      body: ''
-    },
-    {
-      color: '',
-      header: '',
-      sub-header: '',
-      body: ''
-    },
-    {
-      color: '',
-      header: '',
-      sub-header: '',
-      body: ''
-    }
-  ]
-  ['$panel-3', 'Research', 'Methods', 'From A/B Testing to user interviews and everything in between. Choosing the right method for the job is the name of the game here.'],
-  ['$panel-4', 'Visual', 'Designs', "Communicating a design is as important as creating it. Using a quick sketch or pixel perfect visual design depends on what's needed to get the job done."],
-  ['$panel-5', 'Project', 'Management', "Agile, scrum, sprints, waterfall, kanban: whatever the buzzword of the day is, chances are I've probably tried it."],
-  ['$panel-6', 'Front-End', 'Development', "One of the my many hats, it ranges in size from beanie to ten gallon. It's more about the knowledge that I gain from wearing it that makes me a better designer."]
-]};
-
-var panelIndex = 0;
-
-
 // Menu overlay
 
 $(function() {
@@ -91,7 +42,7 @@ $(function () {
       navigationItems.removeClass('active-dot');
       selectedDot.addClass('active-dot');
     }
-
+    console.log(selectedPanelID);
     smoothScroll(selectedPanelID);
   });
 
