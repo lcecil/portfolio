@@ -1,14 +1,20 @@
 .panel {
     position: absolute;
     top: 0;
-    left: -50%;
+    left: 0;
+    transform: translateX(-50%);
     width: 100vw;
     height: 100vh;
+    transition: transform 0.6s;
+
+    &.open {
+      transform: translateX(0);
+    }
 
     .content-wrapper {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 0;
       width: 50vw;
       display: flex;
       flex-direction: column;
@@ -31,5 +37,9 @@
       text-transform: uppercase;
       font-weight: 200;
       text-align: left;
+    }
+
+    .page-link {
+      text-transform: uppercase;
     }
 }

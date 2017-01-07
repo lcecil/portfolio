@@ -59,6 +59,18 @@ a {
     opacity: 0.7;
     transition: 400ms ease-in-out; }
 
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #fff; }
+  button:focus {
+    outline: none; }
+  button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 400ms ease-in-out; }
+
 /* ============================
    LAYOUT PRESETS
    ============================ */
@@ -175,13 +187,17 @@ main {
 .panel {
   position: absolute;
   top: 0;
-  left: -50%;
+  left: 0;
+  transform: translateX(-50%);
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  transition: transform 0.6s; }
+  .panel.open {
+    transform: translateX(0); }
   .panel .content-wrapper {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -198,6 +214,8 @@ main {
     text-transform: uppercase;
     font-weight: 200;
     text-align: left; }
+  .panel .page-link {
+    text-transform: uppercase; }
 
 .background-image {
   display: none;
@@ -219,12 +237,9 @@ main {
       stroke: #666;
       animation: offset 3s linear forwards; }
 
-/* ============================
-   PANEL 1
-   ============================ */
-main .panel-1 {
+.panel.panel-1 {
   background-color: rgba(36, 123, 160, 0.8); }
-main .dot-nav a {
+.panel .dot-nav a {
   color: rgba(36, 123, 160, 0.8); }
 
 .last-name {
@@ -269,13 +284,13 @@ main .dot-nav a {
   stroke-dasharray: 140;
   stroke-dashoffset: 140;
   stroke-linecap: round;
-  stroke-width: 1; }
+  stroke-width: 0.5; }
 
 .background-3 .stroke {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   stroke-linecap: round;
-  stroke-width: 1; }
+  stroke-width: 0.5; }
 
 .background-4 .stroke {
   stroke-dasharray: 3345;

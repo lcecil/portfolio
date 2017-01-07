@@ -1,10 +1,6 @@
-/* ============================
-   PANEL 1
-   ============================ */
+.panel {
 
-main {
-
-  .panel-1 {
+  &.panel-1 {
     background-color: $panel-1;
   }
 

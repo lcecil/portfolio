@@ -9,7 +9,18 @@ $(function() {
 
 });
 
-// Navigation
+// Panel overlay
+
+$(function() {
+
+  $('.page-link').click(function() {
+    $('.panel').toggleClass('open');
+    return false;
+  });
+
+});
+
+// Navigation on click
 
 $(function () {
   var contentSections = $('.panel');
@@ -26,31 +37,28 @@ $(function () {
       $('.show').removeClass('show');
       selectedPanel.addClass('show');
     }
-
-    smoothScroll(selectedPanel);
   });
-
-  function changePanel (event) {
-
-    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        console.log('up');
-    }
-    else {
-        console.log('down');
-    }
-    $(this).off('mousewheel.changePanel');
-
-    setTimeout(function() {
-      $(window).on('mousewheel.changePanel', changePanel);
-    }.bind(this), 1000);
-
-  };
-
-  function smoothScroll(target) {
-      $('body,html').animate(
-      	{'scrollTop':target.offset().top},
-      	600
-      );
-    };
-
 });
+
+function changePanel (event) {
+
+  if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+      console.log('up');
+  }
+  else {
+      console.log('down');
+  }
+  $(this).off('mousewheel.changePanel');
+
+  setTimeout(function() {
+    $(window).on('mousewheel.changePanel', changePanel);
+  }.bind(this), 1000);
+
+};
+
+function smoothScroll(target) {
+    $('body,html').animate(
+      {'scrollTop':target.offset().top},
+      600
+    );
+  };
