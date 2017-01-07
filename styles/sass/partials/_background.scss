@@ -1,0 +1,26 @@
+.background-image {
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: -1;
+
+    &.show {
+      display: block;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      width: 40vw;
+      transform: translateY(-50%);
+
+      .stroke {
+        fill: none;
+        stroke: #666;
+        animation: offset 3s linear forwards;
+      }
+    }
+}

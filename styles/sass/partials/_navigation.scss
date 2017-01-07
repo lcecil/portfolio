@@ -1,0 +1,26 @@
+.dot-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  text-align: center;
+
+  li a {
+    font-size: 10px;
+    opacity: 0.6;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity 500ms;
+
+      i {
+        transform: scale(1.4);
+      }
+    }
+  }
+
+  .active-dot {
+    opacity: 1;
+  }
+}

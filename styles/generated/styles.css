@@ -6,9 +6,9 @@ html {
 
 body {
   background-color: #fff;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
-  line-height: 1.35em;
+  line-height: 1.35;
   color: #333; }
   @media screen and (min-width: 35rem) {
     body {
@@ -18,7 +18,8 @@ body {
       font-size: 1.25em; } }
 
 p {
-  margin-bottom: 1.3em; }
+  margin-bottom: 1.3em;
+  font-family: "Poppins", sans-serif; }
 
 h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
@@ -52,15 +53,14 @@ ul {
 a {
   color: #fff;
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Poppins", sans-serif; }
   a:hover {
     cursor: pointer;
-    opacity: 0.8;
-    transition: 400ms ease-out; }
+    opacity: 0.7;
+    transition: 400ms ease-in-out; }
 
 /* ============================
-   LAYOUT
+   LAYOUT PRESETS
    ============================ */
 * {
   box-sizing: border-box;
@@ -72,149 +72,61 @@ main {
 body {
   overflow: hidden; }
 
-/* ============================
-   PANELS
-   ============================ */
-main {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative; }
-  main .panel {
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 100vw;
-    height: 100vh; }
-  main .background-image {
-    display: none;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: #fff;
-    z-index: -1; }
-    main .background-image.show {
-      display: block; }
-  main .content-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    color: #fff; }
-    main .content-wrapper .text-wrapper {
-      margin: 0 10%; }
-  main .secondary-header {
-    text-transform: uppercase;
-    font-weight: 200;
-    text-align: left; }
-  main .primary-header {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    text-align: left; }
-  main p {
-    font-family: "Poppins", sans-serif; }
-  main svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vmax; }
-    main svg .stroke {
-      fill: none;
-      stroke: #666;
-      stroke-width: 2;
-      stroke-dasharray: 3345;
-      stroke-dashoffset: 3345;
-      animation: offset 10s linear forwards; }
-
-/* ============================
-   DOT NAV
-   ============================ */
-.dot-nav {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  text-align: center;
-  z-index: 1; }
-  .dot-nav li a {
-    font-size: 10px;
-    opacity: 0.6;
-    cursor: pointer; }
-    .dot-nav li a:hover {
-      opacity: 1;
-      transition: opacity 500ms; }
-      .dot-nav li a:hover i {
-        transform: scale(1.4); }
-  .dot-nav .active-dot {
-    opacity: 1; }
-
-/* ============================
-   NAV OVERLAY
-   ============================ */
-.site-wrap {
-  overflow: hidden;
-  transition: transform 0.6s; }
-  .site-wrap.open {
-    transform: translateX(100%); }
-
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0; } }
+@keyframes color-change {
+  from {
+    background-color: rgba(36, 123, 160, 0.8); }
+  to {
+    background-color: rgba(245, 95, 92, 0.8); } }
 .nav-wrap {
   overflow: hidden;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1; }
   .nav-wrap.nav-push {
     visibility: hidden;
-    transform: translateX(-100%);
-    transition: transform 0.6s, visibility 0s 0.6s; }
+    transform: translateY(-100%);
+    transition: transform 0.6s, visibility 0.6s; }
   .nav-wrap.open {
     visibility: visible;
-    transform: translateX(0%);
-    transition: transform 0.6s; }
-  .nav-wrap .nav-header {
-    position: relative;
-    width: 100vw;
-    height: 60px; }
-    .nav-wrap .nav-header #close-icon {
-      width: 44px;
-      position: relative;
-      top: 50%;
-      right: -95%;
-      transform: translateY(-50%); }
-      .nav-wrap .nav-header #close-icon .circle {
-        fill: #fff;
-        stroke: #fff; }
-      .nav-wrap .nav-header #close-icon .line {
-        fill: none;
-        stroke: rgba(0, 0, 0, 0.8);
-        stroke-width: 2px;
-        stroke-linecap: round; }
+    transform: translateY(0%); }
   .nav-wrap nav {
     height: 100vh; }
-    .nav-wrap nav ul {
-      padding: 60px 20% 0; }
-    .nav-wrap nav li {
-      font-family: 'Poppins', sans-serif;
-      text-transform: uppercase;
-      font-size: 1.777em;
+    .nav-wrap nav .menu-wrap {
+      padding: 20vh 5vw 0; }
+    .nav-wrap nav .sub-menu-wrap {
+      width: 75%;
+      margin: 5vh auto 0;
+      text-align: center; }
+    .nav-wrap nav .menu-link, .nav-wrap nav .sub-link {
+      font-family: "Poppins", sans-serif;
       padding-bottom: 20px; }
+    .nav-wrap nav .menu-link {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.777em; }
+    .nav-wrap nav .sub-link {
+      display: inline-block;
+      text-transform: capitalize;
+      font-size: 1.333em;
+      font-weight: 300; }
 
-#menu-icon {
+.menu-icon {
   width: 44px;
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%); }
-  #menu-icon .circle {
+  .menu-icon .circle {
     fill: #fff;
     stroke: #fff; }
-  #menu-icon .line {
+  .menu-icon .line {
     fill: none;
     stroke: rgba(36, 123, 160, 0.8);
     stroke-width: 2px;
@@ -222,7 +134,7 @@ main {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
   height: 60px; }
   header a:hover {
@@ -235,6 +147,77 @@ header {
     line-height: 60px; }
   header .first-name {
     color: #fff; }
+
+.dot-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  text-align: center; }
+  .dot-nav li a {
+    font-size: 10px;
+    opacity: 0.6;
+    cursor: pointer; }
+    .dot-nav li a:hover {
+      opacity: 1;
+      transition: opacity 500ms; }
+      .dot-nav li a:hover i {
+        transform: scale(1.4); }
+  .dot-nav .active-dot {
+    opacity: 1; }
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+
+.panel {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100vw;
+  height: 100vh; }
+  .panel .content-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff; }
+    .panel .content-wrapper .text-wrapper {
+      margin: 0 10%; }
+  .panel .primary-header {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    text-align: left; }
+  .panel .secondary-header {
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left; }
+
+.background-image {
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: -1; }
+  .background-image.show {
+    display: block; }
+  .background-image svg {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 40vw;
+    transform: translateY(-50%); }
+    .background-image svg .stroke {
+      fill: none;
+      stroke: #666;
+      animation: offset 3s linear forwards; }
 
 /* ============================
    PANEL 1
@@ -277,13 +260,36 @@ main .dot-nav a {
 .panel-6 section {
   background-color: rgba(81, 193, 175, 0.8); }
 
-@keyframes offset {
-  100% {
-    stroke-dashoffset: 0; } }
-@keyframes color-change {
-  from {
-    background-color: rgba(36, 123, 160, 0.8); }
-  to {
-    background-color: rgba(245, 95, 92, 0.8); } }
+.background-1 .stroke {
+  stroke-dasharray: 3345;
+  stroke-dashoffset: 3345;
+  stroke-width: 2; }
+
+.background-2 .stroke {
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  stroke-linecap: round;
+  stroke-width: 1; }
+
+.background-3 .stroke {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke-linecap: round;
+  stroke-width: 1; }
+
+.background-4 .stroke {
+  stroke-dasharray: 3345;
+  stroke-dashoffset: 3345;
+  stroke-width: 2; }
+
+.background-5 .stroke {
+  stroke-dasharray: 3345;
+  stroke-dashoffset: 3345;
+  stroke-width: 2; }
+
+.background-6 .stroke {
+  stroke-dasharray: 3345;
+  stroke-dashoffset: 3345;
+  stroke-width: 2; }
 
 /*# sourceMappingURL=styles.css.map */

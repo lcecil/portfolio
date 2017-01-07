@@ -1,0 +1,35 @@
+.panel {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100vw;
+    height: 100vh;
+
+    .content-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      color: $font-color-light;
+
+      .text-wrapper {
+        margin: 0 10%;
+      }
+    }
+
+    .primary-header {
+      font-family: $serif;
+      font-style: italic;
+      text-align: left;
+    }
+
+    .secondary-header {
+      text-transform: uppercase;
+      font-weight: 200;
+      text-align: left;
+    }
+}
