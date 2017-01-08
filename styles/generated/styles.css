@@ -92,11 +92,6 @@ body {
     background-color: rgba(36, 123, 160, 0.8); }
   to {
     background-color: rgba(245, 95, 92, 0.8); } }
-@keyframes panel-text {
-  0% {
-    width: 50vw; }
-  100% {
-    width: 100vw; } }
 .nav-wrap {
   overflow: hidden;
   position: fixed;
@@ -199,8 +194,6 @@ main {
   transition: transform 0.6s; }
   .panel.open {
     transform: translateX(0); }
-    .panel.open .content-wrapper {
-      animation: panel-text 0.6s ease-in; }
   .panel .content-wrapper {
     position: fixed;
     top: 0;
@@ -210,19 +203,23 @@ main {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    color: #fff; }
+    color: #fff;
+    text-align: left; }
     .panel .content-wrapper .text-wrapper {
       margin: 0 10%; }
+    .panel .content-wrapper.full-page {
+      display: none;
+      width: 100vw;
+      text-align: center; }
   .panel .primary-header {
     font-family: "Playfair Display", serif;
-    font-style: italic;
-    text-align: left; }
+    font-style: italic; }
   .panel .secondary-header {
     text-transform: uppercase;
-    font-weight: 200;
-    text-align: left; }
+    font-weight: 200; }
   .panel .page-link {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif; }
 
 .background-image {
   display: none;
@@ -246,7 +243,8 @@ main {
 
 .panel.panel-1 {
   background-color: rgba(36, 123, 160, 0.8); }
-.panel .dot-nav a {
+
+.dot-nav a {
   color: rgba(36, 123, 160, 0.8); }
 
 .last-name {
@@ -288,16 +286,14 @@ main {
   stroke-width: 2; }
 
 .background-2 .stroke {
-  stroke-dasharray: 140;
-  stroke-dashoffset: 140;
-  stroke-linecap: round;
-  stroke-width: 0.5; }
+  stroke-dasharray: 3345;
+  stroke-dashoffset: 3345;
+  stroke-width: 2; }
 
 .background-3 .stroke {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  stroke-linecap: round;
-  stroke-width: 0.5; }
+  stroke-dasharray: 3345;
+  stroke-dashoffset: 3345;
+  stroke-width: 2; }
 
 .background-4 .stroke {
   stroke-dasharray: 3345;

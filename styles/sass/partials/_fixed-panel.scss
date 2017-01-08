@@ -9,10 +9,6 @@
 
     &.open {
       transform: translateX(0);
-
-      .content-wrapper {
-        animation: panel-text 0.6s ease-in ;
-      }
     }
 
     .content-wrapper {
@@ -25,25 +21,31 @@
       justify-content: center;
       height: 100%;
       color: $font-color-light;
+      text-align: left;
 
       .text-wrapper {
         margin: 0 10%;
+      }
+
+      &.full-page {
+        display: none;
+        width: 100vw;
+        text-align: center;
       }
     }
 
     .primary-header {
       font-family: $serif;
       font-style: italic;
-      text-align: left;
     }
 
     .secondary-header {
       text-transform: uppercase;
       font-weight: 200;
-      text-align: left;
     }
 
     .page-link {
       text-transform: uppercase;
+      font-family: $sans-serif;
     }
 }
