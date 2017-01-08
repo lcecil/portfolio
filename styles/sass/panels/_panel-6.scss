@@ -1,11 +1,15 @@
-/* ============================
-   PANEL 6
-   ============================ */
+.panel {
 
-.panel-6 {
-
-  section {
+  &.panel-6 {
     background-color: $panel-6;
   }
+}
 
+.dot-nav a {
+  color: $panel-6;
+}
+
+.last-name {
+  color: $panel-6;
+  transition: color 0.6s;
 }

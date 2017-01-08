@@ -1,51 +1,41 @@
-var navigationItems = $('.dot-nav a');
-var backgroundPanels = $('.background-image');
-var currentBackgroundPanel = $('.active-dot').attr('href');
-var currentFixedPanel = $('.panel').attr('class');
-
 var panelData = [
     {
-      "panel": "home",
-      "color": "rgba(36, 123, 160, 0.8)",
+      "class": "panel-1",
       "header": "UX Design",
       "subHeader": "and Research",
       "body": "Techniques methodologies and designs for a wide range of projects and problems.",
       "link": "About Me"
     },
     {
-      "panel": "information-architecture",
-      "color": "rgba(245, 95, 92, 0.8)",
+      "class": "panel-2",
       "header": "Information",
       "subHeader": "Architecture",
       "body": "Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century.",
       "link": "Read More"
     },
     {
-      "panel": "research-methods",
-      "color": "rgba(39, 48, 67, 0.8)",
+      "class": "panel-3",
       "header": "Research",
       "subHeader": "Methods",
       "body": "From A/B Testing to user interviews and everything in between. Choosing the right method for the job is the name of the game here.",
       "link": "Read More"
     },
     {
-      "panel": "research-methods",
-      "color": "rgba(237, 174, 73, 0.8)",
+      "class": "panel-4",
       "header": "Visual",
       "subHeader": "Designs",
       "body": "Communicating a design is as important as creating it. Using a quick sketch or pixel perfect visual design depends on what's needed to get the job done.",
       "link": "Read More"
     },
     {
-      "panel": "project-managment",
-      "color": "rgba(89, 60, 132, 0.8)",
+      "class": "panel-5",
       "header": "Project",
       "subHeader": "Management",
       "body": "Agile, scrum, sprints, waterfall, kanban: whatever the buzzword of the day is, chances are I've probably tried it.",
       "link": "Read More"
     },
     {
-      "panel": "development",
+      "class": "panel-6",
       "color": "rgba(81, 193, 175, 0.8)",
       "header": "Front-End",
       "subHeader": "Development",
@@ -53,6 +43,11 @@ var panelData = [
       "link": "Read More"
     }
 ];
+var navigationItems = $('.dot-nav a');
+var backgroundPanels = $('.background-image');
+var currentBackgroundPanel = $('.active-dot').attr('href');
+var currentFixedPanel = panelData[0].class;
+
 
 // Menu overlay
 
@@ -84,15 +79,15 @@ $(function () {
 
   navigationItems.on('click', function(event) {
     var selectedDot = $(this);
-    var selectedPanel = $(this.hash);
-    var panelNumber = $(this).attr('data-number');
+    var selectedBackground = $(this).attr('href');
+    var selectedPanel = $(this).attr('data-number');
 
     event.preventDefault();
 
     if (!selectedDot.hasClass('active-dot')) {
       changeDots(selectedDot);
-      changeBackground(selectedPanel);
-      changePanel(panelNumber);
+      changeBackground(selectedBackground);
+      changePanel(selectedPanel);
     }
 
   });
@@ -103,19 +98,22 @@ function changeDots(selectedDot) {
     selectedDot.addClass('active-dot');
 };
 
-function changeBackground(selectedPanel) {
+function changeBackground(selectedBackground) {
   backgroundPanels.removeClass('show');
-  selectedPanel.addClass('show');
+  $(selectedBackground).addClass('show');
 };
 
-function changePanel(panelNumber) {
-  $('.primary-header').text(panelData[panelNumber].header);
-  $('.secondary-header').text(panelData[panelNumber].subHeader);
-  $('.page-description').text(panelData[panelNumber].body);
-  $('.panel').css('background-color', panelData[panelNumber].color);
-  $('.dot-nav a, .last-name').css('color', panelData[panelNumber].color);
-  $('.line').css('stroke', panelData[panelNumber].color);
+function changePanel(selectedPanel) {
+  var int = parseInt(selectedPanel);
+  $('.primary-header').text(panelData[int].header);
+  $('.secondary-header').text(panelData[int].subHeader);
+  $('.page-description').text(panelData[int].body);
+  $('.page-link').text(panelData[int].link);
 
+  $('.panel').removeClass(currentFixedPanel);
+  $('.panel').addClass(panelData[int].class);
+
+  currentFixedPanel = panelData[int].class;
 };
 
 function onScroll (event) {

@@ -262,35 +262,55 @@ main {
   color: rgba(36, 123, 160, 0.8);
   transition: color 0.6s; }
 
-/* ============================
-   PANEL 2
-   ============================ */
-.panel-2 section {
+.panel.panel-2 {
   background-color: rgba(245, 95, 92, 0.8); }
 
-/* ============================
-   PANEL 3
-   ============================ */
-.panel-3 section {
+.dot-nav a {
+  color: rgba(245, 95, 92, 0.8); }
+
+.last-name {
+  color: rgba(245, 95, 92, 0.8);
+  transition: color 0.6s; }
+
+.panel.panel-3 {
   background-color: rgba(39, 48, 67, 0.8); }
 
-/* ============================
-   PANEL 4
-   ============================ */
-.panel-4 section {
+.dot-nav a {
+  color: rgba(39, 48, 67, 0.8); }
+
+.last-name {
+  color: rgba(39, 48, 67, 0.8);
+  transition: color 0.6s; }
+
+.panel.panel-4 {
   background-color: rgba(237, 174, 73, 0.8); }
 
-/* ============================
-   PANEL 5
-   ============================ */
-.panel-5 section {
+.dot-nav a {
+  color: rgba(237, 174, 73, 0.8); }
+
+.last-name {
+  color: rgba(237, 174, 73, 0.8);
+  transition: color 0.6s; }
+
+.panel.panel-5 {
   background-color: rgba(89, 60, 132, 0.8); }
 
-/* ============================
-   PANEL 6
-   ============================ */
-.panel-6 section {
+.dot-nav a {
+  color: rgba(89, 60, 132, 0.8); }
+
+.last-name {
+  color: rgba(89, 60, 132, 0.8);
+  transition: color 0.6s; }
+
+.panel.panel-6 {
   background-color: rgba(81, 193, 175, 0.8); }
+
+.dot-nav a {
+  color: rgba(81, 193, 175, 0.8); }
+
+.last-name {
+  color: rgba(81, 193, 175, 0.8);
+  transition: color 0.6s; }
 
 .background-1 .stroke {
   stroke-dasharray: 3345;
