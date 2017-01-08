@@ -4,11 +4,18 @@
     }
 }
 
-@keyframes color-change {
-  from {
-    background-color: $panel-1;
+.open {
+
+  .panel {
+    transform: translateX(0);
   }
-  to {
-    background-color: $panel-2;
+
+  .dot-nav, .background-image {
+    opacity: 0;
   }
+
+  .last-name {
+    color: $font-color-light;
+  }
+
 }

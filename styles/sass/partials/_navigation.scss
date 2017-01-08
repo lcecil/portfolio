@@ -4,11 +4,16 @@
   right: 20px;
   transform: translateY(-50%);
   text-align: center;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
 
   li a {
     font-size: 10px;
     opacity: 0.6;
     cursor: pointer;
+    color: $panel-1;
+    transition: color 0.6s ease-in-out;
+
 
     &:hover {
       opacity: 1;
