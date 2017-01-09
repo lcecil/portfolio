@@ -1,15 +1,17 @@
-.panel {
+.information-architecture-theme {
 
-  &.panel-2 {
+  .panel {
     background-color: $panel-2;
   }
-}
 
-.dot-nav a {
-  color: $panel-2;
-}
+  .dot-nav a {
+    color: $panel-2;
+    transition: color 0.6s;
+  }
 
-.last-name {
-  color: $panel-2;
-  transition: color 0.6s;
+  .last-name {
+    color: $panel-2;
+    transition: color 0.6s;
+  }
+
 }

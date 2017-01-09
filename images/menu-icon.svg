@@ -1,6 +1,1 @@
-<svg viewBox="0 0 34 34">
-    <g id="menu-icon" data-name="menu-icon">
-      <circle class="circle" cx="17" cy="17" r="16"/>
-      <path class="line" d="M9,12H25M9,17H25M9,22H25"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 11"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;}</style></defs><title>menu-icon</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="0.5" y1="0.5" x2="16.5" y2="0.5"/><line class="cls-1" x1="0.5" y1="5.5" x2="16.5" y2="5.5"/><line class="cls-1" x1="0.5" y1="10.5" x2="16.5" y2="10.5"/></g></g></svg>

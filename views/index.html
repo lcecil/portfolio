@@ -14,11 +14,15 @@
 <body>
   <header>
     <a class="toggle-nav">
-      <svg id="menu-icon" class="menu-icon" viewBox="0 0 34 34">
-          <g data-name="menu-icon">
-            <circle class="circle" cx="17" cy="17" r="16"/>
-            <path class="line" d="M9,12H25M9,17H25M9,22H25"/>
-          </g>
+      <!-- <div class='menu-icon'>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div> -->
+      <svg id="menu-icon" class="menu-icon" viewBox="0 0 11 7">
+        <path class="line" d="M.5.5h10"/>
+        <path class="line" d="M.5,3.5h10"/>
+        <path class="line" d="M.5,6.5h10"/>
       </svg>
     </a>
     <a href="#">
@@ -49,50 +53,44 @@
       <div class='dot-nav' role='navigation'>
         <ul>
           <li>
-            <a href="#home" class="active-dot" data-number='0'>
+            <a href="#home">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="#information-architecture" data-number='1'>
+            <a href="#information-architecture">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="#research-methods" data-number='2'>
+            <a href="#research-methods">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="#visual-designs" data-number='3'>
+            <a href="#visual-designs">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="#project-management" data-number='4'>
+            <a href="#project-management">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="#development" data-number='5'>
+            <a href="#development">
               <i class="fa fa-circle"></i>
             </a>
           </li>
         </ul>
       </div>
-      <div class='panel panel-1'>
+      <div class='panel'>
         <div class='content-wrapper'>
           <div class='text-wrapper'>
-            <h1 class='primary-header'>UX Design</h1>
-            <h2 class='secondary-header'>and Research</h2>
-            <p class='page-description'>
-              Techniques, methodologies, and designs for a wide range of projects and problems.
-            </p>
-            <a href='/about' class='page-link'>About Me</a>
           </div>
         </div>
       </div>
-      <div id="home" class='background-image show'>
+      <div id="home" class='background-image'>
         <svg class="background-1" x="0px" y="0px" viewBox="0 0 1369.6 1543.4">
           <path class="stroke" d="M412,372.7l386,223l-259,146l-382-221L412,372.7z M595,1541.7l203-118l-539-310 M487,1541.7l-330-193l-155-89
              M2,847.7v412l257-146v-415 M2,847.7l155,89l256-149l-155-89L2,847.7z M157,520.7v828l256-146.9V372.7 M285,683.2l153.5,88.5
@@ -264,6 +262,6 @@
   </div>
 </body>
   <script src="../js/jquery-3.1.1.min.js"></script>
-  <script src="../js/handlebars-v4.0.5.js"></script>
-  <script src="../js/site.js"></script>
+  <script src="../js/router.js"></script>
+  <script src="../js/app.js"></script>
 </html>

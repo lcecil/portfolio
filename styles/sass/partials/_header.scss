@@ -12,19 +12,13 @@ header {
     width: 44px;
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 20px;
     transform: translateY(-50%);
 
-    .circle {
-      fill: #fff;
-      stroke: #fff;
-    }
     .line {
-      fill: none;
-      stroke: $panel-1;
-      stroke-width:2px;
+      stroke: $font-color-light;
+      stroke-width: 1px;
       stroke-linecap: round;
-      transition: stroke 0.6s ease-in-out;
     }
   }
 
@@ -40,16 +34,17 @@ header {
     color: $font-color-light;
   }
 
-  .last-name {
-    color: $panel-1;
-    transition: color 0.6s;
-  }
-
   &.show-menu {
 
     .last-name {
       color: $font-color-light;
-      transition: color 0.6s ease-in-out;
+      transition: color 0.3s ease-in-out;
+    }
+
+
+    .line {
+      stroke: $font-color-light;
+      transition: stroke 0.6s ease-in-out;
     }
 
   }
@@ -60,7 +55,10 @@ header {
       color: $font-color-light;
       transition: color 0.6s ease-in-out;
     }
-
+    // 
+    // .line:first-child, .line:last-child{
+    //   transform: rotate(5deg);
+    // }
   }
 
 }

@@ -1,15 +1,17 @@
-.panel {
+.research-methods-theme {
 
-  &.panel-3 {
+  .panel {
     background-color: $panel-3;
   }
-}
 
-.dot-nav a {
-  color: $panel-3;
-}
+  .dot-nav a {
+    color: $panel-3;
+    transition: color 0.6s;
+  }
 
-.last-name {
-  color: $panel-3;
-  transition: color 0.6s;
+  .last-name {
+    color: $panel-3;
+    transition: color 0.6s;
+  }
+
 }

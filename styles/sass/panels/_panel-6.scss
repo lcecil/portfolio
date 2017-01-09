@@ -1,15 +1,17 @@
-.panel {
+.development-theme {
 
-  &.panel-6 {
+  .panel {
     background-color: $panel-6;
   }
-}
 
-.dot-nav a {
-  color: $panel-6;
-}
+  .dot-nav a {
+    color: $panel-6;
+    transition: color 0.6s;
+  }
 
-.last-name {
-  color: $panel-6;
-  transition: color 0.6s;
+  .last-name {
+    color: $panel-6;
+    transition: color 0.6s;
+  }
+
 }
