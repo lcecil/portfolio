@@ -34,6 +34,10 @@ header {
     color: $font-color-light;
   }
 
+  .last-name {
+    transition: color $transition-duration ease-in-out;
+  }
+
   &.show-menu {
 
     .last-name {
@@ -55,7 +59,7 @@ header {
       color: $font-color-light;
       transition: color 0.6s ease-in-out;
     }
-    // 
+    //
     // .line:first-child, .line:last-child{
     //   transform: rotate(5deg);
     // }

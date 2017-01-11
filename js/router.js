@@ -1,19 +1,41 @@
-// Navigation Router
-// @desc Accepts a route name and returns corresponding template.
-function panelRouter (routeName) {
-  switch (routeName) {
-    case 'home':
-      return $('#home-template').html();
-    case 'information-architecture':
-      return $('#information-architecture-template').html();
-    case 'research-methods':
-      return $('#research-methods-template').html();
-    case 'visual-designs':
-      return $('#visual-designs-template').html();
-    case 'project-management':
-      return $('#project-management-template').html();
-    case 'development':
-      return $('#development-template').html();
-    default: return $('#home-template').html();
-  }
-}
+(function () {
+  'use strict';
+
+  var Router = {
+    template: null,
+    init: function () {
+      this.template = _.template($('#panel-template').html());
+    },
+    compile: function (route) {
+      var templateData = {
+        textContent: this.getPanelContent(route),
+        pageContent: this.getPageContent(route)
+      };
+      return this.template(templateData);
+    },
+    getPanelContent: function (route) {
+      var templateEl = $('.panel-template[data-route="' + route + '"]');
+
+      if (templateEl.length) {
+        return templateEl.html();
+      } else {
+        // Default route, home
+        return $('.panel-template[data-route="/home"]').html();
+      }
+    },
+    getPageContent: function (route) {
+      // TODO, very similar to above, but use .page-template
+      var templateEl = $('.page-template[data-route="' + route + '"]');
+
+      if (templateEl.length) {
+        return templateEl.html();
+      } else {
+        // Default route, home
+        return $('.page-template[data-route="/home"]').html();
+      }
+    }
+  };
+
+  // expose as global
+  window.Router = Router;
+})();

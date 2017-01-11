@@ -1,0 +1,42 @@
+.panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+    transition: transform $transition-duration ease-in-out, background-color $transition-duration ease-in-out;;
+
+    .content-wrapper {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      color: $font-color-light;
+      text-align: left;
+
+      .text-wrapper {
+        margin: 0 10%;
+        opacity: 1;
+      }
+    }
+
+    .primary-header {
+      font-family: $serif;
+      font-style: italic;
+    }
+
+    .secondary-header {
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+
+    .page-link {
+      text-transform: uppercase;
+      font-family: $sans-serif;
+    }
+}

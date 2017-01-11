@@ -21,8 +21,13 @@ p {
   margin-bottom: 1.3em;
   font-family: "Poppins", sans-serif; }
 
+h1 {
+  font-family: "Playfair Display", serif; }
+
+h2, h3, h4 {
+  font-family: "Poppins", sans-serif; }
+
 h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin: 0; }
@@ -158,6 +163,8 @@ header {
     line-height: 60px; }
   header .first-name {
     color: #fff; }
+  header .last-name {
+    transition: color 0.6s ease-in-out; }
   header.show-menu .last-name {
     color: #fff;
     transition: color 0.3s ease-in-out; }
@@ -180,7 +187,6 @@ header {
     font-size: 10px;
     opacity: 0.6;
     cursor: pointer;
-    color: rgba(36, 123, 160, 0.8);
     transition: color 0.6s ease-in-out; }
     .dot-nav li a:hover {
       opacity: 1;
@@ -216,7 +222,8 @@ main {
     color: #fff;
     text-align: left; }
     .panel .content-wrapper .text-wrapper {
-      margin: 0 10%; }
+      margin: 0 10%;
+      opacity: 1; }
   .panel .primary-header {
     font-family: "Playfair Display", serif;
     font-style: italic; }
@@ -224,6 +231,31 @@ main {
     text-transform: uppercase;
     font-weight: 200; }
   .panel .page-link {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif; }
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(36, 123, 160, 0.8); }
+  .page .content-wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    text-align: center; }
+    .page .content-wrapper .text-wrapper {
+      margin: 0 10%;
+      opacity: 1; }
+  .page .primary-header {
+    font-family: "Playfair Display", serif;
+    font-style: italic; }
+  .page .secondary-header {
+    text-transform: uppercase;
+    font-weight: 200; }
+  .page .page-link {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif; }
 
@@ -250,59 +282,46 @@ main {
       animation: offset 3s linear forwards; }
 
 .home-theme .panel {
-  background-color: rgba(36, 123, 160, 0.8);
-  transition: color 0.6s, transform 0.6s ease-in-out; }
-.home-theme .dot-nav a {
-  color: rgba(36, 123, 160, 0.8);
-  transition: color 0.6s; }
+  background-color: rgba(36, 123, 160, 0.8); }
+.home-theme .dot-nav li a {
+  color: rgba(36, 123, 160, 0.8); }
 .home-theme .last-name {
-  color: rgba(36, 123, 160, 0.8);
-  transition: color 0.6s; }
+  color: rgba(36, 123, 160, 0.8); }
 
 .information-architecture-theme .panel {
   background-color: rgba(245, 95, 92, 0.8); }
-.information-architecture-theme .dot-nav a {
-  color: rgba(245, 95, 92, 0.8);
-  transition: color 0.6s; }
+.information-architecture-theme .dot-nav li a {
+  color: rgba(245, 95, 92, 0.8); }
 .information-architecture-theme .last-name {
-  color: rgba(245, 95, 92, 0.8);
-  transition: color 0.6s; }
+  color: rgba(245, 95, 92, 0.8); }
 
 .research-methods-theme .panel {
   background-color: rgba(39, 48, 67, 0.8); }
-.research-methods-theme .dot-nav a {
-  color: rgba(39, 48, 67, 0.8);
-  transition: color 0.6s; }
+.research-methods-theme .dot-nav li a {
+  color: rgba(39, 48, 67, 0.8); }
 .research-methods-theme .last-name {
-  color: rgba(39, 48, 67, 0.8);
-  transition: color 0.6s; }
+  color: rgba(39, 48, 67, 0.8); }
 
 .visual-designs-theme .panel {
   background-color: rgba(237, 174, 73, 0.8); }
-.visual-designs-theme .dot-nav a {
-  color: rgba(237, 174, 73, 0.8);
-  transition: color 0.6s; }
+.visual-designs-theme .dot-nav li a {
+  color: rgba(237, 174, 73, 0.8); }
 .visual-designs-theme .last-name {
-  color: rgba(237, 174, 73, 0.8);
-  transition: color 0.6s; }
+  color: rgba(237, 174, 73, 0.8); }
 
 .project-management-theme .panel {
   background-color: rgba(89, 60, 132, 0.8); }
-.project-management-theme .dot-nav a {
-  color: rgba(89, 60, 132, 0.8);
-  transition: color 0.6s; }
+.project-management-theme .dot-nav li a {
+  color: rgba(89, 60, 132, 0.8); }
 .project-management-theme .last-name {
-  color: rgba(89, 60, 132, 0.8);
-  transition: color 0.6s; }
+  color: rgba(89, 60, 132, 0.8); }
 
 .development-theme .panel {
   background-color: rgba(81, 193, 175, 0.8); }
-.development-theme .dot-nav a {
-  color: rgba(81, 193, 175, 0.8);
-  transition: color 0.6s; }
+.development-theme .dot-nav li a {
+  color: rgba(81, 193, 175, 0.8); }
 .development-theme .last-name {
-  color: rgba(81, 193, 175, 0.8);
-  transition: color 0.6s; }
+  color: rgba(81, 193, 175, 0.8); }
 
 .background-1 .stroke {
   stroke-dasharray: 3345;
