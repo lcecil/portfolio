@@ -1,51 +1,89 @@
-<script id="panel-template"  type="x-template">
-  <div class='panel'>
-    <div class='content-wrapper'>
-      <div class='text-wrapper'>
-        <%= textContent %>
-      </div>
-    </div>
-  </div>
-  <div class='page'>
-    <div class='content-wrapper'>
-      <div class='text-wrapper'>
-          <%= pageContent %>
-      </div>
+<!-- <script id="panel-template"  type="x-template">
+  <div class='content-wrapper'>
+    <div class='text-wrapper'>
+      <%= panelContent %>
     </div>
   </div>
 </script>
+
+<script id="page-template"  type="x-template">
+  <div class='content-wrapper'>
+    <div class='text-wrapper'>
+        <%= pageContent %>
+    </div>
+  </div>
+</script> -->
 
 <!-- Home Panel / About Page -->
 <script class="panel-template" data-route="/home" type="x-template">
-  <h1 class='primary-header'>UX Design</h1>
-  <h2 class='secondary-header'>and Research</h2>
-  <p class='page-description'>
-  Techniques, methodologies, and designs for a wide range of projects and problems.
-  </p>
-  <a href='/home/details' class='page-link'>About Me</a>
+<div class='content-wrapper'>
+  <div class='text-wrapper'>
+    <h1 class='primary-header'>UX Design</h1>
+    <h2 class='secondary-header'>and Research</h2>
+    <p class='page-description'>
+      Techniques, methodologies, and designs for a wide range of projects and problems.
+    </p>
+    <a href='/home/details' class='page-link'>About Me</a>
+  </div>
+</div>
 </script>
 
-<script class="page-template" data-route="/home" type="x-template">
-  <img />
-  <h1 class='primary-header'>Librarians make the best designers</h1>
-  <p class='page-description'>
-I know what you’re thinking: where are the reading glasses and cardigan sweaters? Old stereotypes. With the exception of cardigans, I do wear those.
-  </p>
+<script class="panel-template" data-route="/home/details" type="x-template">
+<div class='content-wrapper'>
+  <div class='text-wrapper'>
+    <img src='/images/profile.jpg'/>
+    <h1 class='primary-header'>Librarians make the best designers</h1>
+  </div>
+</div>
+</script>
+
+<script class="page-template" data-route="/home/details" type="x-template">
+<div class='content-wrapper'>
+  <div class='text-wrapper'>
+    <p class='page-description'>
+      I know what you’re thinking: where are the reading glasses and cardigan sweaters? Old stereotypes. With the exception of cardigans, I do wear those.
+    </p>
+    <p class='page-description'>
+    I have great reference interview skills, a passion for helping people, and can organize your book collection in ways you didn’t know were possible. Package those skills with my ability to translate ideas into solid-gold user interfaces, and you’ve got a great designer.
+    </p>
+    <p class="page-description">
+    When Im not preparing a usability test, you can find me either parked on the couch with my nose in a book or putting up a tent in the great outdoors.
+    </p>
+    <p class="page-description">
+    In both cases, you can be sure I’m looking for inspiration from the world around me.
+    </p>
+  </div>
+</div>
 </script>
 
 <!-- Information Architecture -->
 
 <script class="panel-template" data-route="/information-architecture" type="x-template">
-  <h1 class='primary-header'>Information</h1>
-  <h2 class='secondary-header'>Architecture</h2>
-  <p class='page-description'>
-  Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century.
-  </p>
-  <a href='/information-architecture' class='page-link'>Read More</a>
+<div class='content-wrapper'>
+  <div class='text-wrapper'>
+    <h1 class='primary-header'>Information</h1>
+    <h2 class='secondary-header'>Architecture</h2>
+    <p class='page-description'>
+    Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century.
+    </p>
+    <a href='/information-architecture/details' class='page-link'>Read More</a>
+  </div>
+</div>
+
+</script>
+
+<script class="panel-template" data-route="/information-architecture/details" type="x-template">
+<div class='content-wrapper'>
+  <div class='text-wrapper'>
+    <h1 class='primary-header'>Information Architecture</h1>
+    <hr class='divider' />
+    <h2 class='secondary-header'>Case Study</h2>
+  </div>
+</div>
 </script>
 
 <script class="page-template" data-route="/information-architecture" type="x-template">
-  <h1 class='primary-header'>Information</h1>
+  <h1 class='primary-header'>Page Content</h1>
   <h2 class='secondary-header'>Architecture</h2>
   <p class='page-description'>
   Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century.

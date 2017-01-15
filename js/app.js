@@ -8,7 +8,7 @@
     $.get('template.html', function(html){
       $('body').append(html);
       Router.init();
-      renderPage();
+      renderSite();
     });
 
     // Menu overlay
@@ -22,26 +22,53 @@
     navigationItems.on('click', function(event) {
       event.preventDefault();
       var route = $(this).attr('href');
-      renderPage(route);
+      renderPanel(route);
+      updateTheme(route);
     });
 
   });
 
-  function renderPage(route) {
-      var html = Router.compile(route);
-      var pageContainer = $('.page-wrap');
+  // TO DO - shouldn't need this function, but how can we prevent the initialization of the
+  //         the site from performing the css transitions?
+  function renderSite(route) {
+    var html = Router.getPanelContent(route);
+    var panelContainer = $('.panel');
 
+    panelContainer.empty().html(html);
+
+    // Panel overlay
+    $('.page-link').on('click', function(event) {
+      event.preventDefault();
+      var route = $(this).attr('href');
+
+      $('body').addClass('full');
+      $('.panel').addClass('fade-out');
+
+        setTimeout(function () {
+          renderPanel(route);
+          renderPage(route);
+          $('.panel').removeClass('fade-out');
+          $('.panel, header').addClass('fade-in');
+          backgroundPanels.removeClass('show');
+        }, 1000);
+    });
+
+  }
+
+  function renderPanel(route) {
+      var html = Router.getPanelContent(route);
+      var panelContainer = $('.panel');
+
+      panelContainer.empty().html(html);
       updateNavigation(route);
-      updateTheme(route);
+  }
+
+  function renderPage(route) {
+      var html = Router.getPageContent(route);
+      var pageContainer = $('.page');
 
       pageContainer.empty().html(html);
 
-      // Panel overlay
-      $('.page-link').on('click', function(event) {
-        event.preventDefault();
-        $('.site-wrap').toggleClass('open');
-        $('header').toggleClass('show-page');
-      });
   }
 
   function updateNavigation(route) {
@@ -55,7 +82,6 @@
     var root = route.match(/\/([a-z]|\-)+\/?/)[0];
     var theme = root ? root.replace(/\//g, '') : 'home';
 
-    console.log(theme); //rmv
     // update body theme
     $('body').removeClass().addClass(theme + '-theme');
 

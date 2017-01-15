@@ -1,17 +1,12 @@
 .panel {
-    position: absolute;
+    position: absolute;;
     top: 0;
     left: 0;
-    transform: translateX(-50%);
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
-    transition: transform $transition-duration ease-in-out, background-color $transition-duration ease-in-out;;
+    transition: width $transition-duration ease-in-out $transition-duration, background-color $transition-duration ease-in-out;;
 
     .content-wrapper {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 50vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -21,7 +16,6 @@
 
       .text-wrapper {
         margin: 0 10%;
-        opacity: 1;
       }
     }
 

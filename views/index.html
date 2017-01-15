@@ -11,7 +11,7 @@
   <script src="https://use.fontawesome.com/d027586441.js"></script>
 </head>
 
-<body>
+<body class="home-theme">
   <header>
     <a class="toggle-nav">
       <!-- <div class='menu-icon'>
@@ -53,7 +53,7 @@
       <div class='dot-nav' role='navigation'>
         <ul>
           <li>
-            <a href="/home">
+            <a href="/home" class="active-dot">
               <i class="fa fa-circle"></i>
             </a>
           </li>
@@ -84,9 +84,11 @@
           </li>
         </ul>
       </div>
-      <div class='page-wrap'>
+      <div class='panel'>
       </div>
-      <div id="home" class='background-image'>
+      <div class='page'>
+      </div>
+      <div id="home" class='background-image show'>
         <svg class="background-1" x="0px" y="0px" viewBox="0 0 1369.6 1543.4">
           <path class="stroke" d="M412,372.7l386,223l-259,146l-382-221L412,372.7z M595,1541.7l203-118l-539-310 M487,1541.7l-330-193l-155-89
              M2,847.7v412l257-146v-415 M2,847.7l155,89l256-149l-155-89L2,847.7z M157,520.7v828l256-146.9V372.7 M285,683.2l153.5,88.5
@@ -256,19 +258,21 @@
       </div>
     <footer>
       <div class="contact">
-        <h1 class="">Say Hello:</h1>
+        <h1 class="primary-header">Say Hello:</h1>
         <a href='mailto:lececil0827@gmail.com' title='My email address'>
-          <h4>lececil0827@gmail.com</h4>
+          <h4 class='email'>lececil0827@gmail.com</h4>
         </a>
       </div>
       <div class="social">
-        <div class='social-icon'>
-
+        <div class='social-icons'>
+          <a href=''>
+            <i class='fa fa-linkedin-square fa-2x'></i>
+          </a>
+          <a href=''>
+            <i class='fa fa-instagram fa-2x'></i>
+          </a>
         </div>
-        <div class='social-icon'>
-
-        </div>
-        <h4>&copy;Laura Cecil | 2017</h4>
+        <h4 class='copyright'>&copy; Laura Cecil | 2017</h4>
       </div>
     </footer>
   </div>

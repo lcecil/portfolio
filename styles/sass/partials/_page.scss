@@ -1,7 +1,7 @@
 .page {
+    display: none;
     width: 100vw;
-    height: 100vh;
-    background-color: $panel-1;
+    background-color: #fff;
 
     .content-wrapper {
       width: 100vw;
@@ -9,8 +9,8 @@
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      color: $font-color-light;
-      text-align: center;
+      color: $font-color-dark;
+      text-align: left;
 
       .text-wrapper {
         margin: 0 10%;

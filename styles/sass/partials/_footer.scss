@@ -1,0 +1,42 @@
+footer {
+  display: none;
+
+  .contact, .social {
+    text-align: center;
+  }
+
+  .contact {
+
+    .primary-header {
+      font-style: italic;
+      padding: 10px 0;
+    }
+
+    a {
+      display: block;
+      color: $font-color-dark;
+      padding: 10px 0;
+
+      .email {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .social {
+    background-color: $footer-background;
+
+    .social-icons, .copyright {
+      padding: 10px 0;
+    }
+
+    .copyright {
+      color: $font-color-light;
+      font-weight: 300;
+    }
+
+    .fa {
+      vertical-align: middle;
+    }
+  }
+}

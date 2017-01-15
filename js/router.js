@@ -4,15 +4,15 @@
   var Router = {
     template: null,
     init: function () {
-      this.template = _.template($('#panel-template').html());
+      this.template = _.template($('.panel-template').html());
     },
-    compile: function (route) {
-      var templateData = {
-        textContent: this.getPanelContent(route),
-        pageContent: this.getPageContent(route)
-      };
-      return this.template(templateData);
-    },
+    // compile: function (route) {
+    //   var templateData = {
+    //     panelContent: this.getPanelContent(route),
+    //     pageContent: this.getPageContent(route)
+    //   };
+    //   return this.template(templateData);
+    // },
     getPanelContent: function (route) {
       var templateEl = $('.panel-template[data-route="' + route + '"]');
 
@@ -24,7 +24,6 @@
       }
     },
     getPageContent: function (route) {
-      // TODO, very similar to above, but use .page-template
       var templateEl = $('.page-template[data-route="' + route + '"]');
 
       if (templateEl.length) {
