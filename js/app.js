@@ -5,11 +5,15 @@
   var backgroundPanels = $('.background-image');
 
   $(function() {
-    $.get('template.html', function(html){
+    var getTemplates = $.get('views/template.html', function(html){
       $('body').append(html);
-      Router.init();
-      renderSite();
     });
+
+    var getData = $.getJSON('js/data.json', function(data){
+        Router.init(data);
+    });
+
+    $.when(getTemplates, getData).done(renderSite);
 
     // Menu overlay
     $('.toggle-nav').on('click', function(event) {
@@ -31,10 +35,8 @@
   // TO DO - shouldn't need this function, but how can we prevent the initialization of the
   //         the site from performing the css transitions?
   function renderSite(route) {
-    var html = Router.getPanelContent(route);
-    var panelContainer = $('.panel');
-
-    panelContainer.empty().html(html);
+    renderPanel(route);
+    renderPage(route);
 
     // Panel overlay
     $('.page-link').on('click', function(event) {
@@ -68,7 +70,6 @@
       var pageContainer = $('.page');
 
       pageContainer.empty().html(html);
-
   }
 
   function updateNavigation(route) {

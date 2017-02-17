@@ -1,38 +1,43 @@
-var panelData = [
-    {
-      "color": "$panel-1",
-      "header": "UX Design",
-      "sub-header": "and Research",
-      "body": "Techniques methodologies and designs for a wide range of projects and problems."
-    },
-    {
-      "color": "$panel-2",
-      "header": "Information",
-      "sub-header": "Architecture",
-      "body": "Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century."
-    },
-    {
-      "color": "$panel-3",
-      "header": "Research",
-      "sub-header": "Methods",
-      "body": "From A/B Testing to user interviews and everything in between. Choosing the right method for the job is the name of the game here."
-    },
-    {
-      "color": "$panel-4",
-      "header": "Visual",
-      "sub-header": "Designs",
-      "body": "Communicating a design is as important as creating it. Using a quick sketch or pixel perfect visual design depends on what's needed to get the job done."
-    },
-    {
-      "color": "$panel-5",
-      "header": "Project",
-      "sub-header": "Management",
-      "body": "Agile, scrum, sprints, waterfall, kanban: whatever the buzzword of the day is, chances are I've probably tried it."
-    },
-    {
-      "color": "$panel-6",
-      "header": "Front-End",
-      "sub-header": "Development",
-      "body": "One of the my many hats, it ranges in size from beanie to ten gallon. It's more about the knowledge that I gain from wearing it that makes me a better designer."
-    }
-];
+{
+  "home":
+    [
+      {
+        "type": "half-panel",
+        "primary-header": "UX Design",
+        "secondary-header": "and Research",
+        "page-description": "Techniques methodologies and designs for a wide range of projects and problems.",
+        "page-link": "About Me"
+      },
+      {
+        "type": "full-panel",
+        "primary-header": "Librarians make the best designers"
+      },
+      {
+        "type": "page",
+        "page-description": "Techniques methodologies and designs for a wide range of projects and problems."
+      }
+    ],
+  "information-architecture":
+    [
+      {
+        "type": "half-panel",
+        "primary-header": "Information",
+        "secondary-header": "Architecture",
+        "page-description": "Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century."
+      },
+      {
+        "type": "full-panel",
+        "primary-header": "Information Architecture",
+        "page-description": "As the lead designer for an internal tools development team, one of the first tasks I undertook was to shed light on the information architecture of their main product, a cellular phone company’s customer management tool."
+      },
+      {
+        "type": "page",
+        "section-header": ["The Project", "The Process", "The Results"],
+        "section-content": [
+          "",
+          "",
+          ""
+          ]
+      }
+    ]
+}

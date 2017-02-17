@@ -6,13 +6,6 @@
     init: function () {
       this.template = _.template($('.panel-template').html());
     },
-    // compile: function (route) {
-    //   var templateData = {
-    //     panelContent: this.getPanelContent(route),
-    //     pageContent: this.getPageContent(route)
-    //   };
-    //   return this.template(templateData);
-    // },
     getPanelContent: function (route) {
       var templateEl = $('.panel-template[data-route="' + route + '"]');
 
@@ -30,7 +23,7 @@
         return templateEl.html();
       } else {
         // Default route, home
-        return $('.page-template[data-route="/home"]').html();
+        return '';
       }
     }
   };
