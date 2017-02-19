@@ -10,11 +10,18 @@
       },
       {
         "type": "full-panel",
-        "primary-header": "Librarians make the best designers"
+        "primary-header": "Librarians make the best designers",
+        "primary-image":""
       },
       {
         "type": "page",
-        "page-description": "Techniques methodologies and designs for a wide range of projects and problems."
+        "section-content": [
+          "I know what you’re thinking: where are the reading glasses and cardigan sweaters? Old stereotypes. With the exception of cardigans, I do wear those.",
+          "I have great reference interview skills, a passion for helping people, and can organize your book collection in ways you didn’t know were possible. Package those skills with my ability to translate ideas into solid-gold user interfaces, and you’ve got a great designer.",
+          "When I'm not preparing a usability test, you can find me either parked on the couch with my nose in a book or putting up a tent in the great outdoors.",
+          "In both cases, you can be sure I’m looking for inspiration from the world around me."
+        ],
+        "button-label": "View Resume"
       }
     ],
   "information-architecture":
@@ -28,7 +35,106 @@
       {
         "type": "full-panel",
         "primary-header": "Information Architecture",
-        "page-description": "As the lead designer for an internal tools development team, one of the first tasks I undertook was to shed light on the information architecture of their main product, a cellular phone company’s customer management tool."
+        "secondary-header": "Case Study",
+        "page-description": "To make an application feel effortless to navigate, it has to have a strong skeleton or foundation. Information architecture is more than just the menu navigation at the top of a website – it’s the map of a product’s parts, and how those parts need to interact with each other. When designing a new feature for an existing product, mapping out those pieces is one of the first steps."
+      },
+      {
+        "type": "page",
+        "section-header": ["The Project", "The Process", "The Results"],
+        "section-content": [
+          "Through an online survey, we found that our client’s user base spent 75% of their time helping their customers troubleshoot cell phone problems over the phone. Without the ability to see the phone the customer was using, the users were spending more time than was necessary to troubleshoot, and often unable to solve the customer’s problem. The solution was a tool that would allow customers to go into a Target store for in-person device troubleshooting, thereby reducing call volume and duration for our users.",
+          "",
+          ""
+          ]
+      }
+    ],
+  "research-methods":
+    [
+      {
+        "type": "half-panel",
+        "primary-header": "Research",
+        "secondary-header": "Methods",
+        "page-description": "From A/B Testing to user interviews and everything in between. Choosing the right method for the job is the name of the game here."
+      },
+      {
+        "type": "full-panel",
+        "primary-header": "Research Methods",
+        "secondary-header": "Designer Tools",
+        "page-description": "User research is always the first thing I turn to before tackling any project. Understanding both the qualitative and quantitative data behind a project is the key to developing a successful design. Knowing which methods to employ is also half the battle."
+      },
+      {
+        "type": "page",
+        "section-header": ["Usability Testing", "Personas", "Card Sorting", "Survey Design", "Interviews/Observations"],
+        "section-content": [
+          "Usability testing is a necessity for all stages of the development process. Preliminary testing of a current interface can help designers understand user pain points and areas of interest, whereas post-release testing monitors whether design implementations were successful. Paper prototyping is my favorite method for gathering iterative feedback during the design lifecycle and avoiding major pitfalls.",
+          "Personas are a great tool for getting a team on the same page about who is using the products they are creating. The key to a successful persona is not the physical profile itself, but its adoption from all stakeholders involved and application by a company. I work closely with clients, product owners, developers, and most importantly, end users, to ensure that the personas produced are accurate and useful.",
+          "The wrong label can make or break a design. Luckily, a quick card sort is one of the simplest ways to evaluate whether the terms used in a design are terms your users can understand. I use this research method often, either internally or with my end users, to test whether a grouping of information is logical beyond my own assumptions and biases.",
+          "",
+          "If the opportunity to have face-to-face time with an end user is available, it can be the most valuable time spent on a project. As a designer, the desire to empathize with my users can only go so far without observing their daily tasks or hearing stories of their struggles with a product. The art of asking questions is a skill I strive to perfect and often helps me answer the “why” when looking at quantitative data or metrics. "
+          ]
+      }
+    ],
+  "visual-designs":
+    [
+      {
+        "type": "half-panel",
+        "primary-header": "Visual",
+        "secondary-header": "Designs",
+        "page-description": "Communicating a design is as important as creating it. Using a quick sketch or pixel perfect visual design depends on what's needed to get the job done."
+      },
+      {
+        "type": "full-panel",
+        "primary-header": "Visual Designs",
+        "secondary-header": "Designer Tools",
+        "page-description": "Discussing UX designs with a development team is the best way to convey the mechanics of a design and thought process that went into it. But at the end of the day, the visual design artifacts I build must be strong enough to convey all the necessary information to the developer."
+      },
+      {
+        "type": "page",
+        "section-header": ["Wireframes", "Prototypes", "High Fidelity Mock-Ups"],
+        "section-content": [
+          "",
+          "",
+          ""
+          ]
+      }
+    ],
+  "project-management":
+    [
+      {
+        "type": "half-panel",
+        "primary-header": "Project",
+        "secondary-header": "Management",
+        "page-description": "Agile, scrum, sprints, waterfall, kanban: whatever the buzzword of the day is, chances are I've probably tried it."
+      },
+      {
+        "type": "full-panel",
+        "primary-header": "Project Management",
+        "secondary-header": "Case Study",
+        "page-description": ""
+      },
+      {
+        "type": "page",
+        "section-header": ["The Project", "The Process", "The Results"],
+        "section-content": [
+          "",
+          "",
+          ""
+          ]
+      }
+    ],
+  "development":
+    [
+      {
+        "type": "half-panel",
+        "primary-header": "Front-End",
+        "secondary-header": "Development",
+        "page-description": "One of the my many hats, it ranges in size from beanie to ten gallon. It's more about the knowledge that I gain from wearing it that makes me a better designer."
+      },
+      {
+        "type": "full-panel",
+        "primary-header": "Front-End Development",
+        "secondary-header": "Case Study",
+        "page-description": ""
       },
       {
         "type": "page",

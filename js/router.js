@@ -3,8 +3,9 @@
 
   var Router = {
     template: null,
-    init: function () {
+    init: function (data, route) {
       this.template = _.template($('.panel-template').html());
+      console.log(route);
     },
     getPanelContent: function (route) {
       var templateEl = $('.panel-template[data-route="' + route + '"]');
