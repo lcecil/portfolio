@@ -5,15 +5,17 @@
   var backgroundPanels = $('.background-image');
 
   $(function() {
-    var getTemplates = $.get('views/template.html', function(html){
+    var getTemplates = $.get('views/template.html', function (html){
       $('body').append(html);
     });
 
-    var getData = $.getJSON('js/data.json', function(data){
-        Router.init(data);
+    var getData = $.getJSON('js/data.json').then( function (data) {
+      Router.init(data);
     });
 
-    $.when(getTemplates, getData).done(renderSite);
+    $.when(getTemplates, getData).done( function() {
+        renderSite('/');
+    });
 
     // Menu overlay
     $('.toggle-nav').on('click', function(event) {

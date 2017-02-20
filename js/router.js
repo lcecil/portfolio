@@ -3,13 +3,11 @@
 
   var Router = {
     template: null,
-    init: function (data, route) {
+    init: function () {
       this.template = _.template($('.panel-template').html());
-      console.log(route);
     },
     getPanelContent: function (route) {
-      var templateEl = $('.panel-template[data-route="' + route + '"]');
-
+      var templateEl = $('.panel-template');
       if (templateEl.length) {
         return templateEl.html();
       } else {
@@ -18,8 +16,7 @@
       }
     },
     getPageContent: function (route) {
-      var templateEl = $('.page-template[data-route="' + route + '"]');
-
+      var templateEl = $('.page-template');
       if (templateEl.length) {
         return templateEl.html();
       } else {
