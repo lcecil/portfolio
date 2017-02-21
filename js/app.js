@@ -5,16 +5,18 @@
   var backgroundPanels = $('.background-image');
 
   $(function() {
-    var getTemplates = $.get('views/template.html', function (html){
-      $('body').append(html);
+    var getTemplates = $.get('views/template.html').then( function (html) {
+      return html;
     });
 
     var getData = $.getJSON('js/data.json').then( function (data) {
-      Router.init(data);
+      return data;
     });
 
-    $.when(getTemplates, getData).done( function() {
-        renderSite('/');
+    $.when(getTemplates, getData).done( function(html, data) {
+        $('body').append(html);
+        Router.init(data);
+        renderPanel('/home');
     });
 
     // Menu overlay
@@ -34,37 +36,29 @@
 
   });
 
-  // TO DO - shouldn't need this function, but how can we prevent the initialization of the
-  //         the site from performing the css transitions?
-  function renderSite(route) {
-    renderPanel(route);
-    renderPage(route);
-
-    // Panel overlay
-    $('.page-link').on('click', function(event) {
-      event.preventDefault();
-      var route = $(this).attr('href');
-
-      $('body').addClass('full');
-      $('.panel').addClass('fade-out');
-
-        setTimeout(function () {
-          renderPanel(route);
-          renderPage(route);
-          $('.panel').removeClass('fade-out');
-          $('.panel, header').addClass('fade-in');
-          backgroundPanels.removeClass('show');
-        }, 1000);
-    });
-
-  }
-
   function renderPanel(route) {
       var html = Router.getPanelContent(route);
       var panelContainer = $('.panel');
 
       panelContainer.empty().html(html);
       updateNavigation(route);
+
+      // Opens full page on click of "Read More"
+      $('.page-link').on('click', function(event) {
+        event.preventDefault();
+        var route = $(this).attr('href');
+
+        $('body').addClass('full');
+        $('.panel').addClass('fade-out');
+
+          setTimeout(function () {
+            renderPanel(route);
+            renderPage(route);
+            $('.panel').removeClass('fade-out');
+            $('.panel, header').addClass('fade-in');
+            backgroundPanels.removeClass('show');
+          }, 1000);
+      });
   }
 
   function renderPage(route) {

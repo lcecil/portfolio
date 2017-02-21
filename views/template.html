@@ -1,10 +1,56 @@
+<script class="panel-template" data-route="/home" type="x-template">
+  <div class='content-wrapper'>
+    <div class='text-wrapper'>
+      <h1 class='primary-header'><%= panel.primaryHeader %></h1>
+      <h2 class='secondary-header'><%= panel.secondaryHeader %></h2>
+      <p class='page-description'><%= panel.pageDescription %></p>
+      <a href='<%= panel.pageLink %>' class='page-link'>Read More</a>
+    </div>
+  </div>
+</script>
+
+<script class="panel-template" data-route="/home/details" type="x-template">
+  <div class='content-wrapper'>
+    <div class='text-wrapper'>
+      <img class='' />
+      <h1 class='primary-header'><%= panel.primaryHeader %></h1>
+    </div>
+  </div>
+</script>
+
+<script class="page-template" data-route="/home/details" type="x-template">
+<div class='page-wrapper'>
+  <div class='section-content'><%= page.sectionContent %></div>
+</div>
+<div class='portfolio-wrapper'>
+  <div class='previous'>
+    <div class='content-wrapper'>
+      <h1 class='primary-header'></h1>
+      <h2 class='secondary-header'></h2>
+      <p class='page-description'>
+      Read More
+      </p>
+    </div>
+  </div>
+  <div class='next'>
+    <div class='content-wrapper'>
+      <h1 class='primary-header'></h1>
+      <h2 class='secondary-header'></h2>
+      <p class='page-description'>
+      Read More
+      </p>
+    </div>
+  </div>
+</div>
+</script>
+
 <script class="panel-template" data-route="/" type="x-template">
   <div class='content-wrapper'>
     <div class='text-wrapper'>
-      <h1 class='primary-header'><%= data %></h1>
-      <h2 class='secondary-header'></h2>
-      <p class='page-description'></p>
-      <a href='/details' class='page-link'></a>
+      <h1 class='primary-header'><%= panel.primaryHeader %></h1>
+      <h2 class='secondary-header'><%= panel.secondaryHeader %></h2>
+      <p class='page-description'><%= panel.pageDescription %></p>
+      <a href='<%= panel.pageLink %>' class='page-link'>Read More</a>
     </div>
   </div>
 </script>
@@ -12,11 +58,10 @@
 <script class="panel-template" data-route="/details" type="x-template">
   <div class='content-wrapper'>
     <div class='text-wrapper'>
-      <h1 class='primary-header'></h1>
+      <h1 class='primary-header'><%= panel.primaryHeader %></h1>
       <hr class='divider' />
-      <h3 class='secondary-header'></h3>
-      <p class='page-description'>
-      </p>
+      <h3 class='secondary-header'><%= panel.secondaryHeader %></h3>
+      <p class='page-description'><%= panel.pageDescription %></p>
     </div>
   </div>
   <div class='page-indicator'>
@@ -30,8 +75,8 @@
 
 <script class="page-template" data-route="/details" type="x-template">
   <div class='page-wrapper'>
-    <div class='section-header'></div>
-    <div class='section-content'></div>
+    <div class='section-header'><%= page.sectionHeader %></div>
+    <div class='section-content'><%= page.sectionContent %></div>
   </div>
   <div class='portfolio-wrapper'>
     <div class='previous'>

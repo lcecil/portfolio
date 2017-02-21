@@ -3,29 +3,28 @@
 
   var Router = {
     template: null,
-    init: function () {
-      this.template = _.template($('.panel-template').html());
+    templateData: {},
+    init: function (data) {
+      this.template = _.template($('.panel-template[data-route="/home"]').html());
+      this.templateData = data;
     },
     getPanelContent: function (route) {
-      var templateEl = $('.panel-template');
-      if (templateEl.length) {
-        return templateEl.html();
-      } else {
-        // Default route, home
-        return $('.panel-template[data-route="/home"]').html();
-      }
+      //this only works for /home because that data route is declared in the home template
+      //TODO need to disambiguate between everything else that is '.../' and ''.../details'
+      
+      this.template = _.template($('.panel-template[data-route="' + route + '"]').html());
+      var routeData = this.templateData[route];
+      return this.template(routeData);
     },
     getPageContent: function (route) {
-      var templateEl = $('.page-template');
-      if (templateEl.length) {
-        return templateEl.html();
-      } else {
-        // Default route, home
-        return '';
-      }
+      this.template = _.template($('.page-template').html());
+      var routeData = this.templateData[route];
+      return this.template(routeData);
     }
   };
 
   // expose as global
   window.Router = Router;
 })();
+
+// $('.panel-template[data-route="' + route + '"]');
