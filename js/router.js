@@ -5,26 +5,25 @@
     template: null,
     templateData: {},
     init: function (data) {
-      this.template = _.template($('.panel-template[data-route="/home"]').html());
+      this.halfPanelTemplate = _.template($('#half-panel-template').html());
+      this.fullPanelTemplate = _.template($('#full-panel-template').html());
+      this.pageTemplate = _.template($('#page-template').html());
       this.templateData = data;
     },
     getPanelContent: function (route) {
-      //this only works for /home because that data route is declared in the home template
-      //TODO need to disambiguate between everything else that is '.../' and ''.../details'
-      
-      this.template = _.template($('.panel-template[data-route="' + route + '"]').html());
       var routeData = this.templateData[route];
-      return this.template(routeData);
+      if (route.indexOf('details') > 0) {
+        return this.fullPanelTemplate(routeData);
+      } else {
+        return this.halfPanelTemplate(routeData);
+      }
     },
     getPageContent: function (route) {
-      this.template = _.template($('.page-template').html());
       var routeData = this.templateData[route];
-      return this.template(routeData);
+      return this.pageTemplate(routeData);
     }
   };
 
   // expose as global
   window.Router = Router;
 })();
-
-// $('.panel-template[data-route="' + route + '"]');

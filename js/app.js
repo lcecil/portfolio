@@ -59,6 +59,23 @@
             backgroundPanels.removeClass('show');
           }, 1000);
       });
+
+      //Hides full page on click of Header arrow-left
+      $('.toggle-back').on('click', function(event) {
+          event.preventDefault();
+          var route = '/information-architecture';
+
+          $('.panel').addClass('fade-out');
+          $('body').removeClass('full');
+
+            setTimeout(function () {
+              renderPanel(route);
+              $('.panel').removeClass('fade-out');
+              $('.panel, header').addClass('fade-in');
+              backgroundPanels.addClass('show');
+            }, 1000);
+
+      });
   }
 
   function renderPage(route) {

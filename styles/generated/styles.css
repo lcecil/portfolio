@@ -173,13 +173,16 @@ header {
   height: 60px; }
   header a:hover {
     text-decoration: none; }
-  header .menu-icon {
+  header .header-icon {
     width: 44px;
     position: absolute;
     top: 50%;
-    left: 20px;
     transform: translateY(-50%); }
-    header .menu-icon .line {
+    header .header-icon.menu {
+      left: 20px; }
+    header .header-icon.arrow-left {
+      left: 80px; }
+    header .header-icon .line {
       stroke: #fff;
       stroke-width: 1px;
       stroke-linecap: round; }

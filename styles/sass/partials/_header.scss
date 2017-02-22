@@ -8,12 +8,19 @@ header {
     text-decoration: none;
   }
 
-  .menu-icon {
+  .header-icon {
     width: 44px;
     position: absolute;
     top: 50%;
-    left: 20px;
     transform: translateY(-50%);
+
+    &.menu {
+      left: 20px;
+    }
+
+    &.arrow-left {
+      left: 80px;
+    }
 
     .line {
       stroke: $font-color-light;
