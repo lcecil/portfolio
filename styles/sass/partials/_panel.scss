@@ -4,7 +4,7 @@
     left: 0;
     width: 50vw;
     height: 100vh;
-    transition: width $transition-duration ease-in-out $transition-duration, background-color $transition-duration ease-in-out;;
+    transition: width $transition-duration ease-in-out $transition-duration, background-color $transition-duration ease-in-out;
 
     .content-wrapper {
       display: flex;
@@ -32,5 +32,16 @@
     .page-link {
       text-transform: uppercase;
       font-family: $sans-serif;
+    }
+
+    .label {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .divider {
+      border: 1px solid $font-color-light;
+      border-radius: 5px;
+      width: 35%;
     }
 }

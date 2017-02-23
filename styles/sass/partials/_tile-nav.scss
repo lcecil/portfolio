@@ -1,0 +1,37 @@
+.tile-nav {
+  overflow: hidden;
+  
+  .next {
+    text-align: right;
+  }
+
+  .previous {
+    text-align: left;
+  }
+
+  .next, .previous {
+    width: 50%;
+    float: left;
+
+
+    .content-wrapper {
+      color: $font-color-light;
+      max-width: 70%;
+      margin: 1.3em auto 0;
+
+      .primary-header {
+        font-family: $serif;
+        font-style: italic;
+      }
+
+      .secondary-header {
+        text-transform: uppercase;
+        font-weight: 200;
+      }
+
+      .page-description {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

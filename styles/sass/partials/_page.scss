@@ -1,20 +1,14 @@
 .page {
-    display: none;
     width: 100vw;
     background-color: #fff;
 
-    .content-wrapper {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      color: $font-color-dark;
-      text-align: left;
+    .page-wrapper {
+      max-width: 900px;
+      margin: 10vh auto;
 
-      .text-wrapper {
-        margin: 0 10%;
-        opacity: 1;
+      .section-header {
+        text-transform: uppercase;
+        font-weight: 300;
       }
     }
 

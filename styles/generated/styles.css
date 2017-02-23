@@ -84,7 +84,9 @@ button {
   -webkit-font-smoothing: antialiased; }
 
 .site-wrap {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw; }
 
 @keyframes offset {
   100% {
@@ -99,31 +101,21 @@ button {
     opacity: 0; }
   100% {
     opacity: 1; } }
-@keyframes color-fade-in {
-  0% {
-    background-color: none; }
-  100% {
-    background-color: rgba(255, 255, 255, 0.4); } }
 .full .panel {
   width: 100vw;
   position: relative; }
-  .full .panel.fade-out .content-wrapper .text-wrapper {
-    animation: text-fade-out 0.6s ease-out forwards; }
-  .full .panel.fade-in .content-wrapper .text-wrapper {
-    animation: text-fade-in 0.6s ease-in forwards;
-    text-align: center; }
-.full .page, .full footer {
-  display: block; }
 .full .dot-nav, .full .background-image {
   opacity: 0; }
-.full header.fade-in {
-  animation: color-fade-in 0.6s ease-in forwards; }
-.full header .first-name {
-  color: rgba(36, 123, 160, 0.8);
-  transition: color 0.6s ease-in-out; }
-.full header .menu-icon .line {
-  stroke: rgba(36, 123, 160, 0.8);
-  transition: stroke 0.6s ease-in-out; }
+.full header .last-name {
+  color: #fff;
+  transition: color 0.6s ease-in-out 0.6s; }
+.full.loading .content-wrapper .text-wrapper {
+  animation: text-fade-out 0.6s ease-out forwards; }
+.full.loaded .site-wrap {
+  height: auto; }
+.full.loaded .content-wrapper .text-wrapper {
+  animation: text-fade-in 0.6s ease-in forwards;
+  text-align: center; }
 
 .nav-wrap {
   overflow: hidden;
@@ -224,12 +216,6 @@ header {
   .dot-nav .active-dot {
     opacity: 1; }
 
-main {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative; }
-
 .panel {
   position: absolute;
   top: 0;
@@ -255,22 +241,23 @@ main {
   .panel .page-link {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif; }
+  .panel .label {
+    text-transform: uppercase;
+    text-align: center; }
+  .panel .divider {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 35%; }
 
 .page {
-  display: none;
   width: 100vw;
   background-color: #fff; }
-  .page .content-wrapper {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    color: #333;
-    text-align: left; }
-    .page .content-wrapper .text-wrapper {
-      margin: 0 10%;
-      opacity: 1; }
+  .page .page-wrapper {
+    max-width: 900px;
+    margin: 10vh auto; }
+    .page .page-wrapper .section-header {
+      text-transform: uppercase;
+      font-weight: 300; }
   .page .primary-header {
     font-family: "Playfair Display", serif;
     font-style: italic; }
@@ -280,6 +267,28 @@ main {
   .page .page-link {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif; }
+
+.tile-nav {
+  overflow: hidden; }
+  .tile-nav .next {
+    text-align: right; }
+  .tile-nav .previous {
+    text-align: left; }
+  .tile-nav .next, .tile-nav .previous {
+    width: 50%;
+    float: left; }
+    .tile-nav .next .content-wrapper, .tile-nav .previous .content-wrapper {
+      color: #fff;
+      max-width: 70%;
+      margin: 1.3em auto 0; }
+      .tile-nav .next .content-wrapper .primary-header, .tile-nav .previous .content-wrapper .primary-header {
+        font-family: "Playfair Display", serif;
+        font-style: italic; }
+      .tile-nav .next .content-wrapper .secondary-header, .tile-nav .previous .content-wrapper .secondary-header {
+        text-transform: uppercase;
+        font-weight: 200; }
+      .tile-nav .next .content-wrapper .page-description, .tile-nav .previous .content-wrapper .page-description {
+        text-transform: uppercase; }
 
 .background-image {
   display: none;
@@ -302,70 +311,135 @@ main {
       stroke: #666;
       animation: offset 3s linear forwards; }
 
-footer {
-  display: none; }
-  footer .contact, footer .social {
-    text-align: center; }
-  footer .contact .primary-header {
-    font-style: italic;
+footer .contact, footer .social {
+  text-align: center;
+  padding: 5vh 0; }
+footer .contact .primary-header {
+  font-style: italic;
+  padding: 10px 0; }
+footer .contact a {
+  display: block;
+  color: #333;
+  padding: 10px 0; }
+  footer .contact a .email {
+    font-weight: 300; }
+footer .social {
+  background-color: #666; }
+  footer .social .social-icons, footer .social .copyright {
     padding: 10px 0; }
-  footer .contact a {
-    display: block;
-    color: #333;
-    padding: 10px 0; }
-    footer .contact a .email {
-      font-weight: 300; }
-  footer .social {
-    background-color: #666; }
-    footer .social .social-icons, footer .social .copyright {
-      padding: 10px 0; }
-    footer .social .copyright {
-      color: #fff;
-      font-weight: 300; }
-    footer .social .fa {
-      vertical-align: middle; }
+  footer .social .copyright {
+    color: #fff;
+    font-weight: 300; }
+  footer .social .fa {
+    vertical-align: middle; }
 
+@keyframes home-fade-in {
+  0% {
+    background-color: none; }
+  100% {
+    background-color: rgba(36, 123, 160, 0.8); } }
 .home-theme .panel {
   background-color: rgba(36, 123, 160, 0.8); }
 .home-theme .dot-nav li a {
   color: rgba(36, 123, 160, 0.8); }
 .home-theme .last-name {
   color: rgba(36, 123, 160, 0.8); }
+.home-theme .previous {
+  background-color: rgba(81, 193, 175, 0.8); }
+.home-theme .next {
+  background-color: rgba(245, 95, 92, 0.8); }
+.home-theme.full.loaded header {
+  animation: home-fade-in 0.6s ease-in forwards; }
 
+@keyframes info-fade-in {
+  0% {
+    background-color: none; }
+  100% {
+    background-color: rgba(245, 95, 92, 0.8); } }
 .information-architecture-theme .panel {
   background-color: rgba(245, 95, 92, 0.8); }
 .information-architecture-theme .dot-nav li a {
   color: rgba(245, 95, 92, 0.8); }
 .information-architecture-theme .last-name {
   color: rgba(245, 95, 92, 0.8); }
+.information-architecture-theme .previous {
+  background-color: rgba(36, 123, 160, 0.8); }
+.information-architecture-theme .next {
+  background-color: rgba(39, 48, 67, 0.8); }
+.information-architecture-theme.full.loaded header {
+  animation: info-fade-in 0.6s ease-in forwards; }
 
+@keyframes research-fade-in {
+  0% {
+    background-color: none; }
+  100% {
+    background-color: rgba(39, 48, 67, 0.8); } }
 .research-methods-theme .panel {
   background-color: rgba(39, 48, 67, 0.8); }
 .research-methods-theme .dot-nav li a {
   color: rgba(39, 48, 67, 0.8); }
 .research-methods-theme .last-name {
   color: rgba(39, 48, 67, 0.8); }
+.research-methods-theme .previous {
+  background-color: rgba(245, 95, 92, 0.8); }
+.research-methods-theme .next {
+  background-color: rgba(237, 174, 73, 0.8); }
+.research-methods-theme.full.loaded header {
+  animation: research-fade-in 0.6s ease-in forwards; }
 
+@keyframes visual-fade-in {
+  0% {
+    background-color: none; }
+  100% {
+    background-color: rgba(237, 174, 73, 0.8); } }
 .visual-designs-theme .panel {
   background-color: rgba(237, 174, 73, 0.8); }
 .visual-designs-theme .dot-nav li a {
   color: rgba(237, 174, 73, 0.8); }
 .visual-designs-theme .last-name {
   color: rgba(237, 174, 73, 0.8); }
+.visual-designs-theme .previous {
+  background-color: rgba(39, 48, 67, 0.8); }
+.visual-designs-theme .next {
+  background-color: rgba(89, 60, 132, 0.8); }
+.visual-designs-theme.full.loaded header {
+  animation: visual-fade-in 0.6s ease-in forwards; }
 
+@keyframes project-fade-in {
+  0% {
+    background-color: none; }
+  100% {
+    background-color: rgba(89, 60, 132, 0.8); } }
 .project-management-theme .panel {
   background-color: rgba(89, 60, 132, 0.8); }
 .project-management-theme .dot-nav li a {
   color: rgba(89, 60, 132, 0.8); }
 .project-management-theme .last-name {
   color: rgba(89, 60, 132, 0.8); }
+.project-management-theme .previous {
+  background-color: rgba(237, 174, 73, 0.8); }
+.project-management-theme .next {
+  background-color: rgba(81, 193, 175, 0.8); }
+.project-management-theme.full.loaded header {
+  animation: project-fade-in 0.6s ease-in forwards; }
 
+@keyframes dev-fade-in {
+  0% {
+    background-color: none; }
+  100% {
+    background-color: rgba(81, 193, 175, 0.8); } }
 .development-theme .panel {
   background-color: rgba(81, 193, 175, 0.8); }
 .development-theme .dot-nav li a {
   color: rgba(81, 193, 175, 0.8); }
 .development-theme .last-name {
   color: rgba(81, 193, 175, 0.8); }
+.development-theme .previous {
+  background-color: rgba(89, 60, 132, 0.8); }
+.development-theme .next {
+  background-color: rgba(36, 123, 160, 0.8); }
+.development-theme.full.loaded header {
+  animation: dev-fade-in 0.6s ease-in forwards; }
 
 .background-1 .stroke {
   stroke-dasharray: 3345;

@@ -21,13 +21,13 @@
       <h3 class='secondary-header'><%= panel.secondaryHeader %></h3>
       <p class='page-description'><%= panel.pageDescription %></p>
     <% } %>
+    <div class='page-indicator'>
+      <p class='label'>
+        Scroll
+      </p>
+      <div class='icon'>
+      </div>
     </div>
-  </div>
-  <div class='page-indicator'>
-    <p class='label'>
-      Scroll
-    </p>
-    <div class='icon'>
     </div>
   </div>
 </script>
@@ -35,17 +35,21 @@
 <script id="page-template" type="x-template">
   <div class='page-wrapper'>
     <% for (var i = 0; i < page.sections.length; ++i) { %>
-      <% if (page.sections[i].sectionHeader) { %>
-        <div class='section-header'><%= page.sections[i].sectionHeader %></div>
-      <% } %>
-      <div class='section-content'><%= page.sections[i].sectionContent %></div>
+      <div class='section'>
+        <% if (page.sections[i].sectionHeader) { %>
+          <h4 class='section-header'><%= page.sections[i].sectionHeader %></h4>
+        <% } %>
+        <p class='section-content'><%= page.sections[i].sectionContent %></p>
+      </div>
     <% } %>
   </div>
-  <div class='portfolio-wrapper'>
+  </script>
+
+  <script id="tile-template" type="x-template">
     <div class='previous'>
       <div class='content-wrapper'>
-        <h1 class='primary-header'></h1>
-        <h2 class='secondary-header'></h2>
+        <h2 class='primary-header'><%= tile.previous.primaryHeader %></h2>
+        <h3 class='secondary-header'><%= tile.previous.secondaryHeader %></h3>
         <p class='page-description'>
         Read More
         </p>
@@ -53,12 +57,11 @@
     </div>
     <div class='next'>
       <div class='content-wrapper'>
-        <h1 class='primary-header'></h1>
-        <h2 class='secondary-header'></h2>
+        <h2 class='primary-header'><%= tile.next.primaryHeader %></h2>
+        <h3 class='secondary-header'><%= tile.next.secondaryHeader %></h3>
         <p class='page-description'>
         Read More
         </p>
       </div>
     </div>
-  </div>
   </script>

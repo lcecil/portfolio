@@ -22,40 +22,11 @@
   }
 }
 
-@keyframes color-fade-in {
-    0% {
-      background-color: none;
-    }
-    100% {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-}
-
 .full {
 
   .panel {
     width: 100vw;
     position: relative;
-
-    &.fade-out {
-
-      .content-wrapper .text-wrapper {
-        animation: text-fade-out $transition-duration ease-out forwards;
-      }
-
-    }
-    &.fade-in {
-
-      .content-wrapper .text-wrapper {
-        animation: text-fade-in $transition-duration ease-in forwards;
-        text-align: center;
-      }
-
-    }
-  }
-
-  .page, footer {
-    display: block;
   }
 
   .dot-nav, .background-image, {
@@ -64,18 +35,28 @@
 
   header {
 
-    &.fade-in {
-        animation: color-fade-in $transition-duration ease-in forwards;
+    .last-name{
+      color: $font-color-light;
+      transition: color 0.6s ease-in-out 0.6s;
+    }
+  }
+
+  &.loading {
+
+    .content-wrapper .text-wrapper {
+      animation: text-fade-out $transition-duration ease-out forwards;
     }
 
-    .first-name, {
-      color: $panel-1;
-      transition: color 0.6s ease-in-out;
+  }
+  &.loaded {
+
+    .site-wrap {
+      height: auto;
     }
 
-    .menu-icon .line {
-      stroke: $panel-1;
-      transition: stroke 0.6s ease-in-out;
+    .content-wrapper .text-wrapper {
+      animation: text-fade-in $transition-duration ease-in forwards;
+      text-align: center;
     }
   }
 }

@@ -8,6 +8,7 @@
       this.halfPanelTemplate = _.template($('#half-panel-template').html());
       this.fullPanelTemplate = _.template($('#full-panel-template').html());
       this.pageTemplate = _.template($('#page-template').html());
+      this.tileTemplate = _.template($('#tile-template').html());
       this.templateData = data;
     },
     getPanelContent: function (route) {
@@ -21,6 +22,10 @@
     getPageContent: function (route) {
       var routeData = this.templateData[route];
       return this.pageTemplate(routeData);
+    },
+    getTileContent: function (route) {
+      var routeData = this.templateData[route];
+      return this.tileTemplate(routeData);
     }
   };
 

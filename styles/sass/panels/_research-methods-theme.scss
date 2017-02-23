@@ -1,0 +1,39 @@
+@keyframes research-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $panel-3;
+    }
+}
+
+.research-methods-theme {
+
+  .panel {
+    background-color: $panel-3;
+  }
+
+  .dot-nav li a {
+    color: $panel-3;
+  }
+
+  .last-name {
+    color: $panel-3;
+  }
+
+  .previous {
+    background-color: $panel-2;
+  }
+
+  .next {
+    background-color: $panel-4;
+  }
+
+  //Animations for full page
+  &.full.loaded {
+
+    header {
+        animation: research-fade-in $transition-duration ease-in forwards;
+    }
+  }
+}

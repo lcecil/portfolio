@@ -1,0 +1,39 @@
+@keyframes home-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $panel-1;
+    }
+}
+
+.home-theme{
+
+  .panel {
+    background-color: $panel-1;
+  }
+
+  .dot-nav li a {
+    color: $panel-1;
+  }
+
+  .last-name {
+    color: $panel-1;
+  }
+
+  .previous {
+    background-color: $panel-6;
+  }
+
+  .next {
+    background-color: $panel-2;
+  }
+
+  //Animations for full page
+  &.full.loaded {
+
+    header {
+      animation: home-fade-in $transition-duration ease-in forwards;
+    }
+  }
+}

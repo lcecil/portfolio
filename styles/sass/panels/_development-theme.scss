@@ -1,0 +1,39 @@
+@keyframes dev-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $panel-6;
+    }
+}
+
+.development-theme {
+
+  .panel {
+    background-color: $panel-6;
+  }
+
+  .dot-nav li a {
+    color: $panel-6;
+  }
+
+  .last-name {
+    color: $panel-6;
+  }
+
+  .previous {
+    background-color: $panel-5;
+  }
+
+  .next {
+    background-color: $panel-1;
+  }
+
+  //Animations for full page
+  &.full.loaded {
+
+    header {
+        animation: dev-fade-in $transition-duration ease-in forwards;
+    }
+  }
+}

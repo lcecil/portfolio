@@ -3,6 +3,8 @@
 
   var navigationItems = $('.dot-nav a');
   var backgroundPanels = $('.background-image');
+  var halfPageLink = $('.toggle-back');
+  var menuLink = $('.toggle-nav');
 
   $(function() {
     var getTemplates = $.get('views/template.html').then( function (html) {
@@ -19,8 +21,8 @@
         renderPanel('/home');
     });
 
-    // Menu overlay
-    $('.toggle-nav').on('click', function(event) {
+    // Opens menu overlay on click
+    menuLink.on('click', function(event) {
         event.preventDefault();
         $('.nav-wrap').toggleClass('show');
         $('header').toggleClass('show-menu');
@@ -43,35 +45,32 @@
       panelContainer.empty().html(html);
       updateNavigation(route);
 
+
       // Opens full page on click of "Read More"
       $('.page-link').on('click', function(event) {
         event.preventDefault();
         var route = $(this).attr('href');
 
-        $('body').addClass('full');
-        $('.panel').addClass('fade-out');
+        $('body').addClass('full loading');
 
           setTimeout(function () {
             renderPanel(route);
             renderPage(route);
-            $('.panel').removeClass('fade-out');
-            $('.panel, header').addClass('fade-in');
+            renderTile(route);
+            $('body').removeClass('loading').addClass('loaded');
             backgroundPanels.removeClass('show');
           }, 1000);
       });
 
-      //Hides full page on click of Header arrow-left
-      $('.toggle-back').on('click', function(event) {
+      // Returns to half page on click of Header arrow-left
+      halfPageLink.on('click', function(event) {
           event.preventDefault();
           var route = '/information-architecture';
 
-          $('.panel').addClass('fade-out');
-          $('body').removeClass('full');
+          $('body').removeClass('full loaded').addClass('loading');
 
             setTimeout(function () {
               renderPanel(route);
-              $('.panel').removeClass('fade-out');
-              $('.panel, header').addClass('fade-in');
               backgroundPanels.addClass('show');
             }, 1000);
 
@@ -83,6 +82,13 @@
       var pageContainer = $('.page');
 
       pageContainer.empty().html(html);
+  }
+
+  function renderTile(route) {
+      var html = Router.getTileContent(route);
+      var tileContainer = $('.tile-nav');
+
+      tileContainer.empty().html(html);
   }
 
   function updateNavigation(route) {

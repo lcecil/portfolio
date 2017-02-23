@@ -28,6 +28,16 @@
           "sectionContent": "In both cases, you can be sure I’m looking for inspiration from the world around me."
         }
       ]
+    },
+    "tile": {
+      "previous": {
+        "primaryHeader": "Front-End",
+        "secondaryHeader": "Development"
+      },
+      "next": {
+        "primaryHeader": "Information",
+        "secondaryHeader": "Architecture"
+      }
     }
   },
 
@@ -61,6 +71,16 @@
           "sectionContent": ""
         }
       ]
+    },
+    "tile": {
+      "previous": {
+        "primaryHeader": "About",
+        "secondaryHeader": "Laura Cecil"
+      },
+      "next": {
+        "primaryHeader": "Research",
+        "secondaryHeader": "Methods"
+      }
     }
   },
 
@@ -101,6 +121,16 @@
           "sectionContent": "If the opportunity to have face-to-face time with an end user is available, it can be the most valuable time spent on a project. As a designer, the desire to empathize with my users can only go so far without observing their daily tasks or hearing stories of their struggles with a product. The art of asking questions is a skill I strive to perfect and often helps me answer the “why” when looking at quantitative data or metrics."
         }
       ]
+    },
+    "tile": {
+      "previous": {
+        "primaryHeader": "Information",
+        "secondaryHeader": "Architecture"
+      },
+      "next": {
+        "primaryHeader": "Visual",
+        "secondaryHeader": "Designs"
+      }
     }
   },
 
@@ -134,6 +164,16 @@
           "sectionContent": ""
         }
       ]
+    },
+    "tile": {
+      "previous": {
+        "primaryHeader": "Research",
+        "secondaryHeader": "Methods"
+      },
+      "next": {
+        "primaryHeader": "Project",
+        "secondaryHeader": "Management"
+      }
     }
   },
 
@@ -168,6 +208,16 @@
           "sectionContent": ""
         }
       ]
+    },
+    "tile": {
+      "previous": {
+        "primaryHeader": "Visual",
+        "secondaryHeader": "Designs"
+      },
+      "next": {
+        "primaryHeader": "Front-End",
+        "secondaryHeader": "Development"
+      }
     }
   },
 
@@ -201,6 +251,16 @@
           "sectionContent": ""
         }
       ]
+    },
+    "tile": {
+      "previous": {
+        "primaryHeader": "Project",
+        "secondaryHeader": "Management"
+      },
+      "next": {
+        "primaryHeader": "About",
+        "secondaryHeader": "Laura Cecil"
+      }
     }
   }
 }

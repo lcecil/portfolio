@@ -1,0 +1,39 @@
+@keyframes info-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $panel-2;
+    }
+}
+
+.information-architecture-theme {
+
+  .panel {
+    background-color: $panel-2;
+  }
+
+  .dot-nav li a {
+    color: $panel-2;
+  }
+
+  .last-name {
+    color: $panel-2;
+  }
+
+  .previous {
+    background-color: $panel-1;
+  }
+
+  .next {
+    background-color: $panel-3;
+  }
+
+  //Animations for full page
+  &.full.loaded {
+
+    header {
+        animation: info-fade-in $transition-duration ease-in forwards;
+      }
+  }
+}

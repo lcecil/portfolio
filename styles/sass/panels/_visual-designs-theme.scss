@@ -1,0 +1,39 @@
+@keyframes visual-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $panel-4;
+    }
+}
+
+.visual-designs-theme {
+
+  .panel {
+    background-color: $panel-4;
+  }
+
+  .dot-nav li a {
+    color: $panel-4;
+  }
+
+  .last-name {
+    color: $panel-4;
+  }
+
+  .previous {
+    background-color: $panel-3;
+  }
+
+  .next {
+    background-color: $panel-5;
+  }
+
+  //Animations for full page
+  &.full.loaded {
+
+    header {
+        animation: visual-fade-in $transition-duration ease-in forwards;
+    }
+  }
+}
