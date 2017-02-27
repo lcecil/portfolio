@@ -3,6 +3,10 @@
 
   var Router = {
     template: null,
+    prev: null,
+    next: null,
+    keys: null,
+    currentRoute: null,
     templateData: {},
     init: function (data) {
       this.halfPanelTemplate = _.template($('#half-panel-template').html());
@@ -10,10 +14,54 @@
       this.pageTemplate = _.template($('#page-template').html());
       this.tileTemplate = _.template($('#tile-template').html());
       this.templateData = data;
+      this.keys = Object.keys(this.templateData);
+      this.currentRoute = '/home';
+    },
+    render: function (route) {
+      if (route === this.currentRoute) {
+        return;
+      }
+
+      //var isFullPage = this.currentRoute.indexOf('details');
+      //var isSameBaseRoute = this.getBaseRoute(route) === this.getBaseRoute(this.currentRoute);
+
+      // totally the same -- return, do nothing
+      // same base, full -> half
+      // same base, half -> full
+      // totally different, fully re-render
+
+      if (this.currentRoute.indexOf('details')) {
+        //
+      } else {
+        //
+      }
     },
     getBaseRoute: function (route) {
       var route = route.match(/\/[a-z-]+/ig)[0];
       return route ? route : '/home';
+    },
+    getPrevious: function (route) {
+      var baseRoute = this.getBaseRoute(route);
+      var i = this.keys.indexOf(baseRoute);
+
+      if (i === 0) {
+        this.prev = this.templateData[this.keys[this.keys.length - 1]];
+      } else {
+        this.prev = this.templateData[this.keys[i-1]];
+      }
+      return this.prev;
+    },
+    getNext: function (route) {
+      var baseRoute = this.getBaseRoute(route);
+      var i = this.keys.indexOf(baseRoute);
+
+      if (i === (this.keys.length - 1)) {
+        this.next = this.templateData[this.keys[0]];
+      } else {
+        this.next = this.templateData[this.keys[i+1]];
+      }
+
+      return this.next;
     },
     getPanelContent: function (route) {
       var baseRoute = this.getBaseRoute(route);
@@ -31,23 +79,10 @@
       return this.pageTemplate(routeData);
     },
     getTileContent: function (route) {
-      var prev;
-      var next;
-      var baseRoute = this.getBaseRoute(route);
-      var keys = Object.keys(this.templateData);
-      var i = keys.indexOf(baseRoute);
-      if (i === 0) {
-        prev = this.templateData[keys[keys.length - 1]].panel;
-        next = this.templateData[keys[i+1]].panel;
-      } else if (i === (keys.length - 1)) {
-        prev = this.templateData[keys[i-1]].panel;
-        next = this.templateData[keys[0]].panel;
-      } else {
-        prev = this.templateData[keys[i-1]].panel;
-        next = this.templateData[keys[i+1]].panel;
-      }
-      var routeData = {prev, next};
-      console.log(routeData);
+      var prevData = this.getPrevious(route).panel;
+      var nextData = this.getNext(route).panel;
+
+      var routeData = {prevData:prevData, nextData:nextData};
       return this.tileTemplate(routeData);
     }
   };

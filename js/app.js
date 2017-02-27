@@ -1,11 +1,46 @@
 (function () {
   'use-strict';
 
-  var navigationItems = $('.dot-nav a');
-  var backgroundPanels = $('.background-image');
-  var backArrow = $('.toggle-back');
-  var menuIcon = $('.toggle-nav');
-  var menuLink = $('.menu-link');
+  var BaseView = {
+    template: 'WARNING - no template provided',
+    init: function () {
+      throw new Error('init not implemented');
+    },
+    render: function () {
+      throw new Error('render not implemented');
+    }
+  };
+
+
+  var AppView = _.extend(BaseView, {
+    dotNavigation = $('.dot-nav a'),
+    backgroundPanels = $('.background-image'),
+    backArrow = $('.toggle-back'),
+    menuIcon = $('.toggle-nav'),
+    menuItem = $('.menu-link'),
+    halfPanelView: null,
+
+    template: '',
+    init: function () {
+      //this.template: $()
+      this.halfPanelView = HalfPanelView;
+      this.fullPanelView = FullPanelView;
+      this.pageView = PageView;
+    },
+    render: function (route) {
+      var data = Router.getRouteData(route); // get ALL of the data
+      // ... some logic, which says only render half this time
+      if (route.indexOf('details') >= 0) {
+        this.fullPanelView.render(data);
+        this.pageView.render(data);
+      } else {
+        this.halfPanelView.render(data);
+      }
+
+    },
+  });
+
+
 
   $(function() {
     var getTemplates = $.get('views/template.html').then( function (html) {
@@ -19,7 +54,7 @@
     $.when(getTemplates, getData).done( function(html, data) {
         $('body').append(html);
         Router.init(data);
-        renderPanel('/home');
+        renderPanel(Router.currentRoute);
     });
 
     // Opens menu overlay on click
@@ -30,12 +65,34 @@
     });
 
     // Navigation on click
-    navigationItems.on('click', function(event) {
+    dotNavigation.on('click', function(event) {
       event.preventDefault();
       var route = $(this).attr('href');
       renderPanel(route);
       updateTheme(route);
     });
+
+
+
+
+
+
+
+
+  //   $(window).on('wheel', _.debounce(function(event) {
+  //     var route = $('.active-dot').attr('href');
+  //     console.log('scrolled');
+  //     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+  //       var route = $('.dot-nav .active-dot').parent().prev().children().attr('href');
+  //       renderPanel(route);
+  //       updateTheme(route);
+  //    }
+  //     else {
+  //       var route = $('.dot-nav .active-dot').parent().next().children().attr('href');
+  //       renderPanel(route);
+  //       updateTheme(route);
+  //    }
+  //  }, 50));
 
   });
 
@@ -49,6 +106,7 @@
       // Opens full page on click of "Read More"
       $('.page-link').on('click', function(event) {
         event.preventDefault();
+        $(window).off('wheel', _.debounce());
         var route = $(this).attr('href');
 
         $('body').removeClass('half half-loading').addClass('full full-loading');
@@ -79,7 +137,7 @@
       });
 
       // Opens full page on click of menu items and hide menu
-      menuLink.on('click', function (event) {
+      menuItem.on('click', function (event) {
         event.preventDefault();
         var route = $(this).children().attr('href');
 
@@ -122,7 +180,7 @@
   function updateNavigation(route) {
     route = route || '/home';
     var root = route.match(/\/[a-z-]+/ig)[0];
-    navigationItems.removeClass('active-dot');
+    dotNavigation.removeClass('active-dot');
     $('[href="' + root +'"]').addClass('active-dot');
     $('.toggle-back').attr('href', root);
   }
