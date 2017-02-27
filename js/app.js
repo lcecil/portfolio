@@ -3,8 +3,9 @@
 
   var navigationItems = $('.dot-nav a');
   var backgroundPanels = $('.background-image');
-  var halfPageLink = $('.toggle-back');
-  var menuLink = $('.toggle-nav');
+  var backArrow = $('.toggle-back');
+  var menuIcon = $('.toggle-nav');
+  var menuLink = $('.menu-link');
 
   $(function() {
     var getTemplates = $.get('views/template.html').then( function (html) {
@@ -22,7 +23,7 @@
     });
 
     // Opens menu overlay on click
-    menuLink.on('click', function(event) {
+    menuIcon.on('click', function(event) {
         event.preventDefault();
         $('.nav-wrap').toggleClass('show');
         $('header').toggleClass('show-menu');
@@ -45,35 +46,48 @@
       panelContainer.empty().html(html);
       updateNavigation(route);
 
-
       // Opens full page on click of "Read More"
       $('.page-link').on('click', function(event) {
         event.preventDefault();
         var route = $(this).attr('href');
 
-        $('body').addClass('full loading');
+        $('body').removeClass('half half-loading').addClass('full full-loading');
 
           setTimeout(function () {
             renderPanel(route);
             renderPage(route);
             renderTile(route);
-            $('body').removeClass('loading').addClass('loaded');
+            $('body').removeClass('full-loading').addClass('full-loaded');
             backgroundPanels.removeClass('show');
-          }, 1000);
+          }, 800);
       });
 
       // Returns to half page on click of Header arrow-left
-      halfPageLink.on('click', function(event) {
+      backArrow.on('click', function(event) {
           event.preventDefault();
-          var route = '/information-architecture';
+          var route = $(this).attr('href');
 
-          $('body').removeClass('full loaded').addClass('loading');
+          $('.page').empty().html();
+          backgroundPanels.addClass('show');
+          $('body').removeClass('full full-loaded').addClass('half half-loading');
 
             setTimeout(function () {
+              $('body').removeClass('half-loading').addClass('half-loaded');
               renderPanel(route);
-              backgroundPanels.addClass('show');
-            }, 1000);
+            }, 800);
 
+      });
+
+      // Opens full page on click of menu items and hide menu
+      menuLink.on('click', function (event) {
+        event.preventDefault();
+        var route = $(this).children().attr('href');
+
+        $('.page').empty().html();
+        renderPanel(route);
+        updateTheme(route);
+        $('.nav-wrap').removeClass('show');
+        $('header').removeClass('show-menu');
       });
   }
 
@@ -89,12 +103,28 @@
       var tileContainer = $('.tile-nav');
 
       tileContainer.empty().html(html);
+
+      // Opens previous or next page/details
+      $('.tile-nav a').on('click', function(event) {
+        event.preventDefault();
+        var route = $(this).attr('href');
+
+        renderPanel(route);
+        renderPage(route);
+        renderTile(route);
+        updateTheme(route);
+
+        $('body').addClass('full full-loaded');
+        backgroundPanels.removeClass('show');
+      });
   }
 
   function updateNavigation(route) {
     route = route || '/home';
+    var root = route.match(/\/[a-z-]+/ig)[0];
     navigationItems.removeClass('active-dot');
-    $('[href="' + route +'"]').addClass('active-dot');
+    $('[href="' + root +'"]').addClass('active-dot');
+    $('.toggle-back').attr('href', root);
   }
 
   function updateTheme(route) {

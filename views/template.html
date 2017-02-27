@@ -46,22 +46,22 @@
   </script>
 
   <script id="tile-template" type="x-template">
-    <div class='previous'>
+    <a href='<%= prev.pageLink %>' class='previous'>
       <div class='content-wrapper'>
-        <h2 class='primary-header'><%= tile.previous.primaryHeader %></h2>
-        <h3 class='secondary-header'><%= tile.previous.secondaryHeader %></h3>
+        <h2 class='primary-header'><%= prev.primaryHeader %></h2>
+        <h3 class='secondary-header'><%= prev.secondaryHeader %></h3>
         <p class='page-description'>
         Read More
         </p>
       </div>
-    </div>
-    <div class='next'>
+    </a>
+    <a href='<%= next.pageLink %>' class='next'>
       <div class='content-wrapper'>
-        <h2 class='primary-header'><%= tile.next.primaryHeader %></h2>
-        <h3 class='secondary-header'><%= tile.next.secondaryHeader %></h3>
+        <h2 class='primary-header'><%= next.primaryHeader %></h2>
+        <h3 class='secondary-header'><%= next.secondaryHeader %></h3>
         <p class='page-description'>
         Read More
         </p>
       </div>
-    </div>
+    </a>
   </script>

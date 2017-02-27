@@ -109,13 +109,32 @@ button {
 .full header .last-name {
   color: #fff;
   transition: color 0.6s ease-in-out 0.6s; }
-.full.loading .content-wrapper .text-wrapper {
-  animation: text-fade-out 0.6s ease-out forwards; }
-.full.loaded .site-wrap {
+.full.full-loading .content-wrapper .text-wrapper {
+  animation: text-fade-out 0.3s ease-out forwards; }
+.full.full-loaded .site-wrap {
   height: auto; }
-.full.loaded .content-wrapper .text-wrapper {
-  animation: text-fade-in 0.6s ease-in forwards;
-  text-align: center; }
+.full.full-loaded .content-wrapper .text-wrapper {
+  animation: text-fade-in 0.3s ease-in forwards;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto; }
+.full.full-loaded .arrow-left {
+  display: block;
+  opacity: 1; }
+
+.half .panel {
+  width: 50vw;
+  position: absolute; }
+.half.half-loading .content-wrapper .text-wrapper {
+  animation: text-fade-out 0.3s ease-out forwards;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto; }
+.half.half-loaded .site-wrap {
+  height: 100vh; }
+.half.half-loaded .content-wrapper .text-wrapper {
+  animation: text-fade-in 0.3s ease-in forwards;
+  margin: 0 10%; }
 
 .nav-wrap {
   overflow: hidden;
@@ -133,7 +152,8 @@ button {
     height: 100vh; }
     .nav-wrap nav .menu-wrap {
       opacity: 0;
-      padding: 20vh 5vw 0; }
+      padding: 20vh 5vw 0;
+      text-align: center; }
     .nav-wrap nav .sub-menu-wrap {
       opacity: 0;
       width: 75%;
@@ -143,8 +163,8 @@ button {
       font-family: "Poppins", sans-serif;
       padding-bottom: 20px; }
     .nav-wrap nav .menu-link {
+      display: block;
       text-transform: uppercase;
-      text-align: center;
       font-size: 1.777em; }
     .nav-wrap nav .sub-link {
       display: inline-block;
@@ -170,10 +190,15 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%); }
+    header .header-icon:hover {
+      cursor: pointer; }
     header .header-icon.menu {
       left: 20px; }
     header .header-icon.arrow-left {
-      left: 80px; }
+      display: none;
+      left: 80px;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out; }
     header .header-icon .line {
       stroke: #fff;
       stroke-width: 1px;
@@ -191,9 +216,6 @@ header {
   header.show-menu .last-name {
     color: #fff;
     transition: color 0.3s ease-in-out; }
-  header.show-menu .line {
-    stroke: #fff;
-    transition: stroke 0.6s ease-in-out; }
 
 .dot-nav {
   position: fixed;
@@ -222,7 +244,7 @@ header {
   left: 0;
   width: 50vw;
   height: 100vh;
-  transition: width 0.6s ease-in-out 0.6s, background-color 0.6s ease-in-out; }
+  transition: width 0.6s ease-in-out 0.3s, background-color 0.6s ease-in-out; }
   .panel .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -253,8 +275,12 @@ header {
   width: 100vw;
   background-color: #fff; }
   .page .page-wrapper {
-    max-width: 900px;
+    max-width: 60%;
     margin: 10vh auto; }
+    .page .page-wrapper .section {
+      padding-bottom: 5vh; }
+      .page .page-wrapper .section:last-child {
+        padding-bottom: 0; }
     .page .page-wrapper .section-header {
       text-transform: uppercase;
       font-weight: 300; }
@@ -276,7 +302,11 @@ header {
     text-align: left; }
   .tile-nav .next, .tile-nav .previous {
     width: 50%;
-    float: left; }
+    float: left;
+    display: block;
+    height: auto; }
+    .tile-nav .next:hover, .tile-nav .previous:hover {
+      cursor: pointer; }
     .tile-nav .next .content-wrapper, .tile-nav .previous .content-wrapper {
       color: #fff;
       max-width: 70%;
@@ -348,7 +378,7 @@ footer .social {
   background-color: rgba(81, 193, 175, 0.8); }
 .home-theme .next {
   background-color: rgba(245, 95, 92, 0.8); }
-.home-theme.full.loaded header {
+.home-theme.full.full-loaded header {
   animation: home-fade-in 0.6s ease-in forwards; }
 
 @keyframes info-fade-in {
@@ -366,7 +396,7 @@ footer .social {
   background-color: rgba(36, 123, 160, 0.8); }
 .information-architecture-theme .next {
   background-color: rgba(39, 48, 67, 0.8); }
-.information-architecture-theme.full.loaded header {
+.information-architecture-theme.full.full-loaded header {
   animation: info-fade-in 0.6s ease-in forwards; }
 
 @keyframes research-fade-in {
@@ -384,7 +414,7 @@ footer .social {
   background-color: rgba(245, 95, 92, 0.8); }
 .research-methods-theme .next {
   background-color: rgba(237, 174, 73, 0.8); }
-.research-methods-theme.full.loaded header {
+.research-methods-theme.full.full-loaded header {
   animation: research-fade-in 0.6s ease-in forwards; }
 
 @keyframes visual-fade-in {
@@ -402,7 +432,7 @@ footer .social {
   background-color: rgba(39, 48, 67, 0.8); }
 .visual-designs-theme .next {
   background-color: rgba(89, 60, 132, 0.8); }
-.visual-designs-theme.full.loaded header {
+.visual-designs-theme.full.full-loaded header {
   animation: visual-fade-in 0.6s ease-in forwards; }
 
 @keyframes project-fade-in {
@@ -420,7 +450,7 @@ footer .social {
   background-color: rgba(237, 174, 73, 0.8); }
 .project-management-theme .next {
   background-color: rgba(81, 193, 175, 0.8); }
-.project-management-theme.full.loaded header {
+.project-management-theme.full.full-loaded header {
   animation: project-fade-in 0.6s ease-in forwards; }
 
 @keyframes dev-fade-in {
@@ -438,7 +468,7 @@ footer .social {
   background-color: rgba(89, 60, 132, 0.8); }
 .development-theme .next {
   background-color: rgba(36, 123, 160, 0.8); }
-.development-theme.full.loaded header {
+.development-theme.full.full-loaded header {
   animation: dev-fade-in 0.6s ease-in forwards; }
 
 .background-1 .stroke {

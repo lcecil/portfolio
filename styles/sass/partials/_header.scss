@@ -14,12 +14,19 @@ header {
     top: 50%;
     transform: translateY(-50%);
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &.menu {
       left: 20px;
     }
 
     &.arrow-left {
+      display: none;
       left: 80px;
+      opacity: 0;
+      transition: opacity $transition-duration ease-in-out;
     }
 
     .line {
@@ -51,13 +58,6 @@ header {
       color: $font-color-light;
       transition: color 0.3s ease-in-out;
     }
-
-
-    .line {
-      stroke: $font-color-light;
-      transition: stroke 0.6s ease-in-out;
-    }
-
   }
 
 }

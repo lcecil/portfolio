@@ -1,6 +1,6 @@
 .tile-nav {
   overflow: hidden;
-  
+
   .next {
     text-align: right;
   }
@@ -12,7 +12,12 @@
   .next, .previous {
     width: 50%;
     float: left;
+    display: block;
+    height: auto;
 
+    &:hover {
+      cursor: pointer;
+    }
 
     .content-wrapper {
       color: $font-color-light;

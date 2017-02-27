@@ -3,8 +3,16 @@
     background-color: #fff;
 
     .page-wrapper {
-      max-width: 900px;
+      max-width: 60%;
       margin: 10vh auto;
+
+      .section {
+          padding-bottom: 5vh;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+      }
 
       .section-header {
         text-transform: uppercase;

@@ -30,7 +30,7 @@
   }
 
   //Animations for full page
-  &.full.loaded {
+  &.full.full-loaded {
 
     header {
         animation: dev-fade-in $transition-duration ease-in forwards;
