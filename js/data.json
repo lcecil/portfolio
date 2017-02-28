@@ -4,7 +4,7 @@
       "primaryHeader": "UX Design",
       "secondaryHeader": "and Research",
       "pageDescription": "Techniques methodologies and designs for a wide range of projects and problems.",
-      "pageLink": "/home/details"
+      "pageLink": "#/home/details"
     },
     "details": {
       "panel": {
@@ -45,7 +45,7 @@
       "primaryHeader": "Information",
       "secondaryHeader": "Architecture",
       "pageDescription": "Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century.",
-      "pageLink": "/information-architecture/details"
+      "pageLink": "#/information-architecture/details"
     },
     "details": {
       "panel": {
@@ -87,7 +87,7 @@
       "primaryHeader": "Research",
       "secondaryHeader": "Methods",
       "pageDescription": "From A/B Testing to user interviews and everything in between. Choosing the right method for the job is the name of the game here.",
-      "pageLink": "/research-methods/details"
+      "pageLink": "#/research-methods/details"
     },
     "details": {
       "panel": {
@@ -137,7 +137,7 @@
       "primaryHeader": "Visual",
       "secondaryHeader": "Designs",
       "pageDescription": "Communicating a design is as important as creating it. Using a quick sketch or pixel perfect visual design depends on what's needed to get the job done.",
-      "pageLink": "/visual-designs/details"
+      "pageLink": "#/visual-designs/details"
     },
     "details": {
       "panel": {
@@ -179,7 +179,7 @@
       "primaryHeader": "Project",
       "secondaryHeader": "Management",
       "pageDescription": "Agile, scrum, sprints, waterfall, kanban: whatever the buzzword of the day is, chances are I've probably tried it.",
-      "pageLink": "/project-management/details"
+      "pageLink": "#/project-management/details"
     },
     "details": {
       "panel": {
@@ -221,7 +221,7 @@
       "primaryHeader": "Front-End",
       "secondaryHeader": "Development",
       "pageDescription": "One of the my many hats, it ranges in size from beanie to ten gallon. It's more about the knowledge that I gain from wearing it that makes me a better designer.",
-      "pageLink": "/development/details"
+      "pageLink": "#/development/details"
     },
     "details": {
       "panel": {

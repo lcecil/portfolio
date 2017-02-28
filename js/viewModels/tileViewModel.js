@@ -2,10 +2,9 @@
 
   var TileViewModel = ViewModel.extend({
 
-    init: function (el) {
-      var templateHtml = $('.tile-template');
+    init: function (el, html) {
       this.el = el;
-      this.template = _.template(templateHtml);
+      this.template = _.template(html);
     },
 
     render: function (state) {
