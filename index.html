@@ -20,7 +20,7 @@
         <path class="line" d="M.5,6.5h10"/>
       </svg>
     </a>
-    <a class="toggle-back" href=''>
+    <a class="toggle-back" href='#/'> <!-- TODO: back? -->
       <svg class="header-icon arrow-left" viewBox="0 0 11 7">
         <path class="line" d="M3.5,6.6L0.4,3.5"/>
         <path class="line" d="M10.4,3.5h-10"/>
@@ -28,7 +28,7 @@
       </svg>
     </a>
     <h2>
-      <a href='/home'>
+      <a href='#/home'>
         <span class="first-name">Laura</span>
         <span class="last-name"> Cecil</span>
       </a>
@@ -37,15 +37,15 @@
   <div class='nav-wrap'>
     <nav>
       <ul class="menu-wrap">
-        <li class="menu-link"><a href="/home">Home</a></li>
-        <li class="menu-link"><a href="/information-architecture">Information Architecture</a></li>
-        <li class="menu-link"><a href="/research-methods">Research Methods</a></li>
-        <li class="menu-link"><a href="/visual-designs">Visual Designs</a></li>
-        <li class="menu-link"><a href="/project-management">Project Management</a></li>
-        <li class="menu-link"><a href="/development">Front-End Development</a></li>
+        <li class="menu-link"><a href="#/home">Home</a></li>
+        <li class="menu-link"><a href="#/information-architecture">Information Architecture</a></li>
+        <li class="menu-link"><a href="#/research-methods">Research Methods</a></li>
+        <li class="menu-link"><a href="#/visual-designs">Visual Designs</a></li>
+        <li class="menu-link"><a href="#/project-management">Project Management</a></li>
+        <li class="menu-link"><a href="#/development">Front-End Development</a></li>
       </ul>
       <ul class="sub-menu-wrap">
-        <li class="sub-link"><a href="/home/details">About | </a></li>
+        <li class="sub-link"><a href="#/home/details">About | </a></li>
         <li class="sub-link"><a href="mailto:lececil0827@gmail.com">Contact | </a></li>
         <li class="sub-link"><a href="images/profile.jpg" target="_blank">Resume</a></li>
       </ul>
@@ -55,32 +55,32 @@
       <div class='dot-nav' role='navigation'>
         <ul>
           <li>
-            <a href="/home" class="active-dot">
+            <a href="#/home" class="active-dot">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="/information-architecture">
+            <a href="#/information-architecture">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="/research-methods">
+            <a href="#/research-methods">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="/visual-designs">
+            <a href="#/visual-designs">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="/project-management">
+            <a href="#/project-management">
               <i class="fa fa-circle"></i>
             </a>
           </li>
           <li>
-            <a href="/development">
+            <a href="#/development">
               <i class="fa fa-circle"></i>
             </a>
           </li>
@@ -281,5 +281,10 @@
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/underscore.min.js"></script>
   <script src="js/router.js"></script>
+  <script src="js/viewModels/base.js"></script>
+  <script src="js/viewModels/tileViewModel.js"></script>
+  <script src="js/viewModels/pageViewModel.js"></script>
+  <script src="js/viewModels/panelViewModel.js"></script>
+  <script src="js/viewModels/appViewModel.js"></script>
   <script src="js/app.js"></script>
 </html>
