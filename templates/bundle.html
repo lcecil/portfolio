@@ -4,7 +4,13 @@
       <h1 class='primary-header'><%= panel.primaryHeader %></h1>
       <h2 class='secondary-header'><%= panel.secondaryHeader %></h2>
       <p class='page-description'><%= panel.pageDescription %></p>
-      <a href='<%= panel.pageLink %>' class='page-link'>Read More</a>
+      <a href='<%= panel.pageLink %>' class='page-link'>Read More
+        <svg class="arrow-right" viewBox="0 0 11 7">
+          <path class="line" d="M3.5,6.6L0.4,3.5"/>
+          <path class="line" d="M10.4,3.5h-10"/>
+          <path class="line" d="M3.5,0.4L0.4,3.5"/>
+        </svg>
+      </a>
     </div>
   </div>
 </script>
@@ -21,13 +27,16 @@
       <h3 class='secondary-header'><%= panel.secondaryHeader %></h3>
       <p class='page-description'><%= panel.pageDescription %></p>
     <% } %>
-    <div class='page-indicator'>
-      <p class='label'>
-        Scroll
-      </p>
-      <div class='icon'>
+      <div class='page-indicator'>
+        <p class='label'>
+          Scroll
+        </p>
+        <svg class="arrow-down" viewBox="0 0 11 7">
+          <path class="line" d="M3.5,6.6L0.4,3.5"/>
+          <path class="line" d="M10.4,3.5h-10"/>
+          <path class="line" d="M3.5,0.4L0.4,3.5"/>
+        </svg>
       </div>
-    </div>
     </div>
   </div>
 </script>
@@ -43,22 +52,22 @@
       </div>
     <% } %>
   </div>
-  </script>
+</script>
 
   <script id="tile-template" type="x-template">
-    <a href='<%= prev.pageLink %>' class='previous'>
+    <a href='<%= prevData.pageLink %>' class='previous'>
       <div class='content-wrapper'>
-        <h2 class='primary-header'><%= prev.primaryHeader %></h2>
-        <h3 class='secondary-header'><%= prev.secondaryHeader %></h3>
+        <h2 class='primary-header'><%= prevData.primaryHeader %></h2>
+        <h3 class='secondary-header'><%= prevData.secondaryHeader %></h3>
         <p class='page-description'>
         Read More
         </p>
       </div>
     </a>
-    <a href='<%= next.pageLink %>' class='next'>
+    <a href='<%= nextData.pageLink %>' class='next'>
       <div class='content-wrapper'>
-        <h2 class='primary-header'><%= next.primaryHeader %></h2>
-        <h3 class='secondary-header'><%= next.secondaryHeader %></h3>
+        <h2 class='primary-header'><%= nextData.primaryHeader %></h2>
+        <h3 class='secondary-header'><%= nextData.secondaryHeader %></h3>
         <p class='page-description'>
         Read More
         </p>

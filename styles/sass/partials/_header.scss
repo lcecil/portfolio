@@ -28,12 +28,6 @@ header {
       opacity: 0;
       transition: opacity $transition-duration ease-in-out;
     }
-
-    .line {
-      stroke: $font-color-light;
-      stroke-width: 1px;
-      stroke-linecap: round;
-    }
   }
 
   h2 {
