@@ -33,7 +33,7 @@
 
         setTimeout(function () {
           location.url = route;
-          $('body').removeClass('full-loading').addClass('full-loaded');
+          $('body').removeClass('full-loading').addClass('full full-loaded');
         }, animationDelay);
       });
     },

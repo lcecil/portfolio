@@ -60,7 +60,7 @@
       this.menuItem.on('click', function (event) {
         $('.nav-wrap').removeClass('show');
         $('header').removeClass('show-menu');
-        
+
         // // TODO - remove after a-tags fixed
         // event.preventDefault();
         // var route = $(this).children().attr('href');
@@ -99,7 +99,7 @@
       this.backgroundPanel.removeClass('show');
       $('#' + theme).addClass('show');
     }
-
+    
   });
 
   window.AppViewModel = AppViewModel;

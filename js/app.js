@@ -14,9 +14,9 @@ $(function() {
       });
 
       templates[camelId] = template.innerHTML;
-
-      return templates;
     });
+
+    return templates;
   });
 
   var getData = $.getJSON('js/data.json').then( function (data) {
@@ -28,20 +28,16 @@ $(function() {
       // kick things off, baby
       var app = new AppViewModel($('body'), templates);
   });
-
 });
 
-
 ScrollManager.onScroll(function(direction) {
-  var route = $('.active-dot').attr('href');
+  route = location.hash;
   if (direction > 0) {
-    var route = $('.dot-nav .active-dot').parent().prev().children().attr('href');
-    renderPanel(route);
-    updateTheme(route);
+    var nextRoute = Router.getNextRoute(route);
+    location.hash = nextRoute;
   }
   else {
-    var route = $('.dot-nav .active-dot').parent().next().children().attr('href');
-    renderPanel(route);
-    updateTheme(route);
+    var previousRoute = Router.getPreviousRoute(route);
+    location.hash = previousRoute;
   }
 });
