@@ -1,13 +1,15 @@
 .dot-nav {
   position: fixed;
   top: 50%;
-  right: 20px;
+  right: 10px;
   transform: translateY(-50%);
   text-align: center;
   opacity: 1;
   transition: opacity $transition-duration ease-in-out;
 
   li a {
+    display: block;
+    padding: 10px 15px;
     font-size: 10px;
     opacity: 0.6;
     cursor: pointer;

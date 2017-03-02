@@ -30,16 +30,13 @@
         var animationDelay = 800;
 
         $('body').removeClass('half half-loading').addClass('full full-loading');
+        $('.background-image').removeClass('show');
 
         setTimeout(function () {
-          location.url = route;
+          location.hash = route;
           $('body').removeClass('full-loading').addClass('full full-loaded');
         }, animationDelay);
       });
-    },
-
-    setBackArrowHandlers: function () {
-      //
     }
   });
 

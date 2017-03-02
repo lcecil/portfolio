@@ -31,13 +31,15 @@ $(function() {
 });
 
 ScrollManager.onScroll(function(direction) {
-  route = location.hash;
-  if (direction > 0) {
-    var nextRoute = Router.getNextRoute(route);
-    location.hash = nextRoute;
-  }
-  else {
-    var previousRoute = Router.getPreviousRoute(route);
-    location.hash = previousRoute;
+  if (!Router.getState().isShowingDetails) {
+    route = location.hash;
+    if (direction > 0) {
+      var nextRoute = Router.getNextRoute(route);
+      location.hash = nextRoute;
+    }
+    else {
+      var previousRoute = Router.getPreviousRoute(route);
+      location.hash = previousRoute;
+    }
   }
 });

@@ -51,6 +51,8 @@ $text-duration: $transition-duration * 0.5;
 
   }
   &.full-loaded {
+    
+    overflow: auto;
 
     .site-wrap {
       height: auto;

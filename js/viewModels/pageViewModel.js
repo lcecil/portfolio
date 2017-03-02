@@ -1,7 +1,6 @@
 (function () {
 
   var PageViewModel = ViewModel.extend({
-
     init: function (el, html) {
       this.el = el;
       this.template = _.template(html);
