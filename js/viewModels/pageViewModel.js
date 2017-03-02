@@ -7,7 +7,7 @@
     },
 
     render: function (state) {
-      var templateData = state.templateData.details;
+      var templateData = state.currentTemplateData.details;
       this.el.empty();
       this.el.html(this.template(templateData));
     }

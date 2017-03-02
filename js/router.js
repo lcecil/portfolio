@@ -42,9 +42,15 @@
 
     buildState: function (route) {
       var baseRoute = this.getBaseRoute(route);
+      var previousRoute = this.getPreviousRoute(route);
+      var nextRoute = this.getNextRoute(route);
 
       return new State({
-        templateData: this.data[baseRoute]
+        previousRoute: previousRoute,
+        nextRoute: nextRoute,
+        currentTemplateData: this.data[baseRoute],
+        previousTemplateData: this.data[previousRoute],
+        nextTemplateData: this.data[nextRoute]
       });
     },
 
@@ -63,7 +69,7 @@
       } else {
         previousRoute = this.keys[i-1];
       }
-      return '#' + previousRoute;
+      return previousRoute;
     },
 
     getNextRoute: function (route) {
@@ -77,7 +83,7 @@
         nextRoute = this.keys[i+1];
       }
 
-      return '#' + nextRoute;
+      return nextRoute;
     },
 
     getBaseRoute: function (route) {

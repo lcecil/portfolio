@@ -31,7 +31,8 @@ $(function() {
 });
 
 ScrollManager.onScroll(function(direction) {
-  if (!Router.getState().isShowingDetails) {
+  var state = Router.getState();
+  if (!state.isShowingDetails) {
     route = location.hash;
     if (direction > 0) {
       var nextRoute = Router.getNextRoute(route);

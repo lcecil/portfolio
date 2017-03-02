@@ -12,10 +12,10 @@
 
       if (state.isShowingDetails) {
         template = this.fullPanelTemplate;
-        templateData = state.templateData.details;
+        templateData = state.currentTemplateData.details;
       } else {
         template = this.halfPanelTemplate;
-        templateData = state.templateData;
+        templateData = state.currentTemplateData;
       }
 
       this.el.empty();
