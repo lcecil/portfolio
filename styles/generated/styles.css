@@ -354,7 +354,7 @@ header {
     height: 100vh; }
     .background-image svg .stroke {
       fill: none;
-      stroke: #666;
+      stroke: #bbb;
       animation: offset 3s linear forwards; }
 
 footer .contact, footer .social {
@@ -490,12 +490,12 @@ footer .social {
 .background-1 .stroke {
   stroke-dasharray: 3345;
   stroke-dashoffset: 3345;
-  stroke-width: 2; }
+  stroke-width: 3; }
 
 .background-2 .stroke {
-  stroke-dasharray: 3345;
-  stroke-dashoffset: 3345;
-  stroke-width: 2; }
+  stroke-dasharray: 3600;
+  stroke-dashoffset: 3600;
+  stroke-width: 3; }
 
 .background-3 .stroke {
   stroke-dasharray: 3345;
