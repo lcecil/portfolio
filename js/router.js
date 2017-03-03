@@ -46,6 +46,7 @@
       var nextRoute = this.getNextRoute(route);
 
       return new State({
+        route: route,
         previousRoute: previousRoute,
         nextRoute: nextRoute,
         currentTemplateData: this.data[baseRoute],
@@ -56,7 +57,11 @@
 
     getRoute: function (hash) {
       var route = hash.replace('#', '');
-      return route.length > 0 ? route : '/home';
+      if (route.length === 0 || route === '/') {
+        return '/home';
+      } else {
+        return route;
+      }
     },
 
     getPreviousRoute: function (route) {

@@ -51,7 +51,7 @@ $text-duration: $transition-duration * 0.5;
 
   }
   &.full-loaded {
-    
+
     overflow: auto;
 
     .site-wrap {
@@ -63,6 +63,7 @@ $text-duration: $transition-duration * 0.5;
       text-align: center;
       max-width: 70%;
       margin: 0 auto;
+      visibility: visible;
     }
 
     .arrow-left {
@@ -97,6 +98,7 @@ $text-duration: $transition-duration * 0.5;
       .content-wrapper .text-wrapper {
         animation: text-fade-in $text-duration ease-in forwards;
         margin: 0 10%;
+        visibility: visible;
       }
     }
 

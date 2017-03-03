@@ -17,6 +17,7 @@ $panel-duration: $transition-duration * 0.5;
       text-align: left;
 
       .text-wrapper {
+        visibility: hidden;
         margin: 0 10%;
       }
     }

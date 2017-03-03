@@ -13,6 +13,17 @@
       };
       this.el.empty();
       this.el.html(this.template(templateData));
+
+      this.setTileClickHandler();
+    },
+
+    setTileClickHandler: function () {
+      var scrollDelay = 600;
+      this.el.on('click', function () {
+        _.delay(function () {
+          window.scrollTo(0, 0);
+        }, scrollDelay)
+      })
     }
   });
 

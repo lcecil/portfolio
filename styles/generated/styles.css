@@ -125,7 +125,8 @@ button {
     animation: text-fade-in 0.3s ease-in forwards;
     text-align: center;
     max-width: 70%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    visibility: visible; }
   .full.full-loaded .arrow-left {
     display: block;
     opacity: 1; }
@@ -142,7 +143,8 @@ button {
   height: 100vh; }
 .half.half-loaded .content-wrapper .text-wrapper {
   animation: text-fade-in 0.3s ease-in forwards;
-  margin: 0 10%; }
+  margin: 0 10%;
+  visibility: visible; }
 
 .nav-wrap {
   overflow: hidden;
@@ -259,6 +261,7 @@ header {
     color: #fff;
     text-align: left; }
     .panel .content-wrapper .text-wrapper {
+      visibility: hidden;
       margin: 0 10%; }
   .panel .primary-header {
     font-family: "Playfair Display", serif;
