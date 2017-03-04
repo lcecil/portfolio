@@ -17,8 +17,6 @@
       this.tile = new TileViewModel($('.tile-nav'), templates.tile);
       this.setMenuIconHandlers();
       this.setMenuItemHandlers();
-      this.setDotNavigationHandlers();
-      this.setBackArrowHandlers();
       this.setInitialBodyClasses(Router.getState());
 
       this.render(Router.getState());
@@ -41,7 +39,6 @@
         this.updateNavigation(state.route);
       }
 
-      //this.panel.render(state);
       this.updateTheme(state.route, state.isShowingDetails);
     },
 
@@ -54,39 +51,8 @@
 
     setMenuItemHandlers: function () {
       this.menuItem.on('click', function (event) {
-        // var route = $(this).children().attr('href');
-        // var animationDelay = 800;
         $('.nav-wrap').removeClass('show');
         $('header').removeClass('show-menu');
-
-        // $('body').removeClass('half half-loading').addClass('full full-loading');
-        //
-        // setTimeout(function () {
-        //   location.hash = route;
-        //   $('body').removeClass('full-loading').addClass('full full-loaded');
-        // }, animationDelay);
-      });
-    },
-
-    setDotNavigationHandlers: function () {
-      this.dotNavigation.on('click', function(event) {
-        // var route = $(this).attr('href');
-        // location.hash = route;
-      });
-    },
-
-    setBackArrowHandlers: function () {
-      this.backArrow.on('click', function() {
-        // var animationDelay = 800;
-        var route = $(this).attr('href');
-
-        // $('body').removeClass('full full-loaded').addClass('half half-loading');
-        //
-        // setTimeout(function () {
-        //   $('body').removeClass('half-loading').addClass('half-loaded');
-        //   location.hash = route;
-        // }, animationDelay);
-
       });
     },
 

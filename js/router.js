@@ -78,7 +78,7 @@
     },
 
     getNextRoute: function (route) {
-      var currentRoute = this.getRoute(route);
+      var currentRoute = this.getBaseRoute(route);
       var nextRoute;
       var i = this.keys.indexOf(currentRoute);
 
@@ -94,42 +94,7 @@
     getBaseRoute: function (route) {
       var base = route.match(/\/[a-z-]+/ig)[0];
       return base ? base : '/home';
-    },
-
-    // Old Router Stuff
-    //
-    // getPreviousPage: function (route) {
-    //   var baseRoute = this.getBaseRoute(route);
-    //   var i = this.keys.indexOf(baseRoute);
-    //
-    //   if (i === 0) {
-    //     this.prev = this.templateData[this.keys[this.keys.length - 1]];
-    //   } else {
-    //     this.prev = this.templateData[this.keys[i-1]];
-    //   }
-    //   return this.prev;
-    // },
-    //
-    // getNextPage: function (route) {
-    //   var baseRoute = this.getBaseRoute(route);
-    //   var i = this.keys.indexOf(baseRoute);
-    //
-    //   if (i === (this.keys.length - 1)) {
-    //     this.next = this.templateData[this.keys[0]];
-    //   } else {
-    //     this.next = this.templateData[this.keys[i+1]];
-    //   }
-    //
-    //   return this.next;
-    // },
-
-    // getTileContent: function (route) {
-    //   var prevData = this.getPrevious(route).panel;
-    //   var nextData = this.getNext(route).panel;
-    //
-    //   var routeData = {prevData:prevData, nextData:nextData};
-    //   return this.tileTemplate(routeData);
-    // }
+    }
   };
 
   window.Router = Router;

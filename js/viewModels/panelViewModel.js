@@ -20,24 +20,7 @@
 
       this.el.empty();
       this.el.html(template(templateData));
-
-      this.setPageLinkHandlers();
     },
-
-    setPageLinkHandlers: function () {
-      $('.page-link').on('click', function(event) {
-        // var route = $(this).attr('href');
-        // var animationDelay = 800;
-
-        // $('body').removeClass('half half-loading').addClass('full full-loading');
-        // $('.background-image').removeClass('show');
-        //
-        // setTimeout(function () {
-        //   location.hash = route;
-        //   $('body').removeClass('full-loading').addClass('full full-loaded');
-        // }, animationDelay);
-      });
-    }
   });
 
   window.PanelViewModel = PanelViewModel;
