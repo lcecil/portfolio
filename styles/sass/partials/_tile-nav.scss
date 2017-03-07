@@ -34,7 +34,17 @@
         font-weight: 200;
       }
 
+      .arrow-left, .arrow-right {
+        display: inline-block;
+        width: 22px;
+      }
+
+      .arrow-right {
+        transform: rotate(180deg);
+      }
+
       .page-description {
+        display: inline-block;
         text-transform: uppercase;
       }
     }

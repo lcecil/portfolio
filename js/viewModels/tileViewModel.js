@@ -17,12 +17,15 @@
       this.setTileClickHandler();
     },
 
+    // updateBackArrow: function (route) {
+    //   var route = Router.getBaseRoute(route);
+    //   this.backArrow.href(route);
+    // },
+
     setTileClickHandler: function () {
-      var scrollDelay = 600;
+      var scrollDelay = 500;
       this.el.on('click', function () {
-        _.delay(function () {
-          window.scrollTo(0, 0);
-        }, scrollDelay)
+        $('html, body').animate({scrollTop: 0}, scrollDelay);
       })
     }
   });

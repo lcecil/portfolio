@@ -8,26 +8,26 @@ header {
     text-decoration: none;
   }
 
+  .header-icon-wrapper {
+      position: absolute;
+      left: -60px;
+      top: 0;
+      transition: left $transition-duration ease-in-out;
+
+      .toggle-back, .toggle-nav {
+        display: inline-block;
+        padding: 0 10px;
+      }
+  }
+
   .header-icon {
     width: 44px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 60px;
 
     &:hover {
       cursor: pointer;
     }
-
-    &.menu {
-      left: 20px;
-    }
-
-    &.arrow-left {
-      display: none;
-      left: 80px;
-      opacity: 0;
-      transition: opacity $transition-duration ease-in-out;
-    }
+    
   }
 
   h2 {

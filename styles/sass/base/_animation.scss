@@ -58,17 +58,16 @@ $text-duration: $transition-duration * 0.5;
       height: auto;
     }
 
+    .header-icon-wrapper {
+      left: 0;
+    }
+
     .content-wrapper .text-wrapper {
       animation: text-fade-in $text-duration ease-in forwards;
       text-align: center;
       max-width: 70%;
       margin: 0 auto;
       visibility: visible;
-    }
-
-    .arrow-left {
-      display: block;
-      opacity: 1;
     }
   }
 }
