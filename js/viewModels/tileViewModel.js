@@ -17,11 +17,6 @@
       this.setTileClickHandler();
     },
 
-    // updateBackArrow: function (route) {
-    //   var route = Router.getBaseRoute(route);
-    //   this.backArrow.href(route);
-    // },
-
     setTileClickHandler: function () {
       var scrollDelay = 500;
       this.el.on('click', function () {

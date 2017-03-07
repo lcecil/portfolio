@@ -2,8 +2,8 @@
 
   var AppViewModel = ViewModel.extend({
     dotNavigation: $('.dot-nav a'),
-    backArrow: $('.toggle-back'),
     backgroundPanel: $('.background-image'),
+    backArrow: $('.toggle-back'),
     menuIcon: $('.toggle-nav'),
     menuItem: $('.menu-link'),
     panel: null,
@@ -40,6 +40,8 @@
       }
 
       this.updateTheme(state.route, state.isShowingDetails);
+      this.updateBackArrow(state);
+
     },
 
     setMenuIconHandlers: function () {
@@ -64,11 +66,15 @@
       }
     },
 
+    updateBackArrow: function (state) {
+      var baseRoute = Router.getBaseRoute(state.route);
+      this.backArrow.attr('href', '/#' + baseRoute);
+    },
+
     updateNavigation: function (route) {
       route = route || '#/home';
       this.dotNavigation.removeClass('active-dot');
       $('[href="' + route +'"]').addClass('active-dot');
-      this.backArrow.attr('href', '#' + route);
     },
 
     updateTheme: function (route, isShowingDetails) {

@@ -1,3 +1,5 @@
+$arrow-duration: $transition-duration * 0.5;
+
 header {
   position: fixed;
   z-index: 2;
@@ -12,7 +14,7 @@ header {
       position: absolute;
       left: -60px;
       top: 0;
-      transition: left $transition-duration ease-in-out;
+      transition: left $arrow-duration ease-in-out;
 
       .toggle-back, .toggle-nav {
         display: inline-block;
@@ -27,7 +29,7 @@ header {
     &:hover {
       cursor: pointer;
     }
-    
+
   }
 
   h2 {
