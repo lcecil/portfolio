@@ -25,7 +25,11 @@
 
     render: function (state) {
       if (state.isShowingDetails) {
-        this.animateToDetails(state);
+        if (this.el.is('.full')) {
+          this.animateToTop(state);
+        } else {
+          this.animateToDetails(state);
+        }
         this.page.render(state);
         this.tile.render(state);
       }
@@ -104,7 +108,7 @@
           self.panel.render(state);
         },
         end: function () {
-          self.el.removeClass('full-loading').addClass('full full-loaded');
+          self.el.removeClass('full-loading').addClass('full-loaded');
         }
       }, animationDuration);
     },
@@ -125,6 +129,25 @@
           if (self.el.is('.half-loading')) {
             self.el.removeClass('half-loading').addClass('half-loaded');
           }
+        }
+      }, animationDuration);
+    },
+
+    animateToTop: function (state) {
+      var animationDuration = 800;
+      var self = this;
+
+      Animate({
+        begin: function () {
+          // self.el.addClass('top-loading');
+          self.backgroundPanel.removeClass('show');
+        },
+        middle: function () {
+          self.panel.render(state);
+        },
+        end: function () {
+
+          // self.el.removeClass('top-loading').addClass('full-loaded');
         }
       }, animationDuration);
     }

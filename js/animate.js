@@ -9,7 +9,6 @@
     });
 
     steps.begin();
-
     _.delay(steps.middle, duration/2);
 
     _.delay(steps.end, duration);

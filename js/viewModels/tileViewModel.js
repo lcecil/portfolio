@@ -18,10 +18,15 @@
     },
 
     setTileClickHandler: function () {
-      var scrollDelay = 500;
       this.el.on('click', function () {
-        $('html, body').animate({scrollTop: 0}, scrollDelay);
-      })
+        _.delay(function () {
+          window.scrollTo(0, 0);
+        })
+      });
+      // var scrollDelay = 500;
+      // this.el.on('click', function () {
+      //   $('html, body').animate({scrollTop: 0}, scrollDelay);
+      // })
     }
   });
 

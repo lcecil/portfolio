@@ -50,6 +50,7 @@ $text-duration: $transition-duration * 0.5;
     }
 
   }
+
   &.full-loaded {
 
     overflow: auto;
@@ -70,6 +71,14 @@ $text-duration: $transition-duration * 0.5;
       visibility: visible;
     }
   }
+
+  &.top-loading {
+    animation: text-fade-out $transition-duration ease-in forwards;
+  }
+
+  &.top-loaded {
+    animation: text-fade-in $transition-duration ease-out forwards;
+  }
 }
 
 .half {
@@ -88,17 +97,17 @@ $text-duration: $transition-duration * 0.5;
       margin: 0 auto;
     }
   }
-    &.half-loaded {
 
-      .site-wrap {
-        height: 100vh;
-      }
+  &.half-loaded {
 
-      .content-wrapper .text-wrapper {
-        animation: text-fade-in $text-duration ease-in forwards;
-        margin: 0 10%;
-        visibility: visible;
-      }
+    .site-wrap {
+      height: 100vh;
     }
 
+    .content-wrapper .text-wrapper {
+      animation: text-fade-in $text-duration ease-in forwards;
+      margin: 0 10%;
+      visibility: visible;
+    }
   }
+}
