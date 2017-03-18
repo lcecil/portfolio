@@ -25,11 +25,6 @@
 
     render: function (state) {
       if (state.isShowingDetails) {
-        // if (this.el.is('.full')) {
-        //   this.animateToTop(state);
-        // } else {
-        //   this.animateToDetails(state);
-        // }
         this.animateToDetails(state);
         this.page.render(state);
         this.tile.render(state);
