@@ -35,6 +35,10 @@ $arrow-down-duration: $transition-duration * 1.5;
       }
     }
 
+    .primary-image {
+        width: 35%;
+    }
+
     .primary-header {
       font-family: $serif;
       font-style: italic;

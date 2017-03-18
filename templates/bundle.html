@@ -4,7 +4,11 @@
       <h1 class='primary-header'><%= panel.primaryHeader %></h1>
       <h2 class='secondary-header'><%= panel.secondaryHeader %></h2>
       <p class='page-description'><%= panel.pageDescription %></p>
+      <% if (panel.primaryHeader === 'UX Design') { %>
+      <a href='<%= panel.pageLink %>' class='page-link'>About Laura
+      <% } else  { %>
       <a href='<%= panel.pageLink %>' class='page-link'>Read More
+      <% } %>
         <svg class="arrow-right" viewBox="0 0 11 7">
           <path class="line" d="M6.9,0.4L10,3.5"/>
           <path class="line" d="M0,3.5h10"/>
@@ -19,7 +23,7 @@
   <div class='content-wrapper'>
     <div class='text-wrapper'>
     <% if (panel.imgPath) { %>
-      <img src='<%= panel.imgPath %>'/>
+      <img class='primary-image' src='<%= panel.imgPath %>'/>
       <h1 class='primary-header'><%= panel.primaryHeader %></h1>
     <% } else  { %>
       <h1 class='primary-header'><%= panel.primaryHeader %></h1>

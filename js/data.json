@@ -9,21 +9,15 @@
     "details": {
       "panel": {
         "primaryHeader": "Librarians make the best designers",
-        "imgPath": "images/profile.jpg"
+        "imgPath": "images/profile.png"
       },
       "page": {
         "sections": [
           {
-            "sectionContent": "I know what you’re thinking: where are the reading glasses and cardigan sweaters? Old stereotypes. With the exception of cardigans, I do wear those."
+            "sectionContent": "I know what you’re thinking: where are the reading glasses and cardigan sweaters? Old stereotypes. With the exception of cardigans, I do wear those. I have great reference interview skills, a passion for helping people, and can organize your book collection in ways you didn’t know were possible. Package those skills with my ability to translate ideas into solid-gold user interfaces, and you’ve got a great designer."
           },
           {
-            "sectionContent": "I have great reference interview skills, a passion for helping people, and can organize your book collection in ways you didn’t know were possible. Package those skills with my ability to translate ideas into solid-gold user interfaces, and you’ve got a great designer."
-          },
-          {
-            "sectionContent": "When I'm not preparing a usability test, you can find me either parked on the couch with my nose in a book or putting up a tent in the great outdoors."
-          },
-          {
-            "sectionContent": "In both cases, you can be sure I’m looking for inspiration from the world around me."
+            "sectionContent": "When I'm not preparing a usability test, you can find me either parked on the couch with my nose in a book or putting up a tent in the great outdoors. In both cases, you can be sure I’m looking for inspiration from the world around me."
           }
         ]
       },

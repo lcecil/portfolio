@@ -62,7 +62,7 @@ a {
   font-family: "Poppins", sans-serif; }
   a:hover {
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: 400ms ease-in-out; }
 
 button {
@@ -140,7 +140,7 @@ button {
 .half.half-loading .content-wrapper .text-wrapper {
   animation: text-fade-out 0.3s ease-out forwards;
   text-align: center;
-  max-width: 70%;
+  max-width: 60%;
   margin: 0 auto; }
 .half.half-loaded .site-wrap {
   height: 100vh; }
@@ -211,13 +211,15 @@ header {
     height: 60px; }
     header .header-icon:hover {
       cursor: pointer; }
-  header .menu .line {
-    opacity: 1;
-    transition: transform 3s ease-in-out, opacity 2s ease-in-out; }
-  header .menu .line-1 {
-    transform-origin: 0 0; }
-  header .menu .line-3 {
-    transform-origin: 0 0; }
+    header .header-icon.menu .line {
+      opacity: 1;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+    header .header-icon.menu .line-1, header .header-icon.menu .line-3 {
+      transform-origin: 0; }
+    header .header-icon.back {
+      transition: transform 0.18s ease-in; }
+    header .header-icon.back:hover {
+      transform: translateX(-5px); }
   header h2 {
     margin-left: -20px;
     text-transform: uppercase;
@@ -231,12 +233,12 @@ header {
   header.show-menu .last-name {
     color: #fff;
     transition: color 0.3s ease-in-out; }
-  header.show-menu .menu .line-1 {
-    transform: rotate(45deg); }
-  header.show-menu .menu .line-2 {
+  header.show-menu .header-icon.menu .line-1 {
+    transform: rotate(33deg); }
+  header.show-menu .header-icon.menu .line-2 {
     opacity: 0; }
-  header.show-menu .menu .line-3 {
-    transform: rotate(-45deg); }
+  header.show-menu .header-icon.menu .line-3 {
+    transform: rotate(-33deg); }
 
 .dot-nav {
   position: fixed;
@@ -285,6 +287,8 @@ header {
     .panel .content-wrapper .text-wrapper {
       visibility: hidden;
       margin: 0 10%; }
+  .panel .primary-image {
+    width: 35%; }
   .panel .primary-header {
     font-family: "Playfair Display", serif;
     font-style: italic; }
@@ -437,6 +441,11 @@ footer .social {
     background-color: none; }
   100% {
     background-color: rgba(36, 123, 160, 0.8); } }
+@keyframes menu-fade-in {
+  0% {
+    background-color: rgba(36, 123, 160, 0.8); }
+  100% {
+    background-color: none; } }
 .home-theme .panel {
   background-color: rgba(36, 123, 160, 0.8); }
 .home-theme .dot-nav li a {
@@ -449,6 +458,8 @@ footer .social {
   background-color: rgba(245, 95, 92, 0.8); }
 .home-theme.full.full-loaded header {
   animation: home-fade-in 0.6s ease-in forwards; }
+.home-theme.full.full-loaded .show-menu {
+  animation: menu-fade-in 0.6s ease-in-out forwards; }
 
 @keyframes info-fade-in {
   0% {
