@@ -466,6 +466,11 @@ footer .social {
     background-color: none; }
   100% {
     background-color: rgba(245, 95, 92, 0.8); } }
+@keyframes menu-fade-in {
+  0% {
+    background-color: rgba(245, 95, 92, 0.8); }
+  100% {
+    background-color: none; } }
 .information-architecture-theme .panel {
   background-color: rgba(245, 95, 92, 0.8); }
 .information-architecture-theme .dot-nav li a {
@@ -478,12 +483,19 @@ footer .social {
   background-color: rgba(39, 48, 67, 0.8); }
 .information-architecture-theme.full.full-loaded header {
   animation: info-fade-in 0.6s ease-in forwards; }
+.information-architecture-theme.full.full-loaded .show-menu {
+  animation: menu-fade-in 0.6s ease-in-out forwards; }
 
 @keyframes research-fade-in {
   0% {
     background-color: none; }
   100% {
     background-color: rgba(39, 48, 67, 0.8); } }
+@keyframes menu-fade-in {
+  0% {
+    background-color: rgba(39, 48, 67, 0.8); }
+  100% {
+    background-color: none; } }
 .research-methods-theme .panel {
   background-color: rgba(39, 48, 67, 0.8); }
 .research-methods-theme .dot-nav li a {
@@ -496,12 +508,19 @@ footer .social {
   background-color: rgba(237, 174, 73, 0.8); }
 .research-methods-theme.full.full-loaded header {
   animation: research-fade-in 0.6s ease-in forwards; }
+.research-methods-theme.full.full-loaded .show-menu {
+  animation: menu-fade-in 0.6s ease-in-out forwards; }
 
 @keyframes visual-fade-in {
   0% {
     background-color: none; }
   100% {
     background-color: rgba(237, 174, 73, 0.8); } }
+@keyframes menu-fade-in {
+  0% {
+    background-color: rgba(237, 174, 73, 0.8); }
+  100% {
+    background-color: none; } }
 .visual-designs-theme .panel {
   background-color: rgba(237, 174, 73, 0.8); }
 .visual-designs-theme .dot-nav li a {
@@ -514,12 +533,19 @@ footer .social {
   background-color: rgba(89, 60, 132, 0.8); }
 .visual-designs-theme.full.full-loaded header {
   animation: visual-fade-in 0.6s ease-in forwards; }
+.visual-designs-theme.full.full-loaded .show-menu {
+  animation: menu-fade-in 0.6s ease-in-out forwards; }
 
 @keyframes project-fade-in {
   0% {
     background-color: none; }
   100% {
     background-color: rgba(89, 60, 132, 0.8); } }
+@keyframes menu-fade-in {
+  0% {
+    background-color: rgba(89, 60, 132, 0.8); }
+  100% {
+    background-color: none; } }
 .project-management-theme .panel {
   background-color: rgba(89, 60, 132, 0.8); }
 .project-management-theme .dot-nav li a {
@@ -532,12 +558,19 @@ footer .social {
   background-color: rgba(81, 193, 175, 0.8); }
 .project-management-theme.full.full-loaded header {
   animation: project-fade-in 0.6s ease-in forwards; }
+.project-management-theme.full.full-loaded .show-menu {
+  animation: menu-fade-in 0.6s ease-in-out forwards; }
 
 @keyframes dev-fade-in {
   0% {
     background-color: none; }
   100% {
     background-color: rgba(81, 193, 175, 0.8); } }
+@keyframes menu-fade-in {
+  0% {
+    background-color: rgba(245, 95, 92, 0.8); }
+  100% {
+    background-color: none; } }
 .development-theme .panel {
   background-color: rgba(81, 193, 175, 0.8); }
 .development-theme .dot-nav li a {
@@ -550,5 +583,7 @@ footer .social {
   background-color: rgba(36, 123, 160, 0.8); }
 .development-theme.full.full-loaded header {
   animation: dev-fade-in 0.6s ease-in forwards; }
+.development-theme.full.full-loaded .show-menu {
+  animation: menu-fade-in 0.6s ease-in-out forwards; }
 
 /*# sourceMappingURL=styles.css.map */

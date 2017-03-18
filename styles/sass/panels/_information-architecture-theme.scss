@@ -7,6 +7,15 @@
     }
 }
 
+@keyframes menu-fade-in {
+  0% {
+    background-color: $panel-2;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
 .information-architecture-theme {
 
   .panel {
@@ -35,5 +44,9 @@
     header {
         animation: info-fade-in $transition-duration ease-in forwards;
       }
+
+    .show-menu {
+      animation: menu-fade-in $transition-duration ease-in-out forwards;
+    }
   }
 }

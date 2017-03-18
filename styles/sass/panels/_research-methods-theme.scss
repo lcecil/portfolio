@@ -7,6 +7,15 @@
     }
 }
 
+@keyframes menu-fade-in {
+  0% {
+    background-color: $panel-3;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
 .research-methods-theme {
 
   .panel {
@@ -34,6 +43,10 @@
 
     header {
         animation: research-fade-in $transition-duration ease-in forwards;
+    }
+
+    .show-menu {
+      animation: menu-fade-in $transition-duration ease-in-out forwards;
     }
   }
 }
