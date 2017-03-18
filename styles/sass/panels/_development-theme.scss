@@ -1,4 +1,4 @@
-@keyframes dev-fade-in {
+@keyframes dev-page-fade-in {
     0% {
       background-color: none;
     }
@@ -7,9 +7,9 @@
     }
 }
 
-@keyframes menu-fade-in {
+@keyframes dev-menu-fade-in {
   0% {
-    background-color: $panel-2;
+    background-color: $panel-6;
   }
   100% {
     background-color: none;
@@ -42,11 +42,11 @@
   &.full.full-loaded {
 
     header {
-        animation: dev-fade-in $transition-duration ease-in forwards;
+        animation: dev-page-fade-in $transition-duration ease-in forwards;
     }
 
     .show-menu {
-      animation: menu-fade-in $transition-duration ease-in-out forwards;
+      animation: dev-menu-fade-in $header-duration ease-in-out forwards;
     }
   }
 }

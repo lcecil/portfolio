@@ -1,4 +1,4 @@
-@keyframes home-fade-in {
+@keyframes home-page-fade-in {
     0% {
       background-color: none;
     }
@@ -7,7 +7,7 @@
     }
 }
 
-@keyframes menu-fade-in {
+@keyframes home-menu-fade-in {
   0% {
     background-color: $panel-1;
   }
@@ -42,11 +42,11 @@
   &.full.full-loaded {
 
     header {
-      animation: home-fade-in $transition-duration ease-in forwards;
+      animation: home-page-fade-in $transition-duration ease-in forwards;
     }
 
     .show-menu {
-      animation: menu-fade-in $transition-duration ease-in-out forwards;
+      animation: home-menu-fade-in $header-duration ease-in-out forwards;
     }
   }
 }

@@ -1,4 +1,4 @@
-@keyframes visual-fade-in {
+@keyframes visual-page-fade-in {
     0% {
       background-color: none;
     }
@@ -7,7 +7,7 @@
     }
 }
 
-@keyframes menu-fade-in {
+@keyframes visual-menu-fade-in {
   0% {
     background-color: $panel-4;
   }
@@ -42,11 +42,11 @@
   &.full.full-loaded {
 
     header {
-        animation: visual-fade-in $transition-duration ease-in forwards;
+        animation: visual-page-fade-in $transition-duration ease-in forwards;
     }
 
     .show-menu {
-      animation: menu-fade-in $transition-duration ease-in-out forwards;
+      animation: menu-fade-in $header-duration ease-in-out forwards;
     }
   }
 }

@@ -1,4 +1,4 @@
-@keyframes research-fade-in {
+@keyframes research-page-fade-in {
     0% {
       background-color: none;
     }
@@ -7,7 +7,7 @@
     }
 }
 
-@keyframes menu-fade-in {
+@keyframes research-menu-fade-in {
   0% {
     background-color: $panel-3;
   }
@@ -42,11 +42,11 @@
   &.full.full-loaded {
 
     header {
-        animation: research-fade-in $transition-duration ease-in forwards;
+        animation: research-page-fade-in $transition-duration ease-in forwards;
     }
 
     .show-menu {
-      animation: menu-fade-in $transition-duration ease-in-out forwards;
+      animation: research-menu-fade-in $header-duration ease-in-out forwards;
     }
   }
 }

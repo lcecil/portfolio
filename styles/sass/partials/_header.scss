@@ -43,6 +43,17 @@ header {
 
     }
 
+    &.menu:hover {
+
+      .line-1 {
+        transform: translateY(-1px);
+      }
+
+      .line-3 {
+        transform: translateY(1px);
+      }
+    }
+
     &.back {
         transition: transform $arrow-duration ease-in;
     }
