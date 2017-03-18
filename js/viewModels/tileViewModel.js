@@ -18,16 +18,11 @@
     },
 
     setTileClickHandler: function () {
-      this.el.on('click', function () {
-        _.delay(function () {
-          window.scrollTo(0, 0);
-        })
+      this.el.children().on('click', function (event) {
+
       });
-      // var scrollDelay = 500;
-      // this.el.on('click', function () {
-      //   $('html, body').animate({scrollTop: 0}, scrollDelay);
-      // })
     }
+
   });
 
   window.TileViewModel = TileViewModel;

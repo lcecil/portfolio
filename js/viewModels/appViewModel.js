@@ -25,11 +25,12 @@
 
     render: function (state) {
       if (state.isShowingDetails) {
-        if (this.el.is('.full')) {
-          this.animateToTop(state);
-        } else {
-          this.animateToDetails(state);
-        }
+        // if (this.el.is('.full')) {
+        //   this.animateToTop(state);
+        // } else {
+        //   this.animateToDetails(state);
+        // }
+        this.animateToDetails(state);
         this.page.render(state);
         this.tile.render(state);
       }
@@ -140,13 +141,12 @@
       Animate({
         begin: function () {
           // self.el.addClass('top-loading');
-          self.backgroundPanel.removeClass('show');
+          // self.backgroundPanel.removeClass('show');
         },
         middle: function () {
-          self.panel.render(state);
+          // self.panel.render(state);
         },
         end: function () {
-
           // self.el.removeClass('top-loading').addClass('full-loaded');
         }
       }, animationDuration);

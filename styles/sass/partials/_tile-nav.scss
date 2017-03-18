@@ -17,6 +17,14 @@
 
     &:hover {
       cursor: pointer;
+
+      .arrow-left {
+        transform: translateX(-5px);
+      }
+
+      .arrow-right {
+        transform: translateX(5px);
+      }
     }
 
     .content-wrapper {
@@ -37,10 +45,7 @@
       .arrow-left, .arrow-right {
         display: inline-block;
         width: 22px;
-      }
-
-      .arrow-right {
-        transform: rotate(180deg);
+        transition: transform $arrow-duration ease-in;
       }
 
       .page-description {
