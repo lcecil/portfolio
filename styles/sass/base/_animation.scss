@@ -66,14 +66,17 @@ $text-duration: $transition-duration * 0.5;
     .content-wrapper .text-wrapper {
       animation: text-fade-in $text-duration ease-in forwards;
       text-align: center;
-      max-width: 70%;
+      max-width: 60%;
       margin: 0 auto;
       visibility: visible;
     }
   }
 
   &.top-loading {
-    animation: text-fade-out $text-duration ease-in forwards;
+
+    .content-wrapper, .page-wrapper, .contact, .social {
+      animation: text-fade-out $text-duration ease-in forwards;
+    }
   }
 
   &.top-loaded {

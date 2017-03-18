@@ -3,7 +3,7 @@
     "panel": {
       "primaryHeader": "UX Design",
       "secondaryHeader": "and Research",
-      "pageDescription": "Techniques methodologies and designs for a wide range of projects and problems.",
+      "pageDescription": "Techniques, methodologies, and designs for a wide range of projects and problems.",
       "pageLink": "#/home/details",
       "pageLinkLabel": "About Laura"
     },
@@ -33,16 +33,6 @@
           }
         ],
         "buttonLabel": "View Resume"
-      },
-      "tile": {
-        "previous": {
-          "primaryHeader": "Front-End",
-          "secondaryHeader": "Development"
-        },
-        "next": {
-          "primaryHeader": "Information",
-          "secondaryHeader": "Architecture"
-        }
       }
     }
   },
@@ -93,17 +83,7 @@
             ]
           }
         ],
-        "buttonLabel": "View Artifacts"
-      },
-      "tile": {
-        "previous": {
-          "primaryHeader": "About",
-          "secondaryHeader": "Laura Cecil"
-        },
-        "next": {
-          "primaryHeader": "Research",
-          "secondaryHeader": "Methods"
-        }
+        "buttonLabel": "View Images"
       }
     }
   },
@@ -165,17 +145,7 @@
             ]
           }
         ],
-        "buttonLabel": "View Artifacts"
-      },
-      "tile": {
-        "previous": {
-          "primaryHeader": "Information",
-          "secondaryHeader": "Architecture"
-        },
-        "next": {
-          "primaryHeader": "Visual",
-          "secondaryHeader": "Designs"
-        }
+        "buttonLabel": "View Images"
       }
     }
   },
@@ -192,15 +162,23 @@
       "panel": {
         "primaryHeader": "Visual Designs",
         "secondaryHeader": "Designer Tools",
-        "pageDescription": "Discussing UX designs with a development team is the best way to convey the mechanics of a design and thought process that went into it. But at the end of the day, the visual design artifacts I build must be strong enough to convey all the necessary information to the developer."
+        "pageDescription": "Discussing UX designs with a development team is the best way to convey the mechanics of a design and thought process that went into it. But at the end of the day, the visual design artifacts I build must be strong enough to convey all the necessary information to developer and client alike."
       },
       "page": {
         "sections": [
           {
+            "sectionHeader": "Sketches",
+            "sectionContent": [
+              {
+                "sectionParagraph": "I prefer pencil and paper, marker and whiteboard, or any other physical medium as my tool of choice when it comes to creating a proof of concept. Sketching out layouts or interactions is the quickest way to decide what’s going to make or break my designs. This method of drawing things out also facilitates collaboration between myself and other designers or developers, who can comment or contribute in a brainstorming session."
+              }
+            ]
+          },
+          {
             "sectionHeader": "Wireframes",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "Wireframing is thought of as a design staple, but I believe that depends on the project. Developers will eventually need high fidelity mock-ups, if the company is without a pattern library, and clients often have a hard time visualizing the application when there are only boxes and lines. Nevertheless, wireframes are invaluable tool for a designer to get a feel for proportions and interactions across pages. They provide the schema for all my designs."
               }
             ]
           },
@@ -208,7 +186,7 @@
             "sectionHeader": "Prototypes",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "Interactive prototypes are crucial to understanding whether a design is usable and intuitive. The tools available today make it easy for me to create a simple clickable interface for usability testing or showcasing to client. Often times, building out a page in HTML/CSS/JS is just as quick and can shorten development time if only minor tweaks are needed to the final design."
               }
             ]
           },
@@ -221,17 +199,7 @@
             ]
           }
         ],
-        "buttonLabel": "View Artifacts"
-      },
-      "tile": {
-        "previous": {
-          "primaryHeader": "Research",
-          "secondaryHeader": "Methods"
-        },
-        "next": {
-          "primaryHeader": "Project",
-          "secondaryHeader": "Management"
-        }
+        "buttonLabel": "View Images"
       }
     }
   },
@@ -248,7 +216,7 @@
       "panel": {
         "primaryHeader": "Project Management",
         "secondaryHeader": "Case Study",
-        "pageDescription": ""
+        "pageDescription": "Project management is a skill that all good designers should have. Since we often have our finger on the pulse of the product, it’s very natural to fall into a role of leadership and coordination. Organization is the key to a successful project and making sure that what you build is going to solve a problem."
       },
       "page": {
         "sections": [
@@ -277,17 +245,7 @@
             ]
           }
         ],
-        "buttonLabel": "View Artifacts"
-      },
-      "tile": {
-        "previous": {
-          "primaryHeader": "Visual",
-          "secondaryHeader": "Designs"
-        },
-        "next": {
-          "primaryHeader": "Front-End",
-          "secondaryHeader": "Development"
-        }
+        "buttonLabel": "View Images"
       }
     }
   },
@@ -333,17 +291,7 @@
             ]
           }
         ],
-        "buttonLabel": "View Artifacts"
-      },
-      "tile": {
-        "previous": {
-          "primaryHeader": "Project",
-          "secondaryHeader": "Management"
-        },
-        "next": {
-          "primaryHeader": "About",
-          "secondaryHeader": "Laura Cecil"
-        }
+        "buttonLabel": "View Images"
       }
     }
   }

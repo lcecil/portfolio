@@ -19,7 +19,8 @@
 
     setTileClickHandler: function () {
       this.el.children().on('click', function (event) {
-
+        event.preventDefault();
+        $('body').addClass('top-loading');
       });
     }
 
