@@ -14,10 +14,20 @@
       "page": {
         "sections": [
           {
-            "sectionContent": "I know what you’re thinking: where are the reading glasses and cardigan sweaters? Old stereotypes. With the exception of cardigans, I do wear those. I have great reference interview skills, a passion for helping people, and can organize your book collection in ways you didn’t know were possible. Package those skills with my ability to translate ideas into solid-gold user interfaces, and you’ve got a great designer."
-          },
-          {
-            "sectionContent": "When I'm not preparing a usability test, you can find me either parked on the couch with my nose in a book or putting up a tent in the great outdoors. In both cases, you can be sure I’m looking for inspiration from the world around me."
+            "sectionContent": [
+              {
+                "sectionParagraph": "I know what you’re thinking: where are the reading glasses and cardigan sweaters? Old stereotypes. With the exception of cardigans, I do wear those."
+              },
+              {
+                "sectionParagraph": "I have great reference interview skills, a passion for helping people, and can organize your book collection in ways you didn’t know were possible. Package those skills with my ability to translate ideas into solid-gold user interfaces, and you’ve got a great designer."
+              },
+              {
+                "sectionParagraph": "When I'm not preparing a usability test, you can find me either parked on the couch with my nose in a book or putting up a tent in the great outdoors."
+              },
+              {
+                "sectionParagraph": "In both cases, you can be sure I’m looking for inspiration from the world around me."
+              }
+            ]
           }
         ]
       },
@@ -45,21 +55,36 @@
       "panel": {
         "primaryHeader": "Information Architecture",
         "secondaryHeader": "Case Study",
-        "pageDescription": "To make an application feel effortless to navigate, it has to have a strong skeleton or foundation. Information architecture is more than just the menu navigation at the top of a website – it’s the map of a product’s parts, and how those parts need to interact with each other. When designing a new feature for an existing product, mapping out those pieces is one of the first steps."
+        "pageDescription": "To make an application feel effortless to navigate, it has to have a strong skeleton or foundation. Information architecture is more than just the menu navigation at the top of a website – it’s the map of a product’s parts, and how those parts need to interact with each other. When designing a new feature for an existing product, I like to create a map of its pieces as one of my first steps."
       },
       "page": {
         "sections": [
           {
             "sectionHeader": "The Project",
-            "sectionContent": "Through an online survey, we found that our client’s user base spent 75% of their time helping their customers troubleshoot cell phone problems over the phone. Without the ability to see the phone the customer was using, the users were spending more time than was necessary to troubleshoot, and often unable to solve the customer’s problem. The solution was a tool that would allow customers to go into a Target store for in-person device troubleshooting, thereby reducing call volume and duration for our users."
+            "sectionContent": [
+                {
+                  "sectionParagraph": "Through an online survey, we found that our client’s user base spent 75% of their time helping their customers troubleshoot cell phone problems over the phone. Without the ability to see the phone the customer was using, our call center agents were often unable to solve the customer’s problem. The solution was to help our users guide a customer into a Target store for in-person device troubleshooting, thereby reducing call volume and duration."
+                }
+              ]
           },
           {
             "sectionHeader": "The Process",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": "Since this was going to be a new feature, with implementations across a couple of platforms, it was necessary to map out all the required information and parameters before beginning on the workflows. I created a site map of the existing products and workflow diagrams to ensure that our solution was going fit in with our users’ current processes and expectations."
+              },
+              {
+                "sectionParagraph": "When we met with our stakeholders to gather feedback on the workflows, they found it difficult to understand how all the pieces were going to function together. Using Axure, I quickly created a clickable prototype of the application for the client to see and interact with. The ability to go through the process themselves with the prototype made the interactions clearer not only to our stakeholder, but to the developers who used the prototype as a guide when building out the feature."
+              }
+            ]
           },
           {
             "sectionHeader": "The Results",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": "We spent a total of four months from start to launch, building out the new functionality and working closely with our stakeholders, so that they could inform and train their employees. In the two months since we launched the new feature, Target support visits have maintained approximately at 90% success rate for solving the customer’s device problem."
+              }
+            ]
           }
         ]
       },
@@ -93,23 +118,43 @@
         "sections": [
           {
             "sectionHeader": "Usability Testing",
-            "sectionContent": "Usability testing is a necessity for all stages of the development process. Preliminary testing of a current interface can help designers understand user pain points and areas of interest, whereas post-release testing monitors whether design implementations were successful. Paper prototyping is my favorite method for gathering iterative feedback during the design lifecycle and avoiding major pitfalls."
+            "sectionContent": [
+              {
+                "sectionParagraph": "Usability testing is a necessity for all stages of the development process. Preliminary testing of a current interface can help designers understand user pain points and areas of interest, whereas post-release testing monitors whether design implementations were successful. Paper prototyping is my favorite method for gathering iterative feedback during the design lifecycle and avoiding major pitfalls."
+              }
+            ]
           },
           {
             "sectionHeader": "Personas",
-            "sectionContent": "Personas are a great tool for getting a team on the same page about who is using the products they are creating. The key to a successful persona is not the physical profile itself, but its adoption from all stakeholders involved and application by a company. I work closely with clients, product owners, developers, and most importantly, end users, to ensure that the personas produced are accurate and useful."
+            "sectionContent": [
+              {
+                "sectionParagraph": "Personas are a great tool for getting a team on the same page about who is using the products they are creating. The key to a successful persona is not the physical profile itself, but its adoption from all stakeholders involved and application by a company. I work closely with clients, product owners, developers, and most importantly, end users, to ensure that the personas produced are accurate and useful."
+              }
+            ]
           },
           {
             "sectionHeader": "Card Sorting",
-            "sectionContent": "The wrong label can make or break a design. Luckily, a quick card sort is one of the simplest ways to evaluate whether the terms used in a design are terms your users can understand. I use this research method often, either internally or with my end users, to test whether a grouping of information is logical beyond my own assumptions and biases."
+            "sectionContent": [
+              {
+                "sectionParagraph": "The wrong label can make or break a design. Luckily, a quick card sort is one of the simplest ways to evaluate whether the terms used in a design are terms your users can understand. I use this research method often, either internally or with my end users, to test whether a grouping of information is logical beyond my own assumptions and biases."
+              }
+            ]
           },
           {
             "sectionHeader": "Survey Design",
-            "sectionContent": "Surveys help establish both quantitative and qualitative data as a base line before beginning a project, or alternatively, assess whether a design implementation was successful. I find that the key to crafting a useful and accurate survey is to narrow the scope so that the questions are specific and focused on a portion of the product. This reduces the margin for error due to generalities or ambiguity in the survey responses."
+            "sectionContent": [
+              {
+                "sectionParagraph": "Surveys help establish both quantitative and qualitative data as a base line before beginning a project, or alternatively, assess whether a design implementation was successful. I find that the key to crafting a useful and accurate survey is to narrow the scope so that the questions are specific and focused on a portion of the product. This reduces the margin for error due to generalities or ambiguity in the survey responses."
+              }
+            ]
           },
           {
             "sectionHeader": "Interviews/Observations",
-            "sectionContent": "If the opportunity to have face-to-face time with an end user is available, it can be the most valuable time spent on a project. As a designer, the desire to empathize with my users can only go so far without observing their daily tasks or hearing stories of their struggles with a product. The art of asking questions is a skill I strive to perfect and often helps me answer the “why” when looking at quantitative data or metrics."
+            "sectionContent": [
+              {
+                  "sectionParagraph": "If the opportunity to have face-to-face time with an end user is available, it can be the most valuable time spent on a project. As a designer, the desire to empathize with my users can only go so far without observing their daily tasks or hearing stories of their struggles with a product. The art of asking questions is a skill I strive to perfect and often helps me answer the “why” when looking at quantitative data or metrics."
+              }
+            ]
           }
         ]
       },
@@ -143,15 +188,27 @@
         "sections": [
           {
             "sectionHeader": "Wireframes",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           },
           {
             "sectionHeader": "Prototypes",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           },
           {
             "sectionHeader": "High Fidelity Mock-Ups",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           }
         ]
       },
@@ -185,15 +242,27 @@
         "sections": [
           {
             "sectionHeader": "The Project",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           },
           {
             "sectionHeader": "The Process",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           },
           {
             "sectionHeader": "The Results",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           }
         ]
       },
@@ -227,15 +296,27 @@
         "sections": [
           {
             "sectionHeader": "The Project",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           },
           {
             "sectionHeader": "The Process",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           },
           {
             "sectionHeader": "The Results",
-            "sectionContent": ""
+            "sectionContent": [
+              {
+                "sectionParagraph": ""
+              }
+            ]
           }
         ]
       },
