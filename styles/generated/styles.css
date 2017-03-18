@@ -73,9 +73,7 @@ button {
   button:focus {
     outline: none; }
   button:hover {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 400ms ease-in-out; }
+    cursor: pointer; }
 
 /* ============================
    LAYOUT PRESETS
@@ -333,15 +331,18 @@ header {
     .page .page-wrapper .section-header {
       text-transform: uppercase;
       font-weight: 300; }
+    .page .page-wrapper .button-wrapper {
+      text-align: center; }
+    .page .page-wrapper .artifacts-button {
+      text-transform: uppercase;
+      padding: 1em;
+      border-radius: 5px; }
   .page .primary-header {
     font-family: "Playfair Display", serif;
     font-style: italic; }
   .page .secondary-header {
     text-transform: uppercase;
     font-weight: 200; }
-  .page .page-link {
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif; }
 
 .tile-nav {
   overflow: hidden; }
@@ -460,6 +461,14 @@ footer .social {
   background-color: rgba(81, 193, 175, 0.8); }
 .home-theme .next {
   background-color: rgba(245, 95, 92, 0.8); }
+.home-theme .artifacts-button {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: 2px solid rgba(36, 123, 160, 0.8);
+  background-color: #fff;
+  color: rgba(36, 123, 160, 0.8); }
+.home-theme .artifacts-button:hover {
+  background-color: rgba(36, 123, 160, 0.8);
+  color: #fff; }
 .home-theme.full.full-loaded header {
   animation: home-page-fade-in 0.6s ease-in forwards; }
 .home-theme.full.full-loaded .show-menu {
@@ -485,6 +494,14 @@ footer .social {
   background-color: rgba(36, 123, 160, 0.8); }
 .information-architecture-theme .next {
   background-color: rgba(39, 48, 67, 0.8); }
+.information-architecture-theme .artifacts-button {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: 2px solid rgba(245, 95, 92, 0.8);
+  background-color: #fff;
+  color: rgba(245, 95, 92, 0.8); }
+.information-architecture-theme .artifacts-button:hover {
+  background-color: rgba(245, 95, 92, 0.8);
+  color: #fff; }
 .information-architecture-theme.full.full-loaded header {
   animation: info-page-fade-in 0.6s ease-in forwards; }
 .information-architecture-theme.full.full-loaded .show-menu {
@@ -510,6 +527,14 @@ footer .social {
   background-color: rgba(245, 95, 92, 0.8); }
 .research-methods-theme .next {
   background-color: rgba(237, 174, 73, 0.8); }
+.research-methods-theme .artifacts-button {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: 2px solid rgba(39, 48, 67, 0.8);
+  background-color: #fff;
+  color: rgba(39, 48, 67, 0.8); }
+.research-methods-theme .artifacts-button:hover {
+  background-color: rgba(39, 48, 67, 0.8);
+  color: #fff; }
 .research-methods-theme.full.full-loaded header {
   animation: research-page-fade-in 0.6s ease-in forwards; }
 .research-methods-theme.full.full-loaded .show-menu {
@@ -535,6 +560,14 @@ footer .social {
   background-color: rgba(39, 48, 67, 0.8); }
 .visual-designs-theme .next {
   background-color: rgba(89, 60, 132, 0.8); }
+.visual-designs-theme .artifacts-button {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: 2px solid rgba(237, 174, 73, 0.8);
+  background-color: #fff;
+  color: rgba(237, 174, 73, 0.8); }
+.visual-designs-theme .artifacts-button:hover {
+  background-color: rgba(237, 174, 73, 0.8);
+  color: #fff; }
 .visual-designs-theme.full.full-loaded header {
   animation: visual-page-fade-in 0.6s ease-in forwards; }
 .visual-designs-theme.full.full-loaded .show-menu {
@@ -560,6 +593,14 @@ footer .social {
   background-color: rgba(237, 174, 73, 0.8); }
 .project-management-theme .next {
   background-color: rgba(81, 193, 175, 0.8); }
+.project-management-theme .artifacts-button {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: 2px solid rgba(89, 60, 132, 0.8);
+  background-color: #fff;
+  color: rgba(89, 60, 132, 0.8); }
+.project-management-theme .artifacts-button:hover {
+  background-color: rgba(89, 60, 132, 0.8);
+  color: #fff; }
 .project-management-theme.full.full-loaded header {
   animation: project-page-fade-in 0.6s ease-in forwards; }
 .project-management-theme.full.full-loaded .show-menu {
@@ -585,6 +626,14 @@ footer .social {
   background-color: rgba(89, 60, 132, 0.8); }
 .development-theme .next {
   background-color: rgba(36, 123, 160, 0.8); }
+.development-theme .artifacts-button {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border: 2px solid rgba(81, 193, 175, 0.8);
+  background-color: #fff;
+  color: rgba(81, 193, 175, 0.8); }
+.development-theme .artifacts-button:hover {
+  background-color: rgba(81, 193, 175, 0.8);
+  color: #fff; }
 .development-theme.full.full-loaded header {
   animation: dev-page-fade-in 0.6s ease-in forwards; }
 .development-theme.full.full-loaded .show-menu {

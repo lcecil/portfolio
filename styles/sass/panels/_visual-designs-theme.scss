@@ -3,13 +3,13 @@
       background-color: none;
     }
     100% {
-      background-color: $panel-4;
+      background-color: $theme-4;
     }
 }
 
 @keyframes visual-menu-fade-in {
   0% {
-    background-color: $panel-4;
+    background-color: $theme-4;
   }
   100% {
     background-color: none;
@@ -19,23 +19,35 @@
 .visual-designs-theme {
 
   .panel {
-    background-color: $panel-4;
+    background-color: $theme-4;
   }
 
   .dot-nav li a {
-    color: $panel-4;
+    color: $theme-4;
   }
 
   .last-name {
-    color: $panel-4;
+    color: $theme-4;
   }
 
   .previous {
-    background-color: $panel-3;
+    background-color: $theme-3;
   }
 
   .next {
-    background-color: $panel-5;
+    background-color: $theme-5;
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-4;
+    background-color: #fff;
+    color: $theme-4;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-4;
+    color: $font-color-light;
   }
 
   //Animations for full page

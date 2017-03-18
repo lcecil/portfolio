@@ -4,12 +4,14 @@
       "primaryHeader": "UX Design",
       "secondaryHeader": "and Research",
       "pageDescription": "Techniques methodologies and designs for a wide range of projects and problems.",
-      "pageLink": "#/home/details"
+      "pageLink": "#/home/details",
+      "pageLinkLabel": "About Laura"
     },
     "details": {
       "panel": {
         "primaryHeader": "Librarians make the best designers",
-        "imgPath": "images/profile.png"
+        "imgPath": "images/profile.png",
+        "imgAlt": "Laura Cecil's Profile"
       },
       "page": {
         "sections": [
@@ -29,7 +31,8 @@
               }
             ]
           }
-        ]
+        ],
+        "buttonLabel": "View Resume"
       },
       "tile": {
         "previous": {
@@ -49,7 +52,8 @@
       "primaryHeader": "Information",
       "secondaryHeader": "Architecture",
       "pageDescription": "Content organization and structuring is the key to a successful application or website. Think of it as a card catalog for the 21st century.",
-      "pageLink": "#/information-architecture/details"
+      "pageLink": "#/information-architecture/details",
+      "pageLinkLabel": "Read More"
     },
     "details": {
       "panel": {
@@ -71,7 +75,9 @@
             "sectionHeader": "The Process",
             "sectionContent": [
               {
-                "sectionParagraph": "Since this was going to be a new feature, with implementations across a couple of platforms, it was necessary to map out all the required information and parameters before beginning on the workflows. I created a site map of the existing products and workflow diagrams to ensure that our solution was going fit in with our users’ current processes and expectations."
+                "sectionParagraph": "Since this was going to be a new feature, with implementations across a couple of platforms, it was necessary to map out all the required information and parameters before beginning on the workflows. I created a site map of the existing products and workflow diagrams to ensure that our solution was going fit in with our users’ current processes and expectations.",
+                "sectionImage": "images/workflow-whiteboard.jpg",
+                "sectionImageAlt": "Workflow Diagram"
               },
               {
                 "sectionParagraph": "When we met with our stakeholders to gather feedback on the workflows, they found it difficult to understand how all the pieces were going to function together. Using Axure, I quickly created a clickable prototype of the application for the client to see and interact with. The ability to go through the process themselves with the prototype made the interactions clearer not only to our stakeholder, but to the developers who used the prototype as a guide when building out the feature."
@@ -86,7 +92,8 @@
               }
             ]
           }
-        ]
+        ],
+        "buttonLabel": "View Artifacts"
       },
       "tile": {
         "previous": {
@@ -106,7 +113,8 @@
       "primaryHeader": "Research",
       "secondaryHeader": "Methods",
       "pageDescription": "From A/B Testing to user interviews and everything in between. Choosing the right method for the job is the name of the game here.",
-      "pageLink": "#/research-methods/details"
+      "pageLink": "#/research-methods/details",
+      "pageLinkLabel": "Read More"
     },
     "details": {
       "panel": {
@@ -156,7 +164,8 @@
               }
             ]
           }
-        ]
+        ],
+        "buttonLabel": "View Artifacts"
       },
       "tile": {
         "previous": {
@@ -176,7 +185,8 @@
       "primaryHeader": "Visual",
       "secondaryHeader": "Designs",
       "pageDescription": "Communicating a design is as important as creating it. Using a quick sketch or pixel perfect visual design depends on what's needed to get the job done.",
-      "pageLink": "#/visual-designs/details"
+      "pageLink": "#/visual-designs/details",
+      "pageLinkLabel": "Read More"
     },
     "details": {
       "panel": {
@@ -210,7 +220,8 @@
               }
             ]
           }
-        ]
+        ],
+        "buttonLabel": "View Artifacts"
       },
       "tile": {
         "previous": {
@@ -230,7 +241,8 @@
       "primaryHeader": "Project",
       "secondaryHeader": "Management",
       "pageDescription": "Agile, scrum, sprints, waterfall, kanban: whatever the buzzword of the day is, chances are I've probably tried it.",
-      "pageLink": "#/project-management/details"
+      "pageLink": "#/project-management/details",
+      "pageLinkLabel": "Read More"
     },
     "details": {
       "panel": {
@@ -264,7 +276,8 @@
               }
             ]
           }
-        ]
+        ],
+        "buttonLabel": "View Artifacts"
       },
       "tile": {
         "previous": {
@@ -284,7 +297,8 @@
       "primaryHeader": "Front-End",
       "secondaryHeader": "Development",
       "pageDescription": "One of the my many hats, it ranges in size from beanie to ten gallon. It's more about the knowledge that I gain from wearing it that makes me a better designer.",
-      "pageLink": "#/development/details"
+      "pageLink": "#/development/details",
+      "pageLinkLabel": "Read More"
     },
     "details": {
       "panel": {
@@ -318,7 +332,8 @@
               }
             ]
           }
-        ]
+        ],
+        "buttonLabel": "View Artifacts"
       },
       "tile": {
         "previous": {

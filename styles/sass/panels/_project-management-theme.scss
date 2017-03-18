@@ -3,13 +3,13 @@
       background-color: none;
     }
     100% {
-      background-color: $panel-5;
+      background-color: $theme-5;
     }
 }
 
 @keyframes project-menu-fade-in {
   0% {
-    background-color: $panel-5;
+    background-color: $theme-5;
   }
   100% {
     background-color: none;
@@ -19,23 +19,35 @@
 .project-management-theme {
 
   .panel {
-    background-color: $panel-5;
+    background-color: $theme-5;
   }
 
   .dot-nav li a {
-    color: $panel-5;
+    color: $theme-5;
   }
 
   .last-name {
-    color: $panel-5;
+    color: $theme-5;
   }
 
   .previous {
-    background-color: $panel-4;
+    background-color: $theme-4;
   }
 
   .next {
-    background-color: $panel-6;
+    background-color: $theme-6;
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-5;
+    background-color: #fff;
+    color: $theme-5;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-5;
+    color: $font-color-light;
   }
 
   //Animations for full page

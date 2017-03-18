@@ -18,6 +18,17 @@
         text-transform: uppercase;
         font-weight: 300;
       }
+
+      .button-wrapper {
+        text-align: center;
+      }
+
+      .artifacts-button {
+        text-transform: uppercase;
+        padding: 1em;
+        border-radius: 5px;
+      }
+
     }
 
     .primary-header {
@@ -28,10 +39,5 @@
     .secondary-header {
       text-transform: uppercase;
       font-weight: 200;
-    }
-
-    .page-link {
-      text-transform: uppercase;
-      font-family: $sans-serif;
     }
 }

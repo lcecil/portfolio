@@ -3,13 +3,13 @@
       background-color: none;
     }
     100% {
-      background-color: $panel-1;
+      background-color: $theme-1;
     }
 }
 
 @keyframes home-menu-fade-in {
   0% {
-    background-color: $panel-1;
+    background-color: $theme-1;
   }
   100% {
     background-color: none;
@@ -19,23 +19,35 @@
 .home-theme{
 
   .panel {
-    background-color: $panel-1;
+    background-color: $theme-1;
   }
 
   .dot-nav li a {
-    color: $panel-1;
+    color: $theme-1;
   }
 
   .last-name {
-    color: $panel-1;
+    color: $theme-1;
   }
 
   .previous {
-    background-color: $panel-6;
+    background-color: $theme-6;
   }
 
   .next {
-    background-color: $panel-2;
+    background-color: $theme-2;
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-1;
+    background-color: #fff;
+    color: $theme-1;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-1;
+    color: $font-color-light;
   }
 
   //Animations for full page

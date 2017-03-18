@@ -8,12 +8,12 @@ $font-color-dark: #333;
 $font-color-light: #fff;
 $link-color: #fff;
 
-$panel-1: rgba(36, 123, 160, 0.8);
-$panel-2: rgba(245, 95, 92, 0.8);
-$panel-3: rgba(39, 48, 67, 0.8);
-$panel-4: rgba(237, 174, 73, 0.8);
-$panel-5: rgba(89, 60, 132, 0.8);
-$panel-6: rgba(81, 193, 175, 0.8);
+$theme-1: rgba(36, 123, 160, 0.8);
+$theme-2: rgba(245, 95, 92, 0.8);
+$theme-3: rgba(39, 48, 67, 0.8);
+$theme-4: rgba(237, 174, 73, 0.8);
+$theme-5: rgba(89, 60, 132, 0.8);
+$theme-6: rgba(81, 193, 175, 0.8);
 
 $menu-background: rgba(0, 0, 0, 0.9);
 $footer-background: #666;
@@ -21,3 +21,4 @@ $footer-background: #666;
 $transition-duration: 0.6s;
 $arrow-duration: $transition-duration * 0.3;
 $header-duration: $transition-duration * 0.5;
+$button-duration: $transition-duration * 0.5;

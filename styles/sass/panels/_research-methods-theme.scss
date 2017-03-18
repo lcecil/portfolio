@@ -3,13 +3,13 @@
       background-color: none;
     }
     100% {
-      background-color: $panel-3;
+      background-color: $theme-3;
     }
 }
 
 @keyframes research-menu-fade-in {
   0% {
-    background-color: $panel-3;
+    background-color: $theme-3;
   }
   100% {
     background-color: none;
@@ -19,23 +19,35 @@
 .research-methods-theme {
 
   .panel {
-    background-color: $panel-3;
+    background-color: $theme-3;
   }
 
   .dot-nav li a {
-    color: $panel-3;
+    color: $theme-3;
   }
 
   .last-name {
-    color: $panel-3;
+    color: $theme-3;
   }
 
   .previous {
-    background-color: $panel-2;
+    background-color: $theme-2;
   }
 
   .next {
-    background-color: $panel-4;
+    background-color: $theme-4;
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-3;
+    background-color: #fff;
+    color: $theme-3;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-3;
+    color: $font-color-light;
   }
 
   //Animations for full page

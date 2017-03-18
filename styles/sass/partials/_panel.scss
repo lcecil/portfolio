@@ -1,4 +1,4 @@
-$panel-duration: $transition-duration * 0.5;
+$theme-duration: $transition-duration * 0.5;
 $arrow-down-duration: $transition-duration * 1.5;
 
 @keyframes arrow-pulse {
@@ -19,7 +19,7 @@ $arrow-down-duration: $transition-duration * 1.5;
     left: 0;
     width: 50vw;
     height: 100vh;
-    transition: width $transition-duration ease-in-out $panel-duration, background-color $transition-duration ease-in-out;
+    transition: width $transition-duration ease-in-out $theme-duration, background-color $transition-duration ease-in-out;
 
     .content-wrapper {
       display: flex;
