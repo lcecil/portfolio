@@ -194,7 +194,7 @@
             "sectionHeader": "High Fidelity Mock-Ups",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "My favorite thing about creating pixel perfect visual designs is seeing everything come together. It’s the opportunity to bring the application to life through color theory, typography, and layout principles. High fidelity mock-ups can play an important part in communicating a design to a client or developer, who may need that extra push to visualize the application."
               }
             ]
           }
@@ -273,7 +273,7 @@
             "sectionHeader": "The Project",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "AltSource wanted to make it easier for its developers to build out custom applications, without the generic look and feel of Bootstrap. Alternatively, the UX team wanted to teach the developers more about why and when certain design patterns should be used in the future. I worked with one of our primary front-end developers and a graphic designer to come up with a set of patterns and components that we could build as an interactive pattern library."
               }
             ]
           },
@@ -281,7 +281,10 @@
             "sectionHeader": "The Process",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "The graphic designer and myself set to work documenting all the design patterns we needed to encompass current and future functionality of our application. Once we had those guidelines in place, I worked with my tech lead and front-end developer to come up with a strategy for building out the new patterns without disrupting styles that were already in place."
+              },
+              {
+                "sectionParagraph": "We used Bootstrap as a framework, but customized it with our own CSS and Javascript so that it was unique to our client’s application. We wanted each part of the pattern library to be a working example of the components, something someone could click on and interact with, as well as a summary of its UX applications. Developers could easily copy and paste the code into their branches, which would help us maintain changes to the pattern library in the future through consistent class naming."
               }
             ]
           },
@@ -289,7 +292,7 @@
             "sectionHeader": "The Results",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "Our pattern library serves as a go-to for all developers in the company and facilitates discussion around why to use certain patterns over others. By creating a consistent naming scheme and class system, we can start to tackle refactoring old code so that updates in the future will be as simple as changing CSS for a pattern."
               }
             ]
           }
