@@ -68,13 +68,13 @@
 
     updateBackArrow: function (state) {
       var baseRoute = Router.getBaseRoute(state.route);
-      this.backArrow.attr('href', '/#' + baseRoute);
+      this.backArrow.attr('href', '#' + baseRoute);
     },
 
     updateNavigation: function (route) {
       route = route || '#/home';
       this.dotNavigation.removeClass('active-dot');
-      $('[href="' + route +'"]').addClass('active-dot');
+      $('a[href$="' + route + '"]').addClass('active-dot');
     },
 
     updateTheme: function (route, isShowingDetails) {

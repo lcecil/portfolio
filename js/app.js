@@ -46,18 +46,24 @@ ScrollManager.onScroll(function(direction) {
 });
 
 $(window).on('keydown', function(e) {
-  var state = Router.getState();
-  if(!state.isShowingDetails) {
-    route = location.hash;
-    switch (e.which) {
-      case 40:
-        var nextRoute = Router.getNextRoute(route);
-        location.hash = nextRoute;
-        break;
-      case 38:
-        var previousRoute = Router.getPreviousRoute(route);
-        location.hash = previousRoute;
-      default: return;
-    }
+  route = location.hash;
+  switch (e.which) {
+    case 40:
+      var nextRoute = Router.getNextRoute(route);
+      location.hash = nextRoute;
+      break;
+    case 38:
+      var previousRoute = Router.getPreviousRoute(route);
+      location.hash = previousRoute;
+      break;
+    case 39:
+      var fullPanelRoute = $('.page-link').attr('href');
+      location.hash = fullPanelRoute;
+      break;
+    case 37:
+      var halfPanelRoute = $('.toggle-back').attr('href');
+      location.hash = halfPanelRoute;
+      break;
+    default: return;
   }
 });

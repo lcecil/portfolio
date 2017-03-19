@@ -247,22 +247,51 @@ header {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  text-align: center;
-  opacity: 1;
-  transition: opacity 0.6s ease-in-out; }
+  text-align: center; }
+  .dot-nav li:first-child .tooltip-label {
+    top: 0; }
   .dot-nav li a {
+    position: relative;
     display: block;
     padding: 10px 15px;
     font-size: 10px;
-    opacity: 0.6;
-    cursor: pointer;
-    transition: color 0.6s ease-in-out; }
-    .dot-nav li a:hover {
+    cursor: pointer; }
+    .dot-nav li a:hover i {
       opacity: 1;
-      transition: opacity 500ms; }
-      .dot-nav li a:hover i {
-        transform: scale(1.4); }
-  .dot-nav .active-dot {
+      transform: scale(1.4); }
+    .dot-nav li a:hover .tooltip-label {
+      visibility: visible;
+      opacity: 1; }
+    .dot-nav li a i {
+      opacity: 0.6;
+      transform: scale(1);
+      transition: color 0.6s ease-in-out, opacity 0.12s ease-in-out, transform 0.12s ease-in-out; }
+  .dot-nav .tooltip-label {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 5px 15px;
+    border-radius: 6px;
+    position: absolute;
+    top: -5px;
+    right: 105%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.12s ease-in-out; }
+  .dot-nav .tooltip-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black; }
+  .dot-nav .active-dot i {
     opacity: 1; }
 
 @keyframes arrow-pulse {
@@ -453,7 +482,7 @@ footer .social {
     background-color: none; } }
 .home-theme .panel {
   background-color: rgba(36, 123, 160, 0.8); }
-.home-theme .dot-nav li a {
+.home-theme .dot-nav li a i {
   color: rgba(36, 123, 160, 0.8); }
 .home-theme .last-name {
   color: rgba(36, 123, 160, 0.8); }
