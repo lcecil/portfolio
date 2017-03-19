@@ -186,7 +186,7 @@
             "sectionHeader": "Prototypes",
             "sectionContent": [
               {
-                "sectionParagraph": "Interactive prototypes are crucial to understanding whether a design is usable and intuitive. The tools available today make it easy for me to create a simple clickable interface for usability testing or showcasing to client. Often times, building out a page in HTML/CSS/JS is just as quick and can shorten development time if only minor tweaks are needed to the final design."
+                "sectionParagraph": "Interactive prototypes are crucial to understanding whether a design is usable and intuitive. The tools available today make it easy for me to create a simple clickable interface for usability testing or showcasing to client. Often, building out a page in HTML/CSS/JS is just as quick and can shorten development time if only minor tweaks are needed to the final design."
               }
             ]
           },
@@ -224,7 +224,7 @@
             "sectionHeader": "The Project",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "Our company’s website needed updating, both in content and the branding message we wanted to represent us as a company. After reading about the success of Google’s Design Sprints, the UX team decided that the website was the perfect opportunity for a five-day design overhaul."
               }
             ]
           },
@@ -232,7 +232,10 @@
             "sectionHeader": "The Process",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "I gathered the UX team to discuss the best way to implement the schedule, assign moderators for each day, and make sure that we were all on the same page about what deliverables we needed out of each session. After going through the five-day process with our leadership team and other stakeholders, we came up with a few ideas that we could test with an interactive prototype and a few target audience users."
+              },
+              {
+                "sectionParagraph": "What we gained from the design sprint was an understanding of what message we wanted to portray, how that message was received by our audience, what feature ideas (interactive timeline, job creator, employee photo slider) worked and which ones didn’t. Based on that outcome, I pulled the UX team together so that we could discuss our timeline for creating a final design and the subsequent development."
               }
             ]
           },
@@ -240,7 +243,7 @@
             "sectionHeader": "The Results",
             "sectionContent": [
               {
-                "sectionParagraph": ""
+                "sectionParagraph": "Since we could quickly vet key feature ideas in the five-day sprint, it streamlined our development time. Being able to give an accurate timeline and vetted design to our company’s CEO and COO helped us as a team gain support for the project. Our involvement with those stakeholders early in the process also gave them a sense of ownership in the final product, a website that carried their message across to all audiences."
               }
             ]
           }
