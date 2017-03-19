@@ -35,6 +35,7 @@ $dot-duration: $transition-duration * 0.2;
     i {
       opacity: 0.6;
       transform: scale(1);
+      color: inherit;
       transition: color $transition-duration ease-in-out, opacity $dot-duration ease-in-out, transform $dot-duration ease-in-out;
     }
   }
