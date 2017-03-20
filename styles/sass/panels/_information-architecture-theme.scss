@@ -30,12 +30,20 @@
     color: $theme-2;
   }
 
-  .previous {
+  .previous-tile {
     background-color: $theme-1;
   }
 
-  .next {
+  .next-tile {
     background-color: $theme-3;
+  }
+
+  .previous-overlay {
+    background-color: rgb(36, 123, 160);
+  }
+
+  .next-overlay {
+    background-color: rgb(39, 48, 67);
   }
 
   .artifacts-button {

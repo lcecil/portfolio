@@ -20,9 +20,6 @@
       this.el.children().on('click', function (event) {
         var animationDuration = 800;
         var url = $(this).attr("href");
-        var overlayClass = $(this).css();
-        debugger;
-        console.log(overlayClass);
         event.preventDefault();
 
         Animate({

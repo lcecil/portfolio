@@ -376,36 +376,36 @@ header {
 
 .tile-nav {
   overflow: hidden; }
-  .tile-nav .next {
+  .tile-nav .next-tile {
     text-align: right; }
-  .tile-nav .previous {
+  .tile-nav .previous-tile {
     text-align: left; }
-  .tile-nav .next, .tile-nav .previous {
+  .tile-nav .next-tile, .tile-nav .previous-tile {
     width: 50%;
     float: left;
     display: block;
     height: auto; }
-    .tile-nav .next:hover, .tile-nav .previous:hover {
+    .tile-nav .next-tile:hover, .tile-nav .previous-tile:hover {
       cursor: pointer; }
-      .tile-nav .next:hover .arrow-left, .tile-nav .previous:hover .arrow-left {
+      .tile-nav .next-tile:hover .arrow-left, .tile-nav .previous-tile:hover .arrow-left {
         transform: translateX(-5px); }
-      .tile-nav .next:hover .arrow-right, .tile-nav .previous:hover .arrow-right {
+      .tile-nav .next-tile:hover .arrow-right, .tile-nav .previous-tile:hover .arrow-right {
         transform: translateX(5px); }
-    .tile-nav .next .content-wrapper, .tile-nav .previous .content-wrapper {
+    .tile-nav .next-tile .content-wrapper, .tile-nav .previous-tile .content-wrapper {
       color: #fff;
       max-width: 70%;
       margin: 1.3em auto 0; }
-      .tile-nav .next .content-wrapper .primary-header, .tile-nav .previous .content-wrapper .primary-header {
+      .tile-nav .next-tile .content-wrapper .primary-header, .tile-nav .previous-tile .content-wrapper .primary-header {
         font-family: "Playfair Display", serif;
         font-style: italic; }
-      .tile-nav .next .content-wrapper .secondary-header, .tile-nav .previous .content-wrapper .secondary-header {
+      .tile-nav .next-tile .content-wrapper .secondary-header, .tile-nav .previous-tile .content-wrapper .secondary-header {
         text-transform: uppercase;
         font-weight: 200; }
-      .tile-nav .next .content-wrapper .arrow-left, .tile-nav .next .content-wrapper .arrow-right, .tile-nav .previous .content-wrapper .arrow-left, .tile-nav .previous .content-wrapper .arrow-right {
+      .tile-nav .next-tile .content-wrapper .arrow-left, .tile-nav .next-tile .content-wrapper .arrow-right, .tile-nav .previous-tile .content-wrapper .arrow-left, .tile-nav .previous-tile .content-wrapper .arrow-right {
         display: inline-block;
         width: 22px;
         transition: transform 0.18s ease-in; }
-      .tile-nav .next .content-wrapper .page-description, .tile-nav .previous .content-wrapper .page-description {
+      .tile-nav .next-tile .content-wrapper .page-description, .tile-nav .previous-tile .content-wrapper .page-description {
         display: inline-block;
         text-transform: uppercase; }
 
@@ -499,9 +499,9 @@ footer .social {
   color: rgba(36, 123, 160, 0.8); }
 .home-theme .last-name {
   color: rgba(36, 123, 160, 0.8); }
-.home-theme .previous {
+.home-theme .previous-tile {
   background-color: rgba(81, 193, 175, 0.8); }
-.home-theme .next {
+.home-theme .next-tile {
   background-color: rgba(245, 95, 92, 0.8); }
 .home-theme .previous-overlay {
   background-color: #51c1af; }
@@ -536,10 +536,14 @@ footer .social {
   color: rgba(245, 95, 92, 0.8); }
 .information-architecture-theme .last-name {
   color: rgba(245, 95, 92, 0.8); }
-.information-architecture-theme .previous {
+.information-architecture-theme .previous-tile {
   background-color: rgba(36, 123, 160, 0.8); }
-.information-architecture-theme .next {
+.information-architecture-theme .next-tile {
   background-color: rgba(39, 48, 67, 0.8); }
+.information-architecture-theme .previous-overlay {
+  background-color: #247ba0; }
+.information-architecture-theme .next-overlay {
+  background-color: #273043; }
 .information-architecture-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border: 2px solid rgba(245, 95, 92, 0.8);
@@ -569,10 +573,14 @@ footer .social {
   color: rgba(39, 48, 67, 0.8); }
 .research-methods-theme .last-name {
   color: rgba(39, 48, 67, 0.8); }
-.research-methods-theme .previous {
+.research-methods-theme .previous-tile {
   background-color: rgba(245, 95, 92, 0.8); }
-.research-methods-theme .next {
+.research-methods-theme .next-tile {
   background-color: rgba(237, 174, 73, 0.8); }
+.research-methods-theme .previous-overlay {
+  background-color: #f55f5c; }
+.research-methods-theme .next-overlay {
+  background-color: #edae49; }
 .research-methods-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border: 2px solid rgba(39, 48, 67, 0.8);
@@ -602,10 +610,14 @@ footer .social {
   color: rgba(237, 174, 73, 0.8); }
 .visual-designs-theme .last-name {
   color: rgba(237, 174, 73, 0.8); }
-.visual-designs-theme .previous {
+.visual-designs-theme .previous-tile {
   background-color: rgba(39, 48, 67, 0.8); }
-.visual-designs-theme .next {
+.visual-designs-theme .next-tile {
   background-color: rgba(89, 60, 132, 0.8); }
+.visual-designs-theme .previous-overlay {
+  background-color: #273043; }
+.visual-designs-theme .next-overlay {
+  background-color: #593c84; }
 .visual-designs-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border: 2px solid rgba(237, 174, 73, 0.8);
@@ -635,10 +647,14 @@ footer .social {
   color: rgba(89, 60, 132, 0.8); }
 .project-management-theme .last-name {
   color: rgba(89, 60, 132, 0.8); }
-.project-management-theme .previous {
+.project-management-theme .previous-tile {
   background-color: rgba(237, 174, 73, 0.8); }
-.project-management-theme .next {
+.project-management-theme .next-tile {
   background-color: rgba(81, 193, 175, 0.8); }
+.project-management-theme .previous-overlay {
+  background-color: #edae49; }
+.project-management-theme .next-overlay {
+  background-color: #51c1af; }
 .project-management-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border: 2px solid rgba(89, 60, 132, 0.8);
@@ -668,9 +684,9 @@ footer .social {
   color: rgba(81, 193, 175, 0.8); }
 .development-theme .last-name {
   color: rgba(81, 193, 175, 0.8); }
-.development-theme .previous {
+.development-theme .previous-tile {
   background-color: rgba(89, 60, 132, 0.8); }
-.development-theme .next {
+.development-theme .next-tile {
   background-color: rgba(36, 123, 160, 0.8); }
 .development-theme .previous-overlay {
   background-color: #593c84; }

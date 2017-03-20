@@ -1,15 +1,15 @@
 .tile-nav {
   overflow: hidden;
 
-  .next {
+  .next-tile {
     text-align: right;
   }
 
-  .previous {
+  .previous-tile {
     text-align: left;
   }
 
-  .next, .previous {
+  .next-tile, .previous-tile {
     width: 50%;
     float: left;
     display: block;
