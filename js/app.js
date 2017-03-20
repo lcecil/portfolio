@@ -28,6 +28,7 @@ $(function() {
       // kick things off, baby
       var app = new AppViewModel($('body'), templates);
   });
+
 });
 
 ScrollManager.onScroll(function(direction) {
@@ -61,10 +62,6 @@ $(window).on('keydown', function(e) {
       case 39:
         var fullPanelRoute = $('.page-link').attr('href');
         location.hash = fullPanelRoute;
-        break;
-      case 37:
-        var halfPanelRoute = $('.toggle-back').attr('href');
-        location.hash = halfPanelRoute;
         break;
       default: return;
     }

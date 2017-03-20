@@ -449,6 +449,18 @@ header {
     stroke-dasharray: 6650;
     stroke-dashoffset: 6650; }
 
+.overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0; }
+  .overlay.show {
+    display: block; }
+
 footer .contact, footer .social {
   text-align: center;
   padding: 5vh 0; }
@@ -491,6 +503,10 @@ footer .social {
   background-color: rgba(81, 193, 175, 0.8); }
 .home-theme .next {
   background-color: rgba(245, 95, 92, 0.8); }
+.home-theme .previous-overlay {
+  background-color: #51c1af; }
+.home-theme .next-overlay {
+  background-color: #f55f5c; }
 .home-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border: 2px solid rgba(36, 123, 160, 0.8);
@@ -656,6 +672,10 @@ footer .social {
   background-color: rgba(89, 60, 132, 0.8); }
 .development-theme .next {
   background-color: rgba(36, 123, 160, 0.8); }
+.development-theme .previous-overlay {
+  background-color: #593c84; }
+.development-theme .next-overlay {
+  background-color: #247ba0; }
 .development-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border: 2px solid rgba(81, 193, 175, 0.8);

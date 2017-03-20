@@ -10,7 +10,15 @@
       var templateData = state.currentTemplateData.details;
       this.el.empty();
       this.el.html(this.template(templateData));
+      this.setButtonHandlers(state);
+    },
+
+    setButtonHandlers: function (state) {
+      $('.artifacts-button').on('click', function() {
+        PhotoManager.openPhotoswipe(state.currentTemplateData.details.page.imageList);
+      });
     }
+
   });
 
   window.PageViewModel = PageViewModel;

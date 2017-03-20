@@ -38,6 +38,14 @@
     background-color: $theme-1;
   }
 
+  .previous-overlay {
+    background-color: rgb(89, 60, 132);
+  }
+
+  .next-overlay {
+    background-color: rgb(36, 123, 160);
+  }
+
   .artifacts-button {
     transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
     border: 2px solid $theme-6;

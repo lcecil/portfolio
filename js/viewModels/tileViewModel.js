@@ -13,14 +13,28 @@
       };
       this.el.empty();
       this.el.html(this.template(templateData));
-
-      this.setTileClickHandler();
+      this.setTileClickHandler(state);
     },
 
     setTileClickHandler: function () {
       this.el.children().on('click', function (event) {
+        var animationDuration = 800;
+        var url = $(this).attr("href");
+        var overlayClass = $(this).css();
+        debugger;
+        console.log(overlayClass);
         event.preventDefault();
-        $('body').addClass('top-loading');
+
+        Animate({
+          begin: function () {
+          },
+          middle: function () {
+            window.location = url;
+            window.scrollTo(0, 0);
+          },
+          end: function () {
+          }
+        }, animationDuration);
       });
     }
 

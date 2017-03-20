@@ -45,14 +45,14 @@
     },
 
     setMenuIconHandlers: function () {
-      this.menuIcon.on('click', function(event) {
+      this.menuIcon.on('click', function() {
           $('.nav-wrap').toggleClass('show');
           $('header').toggleClass('show-menu');
       });
     },
 
     setMenuItemHandlers: function () {
-      this.menuItem.on('click', function (event) {
+      this.menuItem.on('click', function () {
         $('.nav-wrap').removeClass('show');
         $('header').removeClass('show-menu');
       });
@@ -125,24 +125,6 @@
           if (self.el.is('.half-loading')) {
             self.el.removeClass('half-loading').addClass('half-loaded');
           }
-        }
-      }, animationDuration);
-    },
-
-    animateToTop: function (state) {
-      var animationDuration = 800;
-      var self = this;
-
-      Animate({
-        begin: function () {
-          // self.el.addClass('top-loading');
-          // self.backgroundPanel.removeClass('show');
-        },
-        middle: function () {
-          // self.panel.render(state);
-        },
-        end: function () {
-          // self.el.removeClass('top-loading').addClass('full-loaded');
         }
       }, animationDuration);
     }
