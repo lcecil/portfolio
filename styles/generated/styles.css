@@ -127,10 +127,6 @@ button {
     max-width: 60%;
     margin: 0 auto;
     visibility: visible; }
-.full.top-loading .content-wrapper, .full.top-loading .page-wrapper, .full.top-loading .contact, .full.top-loading .social {
-  animation: text-fade-out 0.3s ease-in forwards; }
-.full.top-loaded {
-  animation: text-fade-in 0.3s ease-out forwards; }
 
 .half .panel {
   width: 50vw;

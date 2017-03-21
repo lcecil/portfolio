@@ -55,6 +55,7 @@
       this.menuItem.on('click', function () {
         $('.nav-wrap').removeClass('show');
         $('header').removeClass('show-menu');
+        window.scrollTo(0,0);
       });
     },
 
@@ -113,7 +114,7 @@
 
       Animation.create([
         Animation.step(0, function () {
-          self.el.removeClass('full ful-loaded').addClass('half half-loading');
+          self.el.removeClass('full full-loaded').addClass('half half-loading');
           $('.page').empty();
         }),
         Animation.step(400, function () {

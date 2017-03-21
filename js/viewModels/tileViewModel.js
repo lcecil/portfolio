@@ -18,7 +18,6 @@
 
     setTileClickHandler: function () {
       this.el.children().on('click', function (event) {
-        var animationDuration = 2000;
         var route = $(this).attr("href");
         var color = $(this).css('background-color');
         var overlay = $('.overlay');

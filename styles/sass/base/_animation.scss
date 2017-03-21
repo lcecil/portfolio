@@ -71,17 +71,6 @@ $text-duration: $transition-duration * 0.5;
       visibility: visible;
     }
   }
-
-  &.top-loading {
-
-    .content-wrapper, .page-wrapper, .contact, .social {
-      animation: text-fade-out $text-duration ease-in forwards;
-    }
-  }
-
-  &.top-loaded {
-    animation: text-fade-in $text-duration ease-out forwards;
-  }
 }
 
 .half {
