@@ -90,7 +90,7 @@ header {
     .header-icon.menu {
 
       .line-1 {
-        transform: rotate(33deg);
+        transform: translate(2px, -1px) rotate(46deg);
       }
 
       .line-2 {
@@ -98,7 +98,7 @@ header {
       }
 
       .line-3 {
-        transform: rotate(-33deg);
+        transform: translate(2px, 1px) rotate(-47deg);
       }
     }
   }

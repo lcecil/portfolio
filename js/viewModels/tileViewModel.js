@@ -18,20 +18,27 @@
 
     setTileClickHandler: function () {
       this.el.children().on('click', function (event) {
-        var animationDuration = 800;
-        var url = $(this).attr("href");
+        var animationDuration = 2000;
+        var route = $(this).attr("href");
+        var color = $(this).css('background-color');
+        var overlay = $('.overlay');
         event.preventDefault();
 
-        Animate({
-          begin: function () {
-          },
-          middle: function () {
-            window.location = url;
+        Animation.create([
+          Animation.step(0, function () {
+            overlay.addClass('show fade-in').css('background-color', color);
+          }),
+          Animation.step(300, function () {
+            window.location = route;
             window.scrollTo(0, 0);
-          },
-          end: function () {
-          }
-        }, animationDuration);
+          }),
+          Animation.step(700, function () {
+            overlay.removeClass('fade-in');
+          }),
+          Animation.step(1000, function () {
+            overlay.removeClass('show');
+          })
+        ]);
       });
     }
 

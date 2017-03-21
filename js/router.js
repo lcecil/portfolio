@@ -93,7 +93,6 @@
 
     getBaseRoute: function (route) {
       var base = '/home'; //default
-
       if (route.length) {
         base = route.match(/\/[a-z-]+/ig)[0];
         return base ? base : '/home';

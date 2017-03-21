@@ -92,41 +92,39 @@
     },
 
     animateToDetails: function (state) {
-      var animationDuration = 800;
       var self = this;
 
-      Animate({
-        begin: function () {
+      Animation.create([
+        Animation.step(0, function () {
           self.el.removeClass('half half-loaded').addClass('full full-loading');
           self.backgroundPanel.removeClass('show');
-        },
-        middle: function () {
+        }),
+        Animation.step(400, function () {
           self.panel.render(state);
-        },
-        end: function () {
+        }),
+        Animation.step(800, function () {
           self.el.removeClass('full-loading').addClass('full-loaded');
-        }
-      }, animationDuration);
+        })
+      ]);
     },
 
     animateFromDetails: function (state) {
-      var animationDuration = 800;
       var self = this;
 
-      Animate({
-        begin: function () {
-          self.el.removeClass('full full-loaded').addClass('half half-loading');
+      Animation.create([
+        Animation.step(0, function () {
+          self.el.removeClass('full ful-loaded').addClass('half half-loading');
           $('.page').empty();
-        },
-        middle: function () {
+        }),
+        Animation.step(400, function () {
           self.panel.render(state);
-        },
-        end: function () {
+        }),
+        Animation.step(800, function () {
           if (self.el.is('.half-loading')) {
             self.el.removeClass('half-loading').addClass('half-loaded');
           }
-        }
-      }, animationDuration);
+        })
+      ]);
     }
 
   });

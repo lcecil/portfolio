@@ -1,18 +1,18 @@
 (function () {
 
-  var Animate = function (steps, duration) {
-    duration = duration || 0;
-    steps = _.defaults(steps, {
-      begin: _.noop(),
-      middle: _.noop(),
-      end: _.noop()
-    });
+  var Animation = {
+      step: function (delay, handler) {
+          return {
+              delay: delay,
+              handler: handler
+          };
+      },
+      create: function (steps) {
+          _.each(steps, function (step) {
+             _.delay(step.handler, step.delay);
+          });
+      }
+    };
 
-    steps.begin();
-    _.delay(steps.middle, duration/2);
-
-    _.delay(steps.end, duration);
-  };
-
-  window.Animate = Animate;
+  window.Animation = Animation;
 })();

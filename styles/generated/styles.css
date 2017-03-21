@@ -236,11 +236,11 @@ header {
     color: #fff;
     transition: color 0.3s ease-in-out; }
   header.show-menu .header-icon.menu .line-1 {
-    transform: rotate(33deg); }
+    transform: translate(2px, -1px) rotate(46deg); }
   header.show-menu .header-icon.menu .line-2 {
     opacity: 0; }
   header.show-menu .header-icon.menu .line-3 {
-    transform: rotate(-33deg); }
+    transform: translate(2px, 1px) rotate(-47deg); }
 
 .dot-nav {
   position: fixed;
@@ -450,16 +450,18 @@ header {
     stroke-dashoffset: 6650; }
 
 .overlay {
-  display: none;
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
-  opacity: 0; }
+  z-index: -1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; }
+  .overlay.fade-in {
+    opacity: 1; }
   .overlay.show {
-    display: block; }
+    z-index: 2; }
 
 footer .contact, footer .social {
   text-align: center;
@@ -500,9 +502,9 @@ footer .social {
 .home-theme .last-name {
   color: rgba(36, 123, 160, 0.8); }
 .home-theme .previous-tile {
-  background-color: rgba(81, 193, 175, 0.8); }
+  background-color: #74CDBF; }
 .home-theme .next-tile {
-  background-color: rgba(245, 95, 92, 0.8); }
+  background-color: #F77F7D; }
 .home-theme .previous-overlay {
   background-color: #51c1af; }
 .home-theme .next-overlay {
@@ -537,9 +539,9 @@ footer .social {
 .information-architecture-theme .last-name {
   color: rgba(245, 95, 92, 0.8); }
 .information-architecture-theme .previous-tile {
-  background-color: rgba(36, 123, 160, 0.8); }
+  background-color: #5095B3; }
 .information-architecture-theme .next-tile {
-  background-color: rgba(39, 48, 67, 0.8); }
+  background-color: #525969; }
 .information-architecture-theme .previous-overlay {
   background-color: #247ba0; }
 .information-architecture-theme .next-overlay {
@@ -574,9 +576,9 @@ footer .social {
 .research-methods-theme .last-name {
   color: rgba(39, 48, 67, 0.8); }
 .research-methods-theme .previous-tile {
-  background-color: rgba(245, 95, 92, 0.8); }
+  background-color: #F77F7D; }
 .research-methods-theme .next-tile {
-  background-color: rgba(237, 174, 73, 0.8); }
+  background-color: #F1BE6D; }
 .research-methods-theme .previous-overlay {
   background-color: #f55f5c; }
 .research-methods-theme .next-overlay {
@@ -611,9 +613,9 @@ footer .social {
 .visual-designs-theme .last-name {
   color: rgba(237, 174, 73, 0.8); }
 .visual-designs-theme .previous-tile {
-  background-color: rgba(39, 48, 67, 0.8); }
+  background-color: #525969; }
 .visual-designs-theme .next-tile {
-  background-color: rgba(89, 60, 132, 0.8); }
+  background-color: #7A639D; }
 .visual-designs-theme .previous-overlay {
   background-color: #273043; }
 .visual-designs-theme .next-overlay {
@@ -648,9 +650,9 @@ footer .social {
 .project-management-theme .last-name {
   color: rgba(89, 60, 132, 0.8); }
 .project-management-theme .previous-tile {
-  background-color: rgba(237, 174, 73, 0.8); }
+  background-color: #F1BE6D; }
 .project-management-theme .next-tile {
-  background-color: rgba(81, 193, 175, 0.8); }
+  background-color: #74CDBF; }
 .project-management-theme .previous-overlay {
   background-color: #edae49; }
 .project-management-theme .next-overlay {
@@ -685,9 +687,9 @@ footer .social {
 .development-theme .last-name {
   color: rgba(81, 193, 175, 0.8); }
 .development-theme .previous-tile {
-  background-color: rgba(89, 60, 132, 0.8); }
+  background-color: #7A639D; }
 .development-theme .next-tile {
-  background-color: rgba(36, 123, 160, 0.8); }
+  background-color: #5095B3; }
 .development-theme .previous-overlay {
   background-color: #593c84; }
 .development-theme .next-overlay {
