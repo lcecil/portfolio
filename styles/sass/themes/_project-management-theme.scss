@@ -1,0 +1,72 @@
+@keyframes project-page-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $theme-5;
+    }
+}
+
+@keyframes project-menu-fade-in {
+  0% {
+    background-color: $theme-5;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+.project-management-theme {
+
+  .panel {
+    background-color: $theme-5;
+  }
+
+  .dot-nav li a i {
+    color: $theme-5;
+  }
+
+  .last-name {
+    color: $theme-5;
+  }
+
+  .previous-tile {
+    background-color: $theme-4-hex;
+  }
+
+  .next-tile {
+    background-color: $theme-6-hex;
+  }
+
+  .previous-overlay {
+    background-color: rgb(237, 174, 73);
+  }
+
+  .next-overlay {
+    background-color: rgb(81, 193, 175);
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-5;
+    background-color: #fff;
+    color: $theme-5;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-5;
+    color: $font-color-light;
+  }
+
+  //Animations for full page
+  &.full.full-loaded {
+
+    header {
+        animation: project-page-fade-in $transition-duration ease-in forwards;
+    }
+
+    .show-menu {
+      animation: project-menu-fade-in $header-duration ease-in-out forwards;
+    }
+  }
+}

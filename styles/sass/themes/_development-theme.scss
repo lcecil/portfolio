@@ -1,0 +1,72 @@
+@keyframes dev-page-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $theme-6;
+    }
+}
+
+@keyframes dev-menu-fade-in {
+  0% {
+    background-color: $theme-6;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+.development-theme {
+
+  .panel {
+    background-color: $theme-6;
+  }
+
+  .dot-nav li a i {
+    color: $theme-6;
+  }
+
+  .last-name {
+    color: $theme-6;
+  }
+
+  .previous-tile {
+    background-color: $theme-5-hex;
+  }
+
+  .next-tile {
+    background-color: $theme-1-hex;
+  }
+
+  .previous-overlay {
+    background-color: rgb(89, 60, 132);
+  }
+
+  .next-overlay {
+    background-color: rgb(36, 123, 160);
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-6;
+    background-color: #fff;
+    color: $theme-6;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-6;
+    color: $font-color-light;
+  }
+
+  //Animations for full page
+  &.full.full-loaded {
+
+    header {
+        animation: dev-page-fade-in $transition-duration ease-in forwards;
+    }
+
+    .show-menu {
+      animation: dev-menu-fade-in $header-duration ease-in-out forwards;
+    }
+  }
+}

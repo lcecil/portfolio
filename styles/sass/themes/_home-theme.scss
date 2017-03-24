@@ -1,0 +1,72 @@
+@keyframes home-page-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $theme-1;
+    }
+}
+
+@keyframes home-menu-fade-in {
+  0% {
+    background-color: $theme-1;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+.home-theme{
+
+  .panel {
+    background-color: $theme-1;
+  }
+
+  .dot-nav li a i {
+    color: $theme-1;
+  }
+
+  .last-name {
+    color: $theme-1;
+  }
+
+  .previous-tile {
+    background-color: $theme-6-hex;
+  }
+
+  .next-tile {
+    background-color: $theme-2-hex;
+  }
+
+  .previous-overlay {
+    background-color: rgb(81, 193, 175);
+  }
+
+  .next-overlay {
+    background-color: rgb(245, 95, 92);
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-1;
+    background-color: #fff;
+    color: $theme-1;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-1;
+    color: $font-color-light;
+  }
+
+  //Animations for full page
+  &.full.full-loaded {
+
+    header {
+      animation: home-page-fade-in $transition-duration ease-in forwards;
+    }
+
+    .show-menu {
+      animation: home-menu-fade-in $header-duration ease-in-out forwards;
+    }
+  }
+}

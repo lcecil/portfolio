@@ -1,0 +1,72 @@
+@keyframes info-page-fade-in {
+    0% {
+      background-color: none;
+    }
+    100% {
+      background-color: $theme-2;
+    }
+}
+
+@keyframes info-menu-fade-in {
+  0% {
+    background-color: $theme-2;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+.information-architecture-theme {
+
+  .panel {
+    background-color: $theme-2;
+  }
+
+  .dot-nav li a i {
+    color: $theme-2;
+  }
+
+  .last-name {
+    color: $theme-2;
+  }
+
+  .previous-tile {
+    background-color: $theme-1-hex;
+  }
+
+  .next-tile {
+    background-color: $theme-3-hex;
+  }
+
+  .previous-overlay {
+    background-color: rgb(36, 123, 160);
+  }
+
+  .next-overlay {
+    background-color: rgb(39, 48, 67);
+  }
+
+  .artifacts-button {
+    transition: background-color $button-duration ease-in-out, color $button-duration ease-in-out;
+    border: 2px solid $theme-2;
+    background-color: #fff;
+    color: $theme-2;
+  }
+
+  .artifacts-button:hover {
+    background-color: $theme-2;
+    color: $font-color-light;
+  }
+
+  //Animations for full page
+  &.full.full-loaded {
+
+    header {
+        animation: info-page-fade-in $transition-duration ease-in forwards;
+      }
+
+    .show-menu {
+      animation: info-menu-fade-in $header-duration ease-in-out forwards;
+    }
+  }
+}
