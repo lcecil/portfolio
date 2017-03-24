@@ -15,7 +15,9 @@
 
     setButtonHandlers: function (state) {
       $('.artifacts-button').on('click', function() {
-        PhotoManager.openPhotoswipe(state.currentTemplateData.details.page.imageList);
+        if (state.route !== '/home/details') {
+          PhotoManager.openPhotoswipe(state.currentTemplateData.details.page.imageList);
+        }
       });
     }
 

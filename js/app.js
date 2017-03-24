@@ -66,12 +66,9 @@ $(window).on('keydown', function(e) {
       default: return;
     }
   } else {
-    switch (e.which) {
-      case 37:
+      if (e.which === 37) {
         var halfPanelRoute = $('.toggle-back').attr('href');
         location.hash = halfPanelRoute;
-        break;
-      default: return;
-    }
+      }
   }
 });

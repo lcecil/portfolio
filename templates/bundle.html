@@ -54,7 +54,13 @@
       </div>
     <% } %>
     <div class='button-wrapper'>
-      <button class='artifacts-button'><%= page.buttonLabel %></button>
+      <% if (page.buttonLink) { %>
+        <a href='assets/lcecil.resume.pdf' download>
+          <button class='artifacts-button'><%= page.buttonLabel %></button>
+        </a>
+      <% } else { %>
+        <button class='artifacts-button'><%= page.buttonLabel %></button>
+      <% } %>
     </div>
   </div>
 </script>
