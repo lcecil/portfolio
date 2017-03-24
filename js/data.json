@@ -10,7 +10,7 @@
     "details": {
       "panel": {
         "primaryHeader": "Librarians make the best designers",
-        "imgPath": "images/profile.png",
+        "imgPath": "assets/images/profile.png",
         "imgAlt": "Laura Cecil's Profile"
       },
       "page": {
@@ -66,9 +66,7 @@
             "sectionHeader": "The Process",
             "sectionContent": [
               {
-                "sectionParagraph": "Since this was going to be a new feature, with implementations across a couple of platforms, it was necessary to map out all the required information and parameters before beginning on the workflows. I created a site map of the existing products and workflow diagrams to ensure that our solution was going fit in with our users’ current processes and expectations.",
-                "sectionImage": "images/workflow-whiteboard.jpg",
-                "sectionImageAlt": "Workflow Diagram"
+                "sectionParagraph": "Since this was going to be a new feature, with implementations across a couple of platforms, it was necessary to map out all the required information and parameters before beginning on the workflows. I created a site map of the existing products and workflow diagrams to ensure that our solution was going fit in with our users’ current processes and expectations."
               },
               {
                 "sectionParagraph": "When we met with our stakeholders to gather feedback on the workflows, they found it difficult to understand how all the pieces were going to function together. Using Axure, I quickly created a clickable prototype of the application for the client to see and interact with. The ability to go through the process themselves with the prototype made the interactions clearer not only to our stakeholder, but to the developers who used the prototype as a guide when building out the feature."
@@ -87,10 +85,10 @@
         "buttonLabel": "View Images",
         "imageList": [
             {
-                "src": "https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg",
-                "w": 964,
-                "h": 1024,
-                "title": "Test Image"
+                "src": "assets/images/workflow-whiteboard.jpg",
+                "w": 2560,
+                "h": 1440,
+                "title": "Workflow Diagram"
             },
             {
                 "src": "https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg",
