@@ -459,6 +459,14 @@ header {
   .overlay.show {
     z-index: 2; }
 
+.pswp__counter,
+.pswp__caption__center {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif; }
+
+.pswp__caption__center {
+  text-align: center; }
+
 footer .contact, footer .social {
   text-align: center;
   padding: 5vh 0; }

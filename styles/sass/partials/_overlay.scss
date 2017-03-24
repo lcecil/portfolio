@@ -18,3 +18,14 @@ $overlay-duration: $transition-duration * 0.5;
     z-index: 2;
   }
 }
+
+//Overrides for Photoswipe's default-skin.css styles for the image gallery
+.pswp__counter,
+.pswp__caption__center {
+  font-size: 12px;
+  font-family: $sans-serif;
+}
+
+.pswp__caption__center {
+  text-align: center;
+}
