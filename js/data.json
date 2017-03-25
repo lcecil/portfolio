@@ -91,10 +91,28 @@
                 "title": "Workflow Diagram"
             },
             {
-                "src": "https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg",
-                "w": 1024,
-                "h": 683,
-                "title": "Test Image"
+                "src": "assets/images/info-arch-wire1.png",
+                "w": 2408,
+                "h": 1180,
+                "title": "Customer Management Wireframe"
+            },
+            {
+                "src": "assets/images/info-arch-wire2.png",
+                "w": 1912,
+                "h": 1108,
+                "title": "Retail Kiosk Wireframe"
+            },
+            {
+                "src": "assets/images/info-arch-vd.png",
+                "w": 2726,
+                "h": 1626,
+                "title": "Customer Management Visual Design Specification"
+            },
+            {
+                "src": "assets/images/info-arch-product.png",
+                "w": 1792,
+                "h": 1406,
+                "title": "Retail Kiosk Support Queue UI"
             }
         ]
       }
