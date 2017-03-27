@@ -277,16 +277,40 @@
         "buttonLabel": "View Images",
         "imageList": [
             {
-                "src": "https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg",
-                "w": 964,
-                "h": 1024,
-                "title": "Test Image"
+                "src": "assets/images/visual-designs/sketching.JPG",
+                "w": 2448,
+                "h": 3264,
+                "title": "Example of sketching I do in a notebook during meetings or brainstorming sessions"
             },
             {
-                "src": "https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg",
-                "w": 1024,
-                "h": 683,
-                "title": "Test Image"
+                "src": "assets/images/visual-designs/wireframe-1.png",
+                "w": 2256,
+                "h": 1242,
+                "title": "Laying out the heirarchy and information architecture for a new design"
+            },
+            {
+                "src": "assets/images/visual-designs/wireframe-2.png",
+                "w": 2216,
+                "h": 1158,
+                "title": "I like to include notes about my design motivations in the documentation for developers"
+            },
+            {
+                "src": "assets/images/visual-designs/interactive-prototype.png",
+                "w": 2156,
+                "h": 886,
+                "title": "For this design, we performed some usability testing using an Axure prototype"
+            },
+            {
+                "src": "assets/images/visual-designs/visual-design-1.png",
+                "w": 2118,
+                "h": 632,
+                "title": "The final design layout in a high fidelity mock up"
+            },
+            {
+                "src": "assets/images/visual-designs/visual-design-2.png",
+                "w": 1575,
+                "h": 1161,
+                "title": "Specifications for layout, padding, and colors help the developers with building the product"
             }
         ]
       }
@@ -374,6 +398,12 @@
                 "w": 1438,
                 "h": 1580,
                 "title": "A final designs for the more playful contact form that we decided worked best for our layout"
+            },
+            {
+                "src": "assets/images/project-management/character-carousel.png",
+                "w": 1918,
+                "h": 1110,
+                "title": "Our character carousel was a big hit with uesrs, so that was something we kept int he final design"
             }
         ]
       }
@@ -427,16 +457,28 @@
         "buttonLabel": "View Images",
         "imageList": [
             {
-                "src": "https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg",
-                "w": 964,
-                "h": 1024,
-                "title": "Test Image"
+                "src": "assets/images/development/pattern-documentation.png",
+                "w": 2880,
+                "h": 2370,
+                "title": "Example of one of our interaction guidelines and pattern documentation"
             },
             {
-                "src": "https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg",
-                "w": 1024,
-                "h": 683,
-                "title": "Test Image"
+                "src": "assets/images/development/example-pattern.png",
+                "w": 948,
+                "h": 1196,
+                "title": "Template for our pattern library documentation, outlining the pieces we wanted to build in the application"
+            },
+            {
+                "src": "assets/images/development/color-swatches.png",
+                "w": 1420,
+                "h": 1042,
+                "title": "Creating a color pallete for the application and its many states"
+            },
+            {
+                "src": "assets/images/development/pattern-application.png",
+                "w": 2880,
+                "h": 2140,
+                "title": "A button pattern from our interactive application that developers use on a daily basis"
             }
         ]
       }
