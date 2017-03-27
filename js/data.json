@@ -10,7 +10,7 @@
     "details": {
       "panel": {
         "primaryHeader": "Librarians make the best designers",
-        "imgPath": "assets/images/profile.png",
+        "imgPath": "assets/images/home/profile.png",
         "imgAlt": "Laura Cecil's Profile"
       },
       "page": {
@@ -85,34 +85,40 @@
         "buttonLabel": "View Images",
         "imageList": [
             {
-                "src": "assets/images/workflow-whiteboard.jpg",
+                "src": "assets/images/information-architecture/whiteboard-workflow.jpg",
                 "w": 2560,
                 "h": 1440,
-                "title": "Workflow Diagram"
+                "title": "Sketching out a workflow on the whiteboard"
             },
             {
-                "src": "assets/images/info-arch-wire1.png",
+                "src": "assets/images/information-architecture/wireframe-workflow.png",
+                "w": 2602,
+                "h": 1260,
+                "title": "Translating the sketches into flow diagrams for the wireframes"
+            },
+            {
+                "src": "assets/images/information-architecture/wireframe-1.png",
                 "w": 2408,
                 "h": 1180,
-                "title": "Customer Management Wireframe"
+                "title": "Customer Management wireframe, illustrating layout and interactions"
             },
             {
-                "src": "assets/images/info-arch-wire2.png",
+                "src": "assets/images/information-architecture/wireframe-2.png",
                 "w": 1912,
                 "h": 1108,
-                "title": "Retail Kiosk Wireframe"
+                "title": "Retail Kiosk wireframe for a support queue"
             },
             {
-                "src": "assets/images/info-arch-vd.png",
+                "src": "assets/images/information-architecture/visual-design.png",
                 "w": 2726,
                 "h": 1626,
-                "title": "Customer Management Visual Design Specification"
+                "title": "Customer Management visual design specification"
             },
             {
-                "src": "assets/images/info-arch-product.png",
+                "src": "assets/images/information-architecture/final-product.png",
                 "w": 1792,
                 "h": 1406,
-                "title": "Retail Kiosk Support Queue UI"
+                "title": "The final Retail Kiosk Support Queue interface"
             }
         ]
       }
@@ -179,16 +185,40 @@
         "buttonLabel": "View Images",
         "imageList": [
             {
-                "src": "https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg",
-                "w": 964,
-                "h": 1024,
-                "title": "Test Image"
+                "src": "assets/images/research-methods/paper-prototype.jpg",
+                "w": 2448,
+                "h": 2448,
+                "title": "A co-worker tries out a paper prototype to test for usability"
             },
             {
-                "src": "https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg",
-                "w": 1024,
-                "h": 683,
-                "title": "Test Image"
+                "src": "assets/images/research-methods/interactive-prototype.jpg",
+                "w": 3259,
+                "h": 1669,
+                "title": "Conducting an application prototype usability test for interactions"
+            },
+            {
+                "src": "assets/images/research-methods/architecture.jpg",
+                "w": 2442,
+                "h": 2848,
+                "title": "Making notes and sketches before a card sorting exercise"
+            },
+            {
+                "src": "assets/images/research-methods/card-sorting.jpg",
+                "w": 3255,
+                "h": 1700,
+                "title": "Participants group similar concepts in the card sort"
+            },
+            {
+                "src": "assets/images/research-methods/application-mapping.jpg",
+                "w": 3264,
+                "h": 2448,
+                "title": "Mapping out an application by user activities"
+            },
+            {
+                "src": "assets/images/research-methods/personas.jpg",
+                "w": 3259,
+                "h": 2056,
+                "title": "The end result of a persona brainstorming session"
             }
         ]
       }
