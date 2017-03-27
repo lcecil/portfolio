@@ -1,11 +1,11 @@
 'use strict';
 
-  var express = require('express');
+var express = require('express');
+var app = express();
+var staticDirectory = express.static('app');
 
-  var app = express();
+app.use('/', staticDirectory);
 
-  app.use('/', express.static('.'));
-
-  app.listen(3000, function() {
-    console.log("The server is running on port 3000.")
-  });
+app.listen(3000, function() {
+  console.log("The server is running on port 3000.")
+});

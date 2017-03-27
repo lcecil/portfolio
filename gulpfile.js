@@ -6,8 +6,8 @@ const rename = require('gulp-rename');
 
 let paths = {
   sass: {
-    input: 'styles/sass/**/*.scss',
-    output: 'styles/generated/'
+    input: 'app/styles/sass/**/*.scss',
+    output: 'app/styles/generated/'
   }
 };
 
