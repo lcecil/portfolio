@@ -34,7 +34,7 @@ $(function() {
 ScrollManager.onScroll(function(direction) {
   var state = Router.getState();
   if (!state.isShowingDetails) {
-    route = location.hash;
+    route = state.route;
     if (direction > 0) {
       var nextRoute = Router.getNextRoute(route);
       location.hash = nextRoute;
@@ -48,7 +48,7 @@ ScrollManager.onScroll(function(direction) {
 
 $(window).on('keydown', function(e) {
   var state = Router.getState();
-  route = location.hash;
+  var route = state.route;
   if (!state.isShowingDetails) {
     switch (e.which) {
       case 40:
