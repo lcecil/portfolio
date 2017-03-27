@@ -340,16 +340,40 @@
         "buttonLabel": "View Images",
         "imageList": [
             {
-                "src": "https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg",
-                "w": 964,
-                "h": 1024,
-                "title": "Test Image"
+                "src": "assets/images/project-management/design-sprint.JPG",
+                "w": 2448,
+                "h": 3264,
+                "title": "A selection of sketches from our design sprint"
             },
             {
-                "src": "https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg",
-                "w": 1024,
-                "h": 683,
-                "title": "Test Image"
+                "src": "assets/images/project-management/build-a-job.png",
+                "w": 2166,
+                "h": 1308,
+                "title": "An early interactive prototype for our idea of a job-builder"
+            },
+            {
+                "src": "assets/images/project-management/contact-header.png",
+                "w": 2878,
+                "h": 1410,
+                "title": "Testing out our idea of having a sticky contact header"
+            },
+            {
+                "src": "assets/images/project-management/social-media-section.png",
+                "w": 2662,
+                "h": 1414,
+                "title": "Our second prototype had a more polished look and included a social media section"
+            },
+            {
+                "src": "assets/images/project-management/timeline.png",
+                "w": 2572,
+                "h": 1404,
+                "title": "The timeline seemed like a good idea from our sprint, but ended up falling flat with users"
+            },
+            {
+                "src": "assets/images/project-management/contact-form.png",
+                "w": 1438,
+                "h": 1580,
+                "title": "A final designs for the more playful contact form that we decided worked best for our layout"
             }
         ]
       }
