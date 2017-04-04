@@ -31,7 +31,7 @@
             window.location = route;
             window.scrollTo(0, 0);
           }),
-          Animation.step(700, function () {
+          Animation.step(750, function () {
             overlay.removeClass('fade-in');
           }),
           Animation.step(1000, function () {

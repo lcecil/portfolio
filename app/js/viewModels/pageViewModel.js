@@ -16,6 +16,7 @@
     setButtonHandlers: function (state) {
       $('.artifacts-button').on('click', function() {
         if (state.route !== '/home/details') {
+          KeyDownManager.disabled = true;
           PhotoManager.openPhotoswipe(state.currentTemplateData.details.page.imageList);
         }
       });

@@ -46,29 +46,31 @@ ScrollManager.onScroll(function(direction) {
   }
 });
 
-$(window).on('keydown', function(e) {
-  var state = Router.getState();
+KeyDownManager.init();
+
+KeyDownManager.onKeyDown(KeyDownManager.keys.leftKey, function(event, state) {
   var route = state.route;
+  var backRoute = Router.getBaseRoute(route);
+  location.hash = '#' + backRoute;
+});
+
+KeyDownManager.onKeyDown(KeyDownManager.keys.rightKey, function(event, state) {
+  var route = state.currentTemplateData.panel.pageLink;
+  location.hash = route;
+});
+
+KeyDownManager.onKeyDown(KeyDownManager.keys.downKey, function(event, state) {
   if (!state.isShowingDetails) {
-    switch (e.which) {
-      case 40:
-        var nextRoute = Router.getNextRoute(route);
-        location.hash = nextRoute;
-        break;
-      case 38:
-        var previousRoute = Router.getPreviousRoute(route);
-        location.hash = previousRoute;
-        break;
-      case 39:
-        var fullPanelRoute = $('.page-link').attr('href');
-        location.hash = fullPanelRoute;
-        break;
-      default: return;
-    }
-  } else {
-      if (e.which === 37) {
-        var halfPanelRoute = $('.toggle-back').attr('href');
-        location.hash = halfPanelRoute;
-      }
+    var route = state.route;
+    var nextRoute = Router.getNextRoute(route);
+    location.hash = nextRoute;
+  }
+});
+
+KeyDownManager.onKeyDown(KeyDownManager.keys.upKey, function(event, state) {
+  if (!state.isShowingDetails) {
+    var route = state.route;
+    var previousRoute = Router.getPreviousRoute(route);
+    location.hash = previousRoute;
   }
 });

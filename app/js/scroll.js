@@ -18,7 +18,7 @@
     _setFirstListener: function (listener) {
       var throttleDelay = 100; // ms
       this.listeners.push(listener);
-      $(window).on('wheel', _.throttle(
+      $(window).on('wheel swipe', _.throttle(
         _.bind(this._onScroll, this), throttleDelay));
     },
 
