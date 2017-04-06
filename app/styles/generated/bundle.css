@@ -193,7 +193,7 @@ button {
     transform: translateY(0%); }
     .nav-wrap.show .menu-wrap, .nav-wrap.show .sub-menu-wrap {
       opacity: 1;
-      transition: opacity 0.6s ease-in-out 100ms; }
+      transition: opacity 0.9s ease-in-out 100ms; }
 
 header {
   position: fixed;

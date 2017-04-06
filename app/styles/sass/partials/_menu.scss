@@ -1,3 +1,5 @@
+$menu-duration: $transition-duration * 1.5;
+
 .nav-wrap {
   overflow: hidden;
   visibility: hidden;
@@ -52,7 +54,7 @@
 
     .menu-wrap, .sub-menu-wrap {
         opacity: 1;
-        transition: opacity $transition-duration ease-in-out 100ms;
+        transition: opacity $menu-duration ease-in-out 100ms;
     }
 
   }

@@ -1,4 +1,4 @@
-$icon-duration: $transition-duration * 0.5;
+$header-duration: $transition-duration * 0.5;
 
 header {
   position: fixed;
@@ -14,7 +14,7 @@ header {
       position: absolute;
       left: -60px;
       top: 0;
-      transition: left $icon-duration ease-in-out;
+      transition: left $header-duration ease-in-out;
 
       .toggle-back, .toggle-nav {
         display: inline-block;
@@ -34,7 +34,7 @@ header {
 
       .line {
         opacity: 1;
-        transition: transform $icon-duration ease-in-out, opacity $icon-duration ease-in-out;
+        transition: transform $header-duration ease-in-out, opacity $header-duration ease-in-out;
       }
 
       .line-1, .line-3 {
@@ -84,7 +84,7 @@ header {
 
     .last-name {
       color: $font-color-light;
-      transition: color 0.3s ease-in-out;
+      transition: color $header-duration ease-in-out;
     }
 
     .header-icon.menu {

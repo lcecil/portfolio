@@ -51,12 +51,39 @@
       });
     },
 
+    onMenuItemClick: function (event) {
+      var targetRoute = $(event.currentTarget).children().attr("href");
+      var state = Router.getState();
+      event.preventDefault();
+      if (state.isShowingDetails) {
+        Animation.create([
+          Animation.step(0, function () {
+            location.hash = targetRoute;
+            window.scrollTo(0, 0);
+          }),
+          Animation.step(400, function () {
+            $('.nav-wrap').removeClass('show');
+            $('header').removeClass('show-menu');
+          })
+        ]);
+      } else {
+        Animation.create([
+          Animation.step(0, function () {
+            location.hash = targetRoute;
+          }),
+          Animation.step(400, function () {
+            //TODO add in some menu item fade out animation
+          }),
+          Animation.step(1200, function () {
+            $('.nav-wrap').removeClass('show');
+            $('header').removeClass('show-menu');
+          })
+        ]);
+      }
+    },
+
     setMenuItemHandlers: function () {
-      this.menuItem.on('click', function () {
-        $('.nav-wrap').removeClass('show');
-        $('header').removeClass('show-menu');
-        window.scrollTo(0,0);
-      });
+      this.menuItem.on('click', _.bind(this.onMenuItemClick, this));
     },
 
     setInitialBodyClasses: function (state) {

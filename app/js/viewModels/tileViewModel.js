@@ -13,7 +13,7 @@
       };
       this.el.empty();
       this.el.html(this.template(templateData));
-      this.setTileClickHandler(state);
+      this.setTileClickHandler();
     },
 
     setTileClickHandler: function () {
@@ -28,7 +28,7 @@
             overlay.addClass('show fade-in').css('background-color', color);
           }),
           Animation.step(300, function () {
-            window.location = route;
+            location.hash = route;
             window.scrollTo(0, 0);
           }),
           Animation.step(750, function () {
