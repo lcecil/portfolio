@@ -5,7 +5,7 @@
     backgroundPanel: $('.background-image'),
     backArrow: $('.toggle-back'),
     menuIcon: $('.toggle-nav'),
-    menuItem: $('.menu-link'),
+    menuItem: $('.menu-link a'),
     panel: null,
     page: null,
     tile: null,
@@ -52,7 +52,7 @@
     },
 
     onMenuItemClick: function (event) {
-      var targetRoute = $(event.currentTarget).children().attr("href");
+      var targetRoute = $(event.currentTarget).attr("href");
       var state = Router.getState();
       event.preventDefault();
       if (state.isShowingDetails) {

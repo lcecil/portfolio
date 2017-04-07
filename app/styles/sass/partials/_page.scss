@@ -5,6 +5,9 @@
     .page-wrapper {
       max-width: 60%;
       margin: 10vh auto;
+      @media screen and (min-width: $bp-desktop-lg) {
+        max-width: 35%;
+      }
 
       .section {
           padding-bottom: 5vh;
