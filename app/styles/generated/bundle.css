@@ -140,9 +140,15 @@ button {
   .full.full-loaded .content-wrapper .text-wrapper {
     animation: text-fade-in 0.3s ease-in forwards;
     text-align: center;
-    max-width: 60%;
+    max-width: 70%;
     margin: 0 auto;
     visibility: visible; }
+    @media screen and (min-width: 56.25em) {
+      .full.full-loaded .content-wrapper .text-wrapper {
+        max-width: 50%; } }
+    @media screen and (min-width: 90.25em) {
+      .full.full-loaded .content-wrapper .text-wrapper {
+        max-width: 35%; } }
 
 .half .panel {
   width: 50vw;
@@ -160,7 +166,14 @@ button {
 .half.half-loaded .content-wrapper .text-wrapper {
   animation: text-fade-in 0.3s ease-in forwards;
   margin: 0 10%;
+  max-width: 70%;
   visibility: visible; }
+  @media screen and (min-width: 56.25em) {
+    .half.half-loaded .content-wrapper .text-wrapper {
+      max-width: 50%; } }
+  @media screen and (min-width: 90.25em) {
+    .half.half-loaded .content-wrapper .text-wrapper {
+      max-width: 35%; } }
 
 .nav-wrap {
   overflow: hidden;
@@ -368,9 +381,12 @@ header {
   width: 100vw;
   background-color: #fff; }
   .page .page-wrapper {
-    max-width: 60%;
+    max-width: 70%;
     margin: 10vh auto; }
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 56.25em) {
+      .page .page-wrapper {
+        max-width: 50%; } }
+    @media screen and (min-width: 90.25em) {
       .page .page-wrapper {
         max-width: 35%; } }
     .page .page-wrapper .section {
