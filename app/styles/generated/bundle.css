@@ -15,7 +15,7 @@ body {
   font-size: 1em;
   line-height: 1.25;
   color: #333; }
-  @media (min-width: 43.75em) {
+  @media screen and (min-width: 43.75em) {
     body {
       line-height: 1.375; } }
 
@@ -36,23 +36,46 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 2em; }
-  @media (min-width: 43.75em) {
+  @media screen and (min-width: 43.75em) {
     h1 {
       font-size: 2.5em;
       line-height: 1.125; } }
-  @media (min-width: 56.25em) {
+  @media screen and (min-width: 56.25em) {
     h1 {
       font-size: 3em;
       line-height: 1.05; } }
 
 h2 {
-  font-size: 2.369em; }
+  font-size: 1.625em;
+  line-height: 1.15; }
+  @media screen and (min-width: 43.75em) {
+    h2 {
+      font-size: 2em;
+      line-height: 1.25; } }
+  @media screen and (min-width: 56.25em) {
+    h2 {
+      font-size: 2.25em;
+      line-height: 1.25; } }
 
 h3 {
-  font-size: 1.777rem; }
+  font-size: 1.375em;
+  line-height: 1.13; }
+  @media screen and (min-width: 43.75em) {
+    h3 {
+      font-size: 1.5em;
+      line-height: 1.25; } }
+  @media screen and (min-width: 56.25em) {
+    h3 {
+      font-size: 1.75em;
+      line-height: 1.25; } }
 
 h4 {
-  font-size: 1.333em; }
+  font-size: 1.125em;
+  line-height: 1.11; }
+  @media screen and (min-width: 43.75em) {
+    h4 {
+      font-size: 2em;
+      line-height: 1.22; } }
 
 small {
   font-size: 0.75em; }
@@ -151,8 +174,11 @@ button {
         max-width: 35%; } }
 
 .half .panel {
-  width: 50vw;
+  width: 100vw;
   position: absolute; }
+  @media screen and (min-width: 43.75em) {
+    .half .panel {
+      width: 50vw; } }
 
 .half.half-loading .content-wrapper .text-wrapper {
   animation: text-fade-out 0.3s ease-out forwards;
@@ -221,7 +247,10 @@ header {
   position: fixed;
   z-index: 2;
   width: 100vw;
-  height: 60px; }
+  height: 42px; }
+  @media screen and (min-width: 43.75em) {
+    header {
+      height: 60px; } }
   header a:hover {
     text-decoration: none; }
   header .header-icon-wrapper {
@@ -233,8 +262,12 @@ header {
       display: inline-block;
       padding: 0 10px; }
   header .header-icon {
-    width: 44px;
-    height: 60px; }
+    width: 34px;
+    height: 42px; }
+    @media screen and (min-width: 43.75em) {
+      header .header-icon {
+        width: 44px;
+        height: 60px; } }
     header .header-icon:hover {
       cursor: pointer; }
     header .header-icon.menu .line {
@@ -255,7 +288,10 @@ header {
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
-    line-height: 60px; }
+    line-height: 42px; }
+    @media screen and (min-width: 43.75em) {
+      header h2 {
+        line-height: 60px; } }
   header .first-name {
     color: #fff; }
   header .last-name {
@@ -275,7 +311,8 @@ header {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
   .dot-nav li:first-child .tooltip-label {
     top: 0; }
   .dot-nav li a {
@@ -335,7 +372,6 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50vw;
   height: 100vh;
   transition: width 0.6s ease-in-out 0.3s, background-color 0.6s ease-in-out; }
   .panel .content-wrapper {
@@ -356,6 +392,11 @@ header {
   .panel .secondary-header {
     text-transform: uppercase;
     font-weight: 200; }
+  .panel .page-description {
+    display: none; }
+    @media screen and (min-width: 43.75em) {
+      .panel .page-description {
+        display: block; } }
   .panel .page-link {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif; }
@@ -546,23 +587,21 @@ footer .social {
 .home-theme .panel {
   background-color: rgba(36, 123, 160, 0.8); }
 
-.home-theme .dot-nav li a i {
-  color: rgba(36, 123, 160, 0.8); }
-
+.home-theme .dot-nav li a i,
 .home-theme .last-name {
-  color: rgba(36, 123, 160, 0.8); }
+  color: #fff; }
+  @media screen and (min-width: 43.75em) {
+    .home-theme .dot-nav li a i,
+    .home-theme .last-name {
+      color: rgba(36, 123, 160, 0.8); } }
 
-.home-theme .previous-tile {
+.home-theme .previous-tile,
+.home-theme .previous-overlay {
   background-color: #74CDBF; }
 
-.home-theme .next-tile {
-  background-color: #F77F7D; }
-
-.home-theme .previous-overlay {
-  background-color: #51c1af; }
-
+.home-theme .next-tile,
 .home-theme .next-overlay {
-  background-color: #f55f5c; }
+  background-color: #F77F7D; }
 
 .home-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -791,23 +830,21 @@ footer .social {
 .development-theme .panel {
   background-color: rgba(81, 193, 175, 0.8); }
 
-.development-theme .dot-nav li a i {
-  color: rgba(81, 193, 175, 0.8); }
-
+.development-theme .dot-nav li a i,
 .development-theme .last-name {
-  color: rgba(81, 193, 175, 0.8); }
+  color: #fff; }
+  @media screen and (min-width: 43.75em) {
+    .development-theme .dot-nav li a i,
+    .development-theme .last-name {
+      color: rgba(81, 193, 175, 0.8); } }
 
-.development-theme .previous-tile {
+.development-theme .previous-tile,
+.development-theme .previous-overlay {
   background-color: #7A639D; }
 
-.development-theme .next-tile {
-  background-color: #5095B3; }
-
-.development-theme .previous-overlay {
-  background-color: #593c84; }
-
+.development-theme .next-tile,
 .development-theme .next-overlay {
-  background-color: #247ba0; }
+  background-color: #5095B3; }
 
 .development-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;

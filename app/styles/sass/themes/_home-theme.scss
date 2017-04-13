@@ -22,28 +22,22 @@
     background-color: $theme-1;
   }
 
-  .dot-nav li a i {
-    color: $theme-1;
-  }
-
+  .dot-nav li a i,
   .last-name {
-    color: $theme-1;
+    color: $link-color;
+    @media screen and (min-width: $bp-tablet) {
+      color: $theme-1;
+    }
   }
 
-  .previous-tile {
+  .previous-tile,
+  .previous-overlay {
     background-color: $theme-6-hex;
   }
 
-  .next-tile {
-    background-color: $theme-2-hex;
-  }
-
-  .previous-overlay {
-    background-color: rgb(81, 193, 175);
-  }
-
+  .next-tile,
   .next-overlay {
-    background-color: rgb(245, 95, 92);
+    background-color: $theme-2-hex;
   }
 
   .artifacts-button {

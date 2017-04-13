@@ -6,6 +6,7 @@ $dot-duration: $transition-duration * 0.2;
   right: 10px;
   transform: translateY(-50%);
   text-align: center;
+  z-index: 1;
 
   // Fixes inconsistant placement for first tooltip
   li:first-child .tooltip-label {

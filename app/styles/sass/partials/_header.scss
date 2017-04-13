@@ -1,10 +1,15 @@
 $header-duration: $transition-duration * 0.5;
+$mobile-height: 42px;
+$desktop-height: 60px;
 
 header {
   position: fixed;
   z-index: 2;
   width: 100vw;
-  height: 60px;
+  height: $mobile-height;
+  @media screen and (min-width: $bp-tablet) {
+    height: $desktop-height;
+  }
 
   a:hover {
     text-decoration: none;
@@ -23,8 +28,12 @@ header {
   }
 
   .header-icon {
-    width: 44px;
-    height: 60px;
+    width: 34px;
+    height: $mobile-height;
+    @media screen and (min-width: $bp-tablet) {
+      width: 44px;
+      height: $desktop-height;
+    }
 
     &:hover {
       cursor: pointer;
@@ -69,7 +78,10 @@ header {
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
-    line-height: 60px;
+    line-height: $mobile-height;
+    @media screen and (min-width: $bp-tablet) {
+      line-height: $desktop-height;
+    }
   }
 
   .first-name {

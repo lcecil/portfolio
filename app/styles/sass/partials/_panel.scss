@@ -17,7 +17,6 @@ $arrow-down-duration: $transition-duration * 2;
     position: absolute;;
     top: 0;
     left: 0;
-    width: 50vw;
     height: 100vh;
     transition: width $transition-duration ease-in-out $theme-duration, background-color $transition-duration ease-in-out;
 
@@ -47,6 +46,13 @@ $arrow-down-duration: $transition-duration * 2;
     .secondary-header {
       text-transform: uppercase;
       font-weight: 200;
+    }
+
+    .page-description {
+        display: none;
+        @media screen and (min-width: $bp-tablet) {
+          display: block;
+        }
     }
 
     .page-link {
