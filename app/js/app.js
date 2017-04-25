@@ -33,7 +33,7 @@ $(function() {
 
 ScrollManager.onScroll(function(direction) {
   var state = Router.getState();
-  if (!state.isShowingDetails) {
+  if (!state.isShowingDetails && !state.isShowingMenu) {
     route = state.route;
     if (direction > 0) {
       var nextRoute = Router.getNextRoute(route);

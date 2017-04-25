@@ -406,9 +406,15 @@ header {
     animation: arrow-pulse 1.2s ease-in-out infinite; }
   .panel .arrow-right {
     transition: transform 0.18s ease-in;
-    width: 22px; }
+    width: 15px; }
+    @media screen and (min-width: 43.75em) {
+      .panel .arrow-right {
+        width: 22px; } }
   .panel .arrow-down {
-    height: 22px; }
+    width: 15px; }
+    @media screen and (min-width: 43.75em) {
+      .panel .arrow-down {
+        width: 22px; } }
   .panel .label {
     text-transform: uppercase;
     text-align: center;
@@ -634,23 +640,21 @@ footer .social {
 .information-architecture-theme .panel {
   background-color: rgba(245, 95, 92, 0.8); }
 
-.information-architecture-theme .dot-nav li a i {
-  color: rgba(245, 95, 92, 0.8); }
-
+.information-architecture-theme .dot-nav li a i,
 .information-architecture-theme .last-name {
-  color: rgba(245, 95, 92, 0.8); }
+  color: #fff; }
+  @media screen and (min-width: 43.75em) {
+    .information-architecture-theme .dot-nav li a i,
+    .information-architecture-theme .last-name {
+      color: rgba(245, 95, 92, 0.8); } }
 
-.information-architecture-theme .previous-tile {
+.information-architecture-theme .previous-tile,
+.information-architecture-theme .previous-overlay {
   background-color: #5095B3; }
 
-.information-architecture-theme .next-tile {
-  background-color: #525969; }
-
-.information-architecture-theme .previous-overlay {
-  background-color: #247ba0; }
-
+.information-architecture-theme .next-tile,
 .information-architecture-theme .next-overlay {
-  background-color: #273043; }
+  background-color: #525969; }
 
 .information-architecture-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -683,23 +687,21 @@ footer .social {
 .research-methods-theme .panel {
   background-color: rgba(39, 48, 67, 0.8); }
 
-.research-methods-theme .dot-nav li a i {
-  color: rgba(39, 48, 67, 0.8); }
-
+.research-methods-theme .dot-nav li a i,
 .research-methods-theme .last-name {
-  color: rgba(39, 48, 67, 0.8); }
+  color: #fff; }
+  @media screen and (min-width: 43.75em) {
+    .research-methods-theme .dot-nav li a i,
+    .research-methods-theme .last-name {
+      color: rgba(39, 48, 67, 0.8); } }
 
-.research-methods-theme .previous-tile {
+.research-methods-theme .previous-tile,
+.research-methods-theme .previous-overlay {
   background-color: #F77F7D; }
 
-.research-methods-theme .next-tile {
-  background-color: #F1BE6D; }
-
-.research-methods-theme .previous-overlay {
-  background-color: #f55f5c; }
-
+.research-methods-theme .next-tile,
 .research-methods-theme .next-overlay {
-  background-color: #edae49; }
+  background-color: #F1BE6D; }
 
 .research-methods-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -732,23 +734,21 @@ footer .social {
 .visual-designs-theme .panel {
   background-color: rgba(237, 174, 73, 0.8); }
 
-.visual-designs-theme .dot-nav li a i {
-  color: rgba(237, 174, 73, 0.8); }
-
+.visual-designs-theme .dot-nav li a i,
 .visual-designs-theme .last-name {
-  color: rgba(237, 174, 73, 0.8); }
+  color: #fff; }
+  @media screen and (min-width: 43.75em) {
+    .visual-designs-theme .dot-nav li a i,
+    .visual-designs-theme .last-name {
+      color: rgba(237, 174, 73, 0.8); } }
 
-.visual-designs-theme .previous-tile {
+.visual-designs-theme .previous-tile,
+.visual-designs-theme .previous-overlay {
   background-color: #525969; }
 
-.visual-designs-theme .next-tile {
-  background-color: #7A639D; }
-
-.visual-designs-theme .previous-overlay {
-  background-color: #273043; }
-
+.visual-designs-theme .next-tile,
 .visual-designs-theme .next-overlay {
-  background-color: #593c84; }
+  background-color: #7A639D; }
 
 .visual-designs-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -781,23 +781,21 @@ footer .social {
 .project-management-theme .panel {
   background-color: rgba(89, 60, 132, 0.8); }
 
-.project-management-theme .dot-nav li a i {
-  color: rgba(89, 60, 132, 0.8); }
-
+.project-management-theme .dot-nav li a i,
 .project-management-theme .last-name {
-  color: rgba(89, 60, 132, 0.8); }
+  color: #fff; }
+  @media screen and (min-width: 43.75em) {
+    .project-management-theme .dot-nav li a i,
+    .project-management-theme .last-name {
+      color: rgba(89, 60, 132, 0.8); } }
 
-.project-management-theme .previous-tile {
+.project-management-theme .previous-tile,
+.project-management-theme .previous-overlay {
   background-color: #F1BE6D; }
 
-.project-management-theme .next-tile {
-  background-color: #74CDBF; }
-
-.project-management-theme .previous-overlay {
-  background-color: #edae49; }
-
+.project-management-theme .next-tile,
 .project-management-theme .next-overlay {
-  background-color: #51c1af; }
+  background-color: #74CDBF; }
 
 .project-management-theme .artifacts-button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;

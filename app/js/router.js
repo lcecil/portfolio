@@ -4,7 +4,8 @@
   var State = function (data) {
     return _.extend(data, {
       url: location.hash,
-      isShowingDetails: location.hash.indexOf('details') > 0
+      isShowingDetails: location.hash.indexOf('details') > 0,
+      isShowingMenu: $('header').is('.show-menu')
     });
   };
 

@@ -22,28 +22,22 @@
     background-color: $theme-3;
   }
 
-  .dot-nav li a i {
-    color: $theme-3;
-  }
-
+  .dot-nav li a i,
   .last-name {
-    color: $theme-3;
+    color: $link-color;
+    @media screen and (min-width: $bp-tablet) {
+      color: $theme-3;
+    }
   }
 
-  .previous-tile {
+  .previous-tile,
+  .previous-overlay {
     background-color: $theme-2-hex;
   }
 
-  .next-tile {
-    background-color: $theme-4-hex;
-  }
-
-  .previous-overlay {
-    background-color: rgb(245, 95, 92);
-  }
-
+  .next-tile,
   .next-overlay {
-    background-color: rgb(237, 174, 73);
+    background-color: $theme-4-hex;
   }
 
   .artifacts-button {
@@ -62,7 +56,7 @@
   &.full.full-loaded {
 
     header {
-        animation: research-page-fade-in $transition-duration ease-in forwards;
+      animation: research-page-fade-in $transition-duration ease-in forwards;
     }
 
     .show-menu {

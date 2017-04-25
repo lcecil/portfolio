@@ -16,7 +16,7 @@
       this.page = new PageViewModel($('.page'), templates.page);
       this.tile = new TileViewModel($('.tile-nav'), templates.tile);
       this.setMenuIconHandlers();
-      this.setMenuItemHandlers();
+      // this.setMenuItemHandlers();
       this.setInitialBodyClasses(Router.getState());
 
       this.render(Router.getState());
@@ -25,7 +25,11 @@
 
     render: function (state) {
       if (state.isShowingDetails) {
-        this.animateToDetails(state);
+        if (state.isShowingMenu) {
+          this.animateFromMenu(state);
+        } else {
+          this.animateToDetails(state);
+        }
         this.page.render(state);
         this.tile.render(state);
       }
@@ -51,40 +55,40 @@
       });
     },
 
-    onMenuItemClick: function (event) {
-      var targetRoute = $(event.currentTarget).attr("href");
-      var state = Router.getState();
-      event.preventDefault();
-      if (state.isShowingDetails) {
-        Animation.create([
-          Animation.step(0, function () {
-            location.hash = targetRoute;
-            window.scrollTo(0, 0);
-          }),
-          Animation.step(400, function () {
-            $('.nav-wrap').removeClass('show');
-            $('header').removeClass('show-menu');
-          })
-        ]);
-      } else {
-        Animation.create([
-          Animation.step(0, function () {
-            location.hash = targetRoute;
-          }),
-          Animation.step(400, function () {
-            //TODO add in some menu item fade out animation
-          }),
-          Animation.step(1200, function () {
-            $('.nav-wrap').removeClass('show');
-            $('header').removeClass('show-menu');
-          })
-        ]);
-      }
-    },
+    // onMenuItemClick: function (event) {
+    //   var targetRoute = $(event.currentTarget).attr("href");
+    //   var state = Router.getState();
+    //   event.preventDefault();
+    //   if (state.isShowingDetails) {
+    //     Animation.create([
+    //       Animation.step(0, function () {
+    //         location.hash = targetRoute;
+    //         window.scrollTo(0, 0);
+    //       }),
+    //       Animation.step(400, function () {
+    //         $('.nav-wrap').removeClass('show');
+    //         $('header').removeClass('show-menu');
+    //       })
+    //     ]);
+    //   } else {
+    //     Animation.create([
+    //       Animation.step(0, function () {
+    //         location.hash = targetRoute;
+    //       }),
+    //       Animation.step(400, function () {
+    //         //TODO add in some menu item fade out animation
+    //       }),
+    //       Animation.step(1200, function () {
+    //         $('.nav-wrap').removeClass('show');
+    //         $('header').removeClass('show-menu');
+    //       })
+    //     ]);
+    //   }
+    // },
 
-    setMenuItemHandlers: function () {
-      this.menuItem.on('click', _.bind(this.onMenuItemClick, this));
-    },
+    // setMenuItemHandlers: function () {
+    //   this.menuItem.on('click', _.bind(this.onMenuItemClick, this));
+    // },
 
     setInitialBodyClasses: function (state) {
       if (state.isShowingDetails) {
@@ -151,6 +155,20 @@
           if (self.el.is('.half-loading')) {
             self.el.removeClass('half-loading').addClass('half-loaded');
           }
+        })
+      ]);
+    },
+
+    animateFromMenu: function (state) {
+      var self = this;
+      Animation.create([
+        Animation.step(0, function () {
+          self.panel.render(state);
+          window.scrollTo(0, 0);
+        }),
+        Animation.step(400, function () {
+          $('.nav-wrap').removeClass('show');
+          $('header').removeClass('show-menu');
         })
       ]);
     }
