@@ -1,6 +1,9 @@
 $header-duration: $transition-duration * 0.5;
 $mobile-height: 42px;
+$mobile-width: 26px;
 $desktop-height: 60px;
+$desktop-width: 44px;
+
 
 header {
   position: fixed;
@@ -17,9 +20,12 @@ header {
 
   .header-icon-wrapper {
       position: absolute;
-      left: -60px;
+      left: -45px;
       top: 0;
       transition: left $header-duration ease-in-out;
+      @media screen and (min-width: $bp-tablet) {
+        left: -60px;
+      }
 
       .toggle-back, .toggle-nav {
         display: inline-block;
@@ -28,10 +34,10 @@ header {
   }
 
   .header-icon {
-    width: 34px;
+    width: $mobile-width;
     height: $mobile-height;
     @media screen and (min-width: $bp-tablet) {
-      width: 44px;
+      width: $desktop-height;
       height: $desktop-height;
     }
 
@@ -74,13 +80,14 @@ header {
   }
 
   h2 {
-    margin-left: -20px;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-align: center;
-    line-height: $mobile-height;
+    visibility: hidden;
     @media screen and (min-width: $bp-tablet) {
+      visibility: visible;
       line-height: $desktop-height;
+      margin-left: -20px;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-align: center;
     }
   }
 

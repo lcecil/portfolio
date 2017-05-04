@@ -255,18 +255,21 @@ header {
     text-decoration: none; }
   header .header-icon-wrapper {
     position: absolute;
-    left: -60px;
+    left: -45px;
     top: 0;
     transition: left 0.3s ease-in-out; }
+    @media screen and (min-width: 43.75em) {
+      header .header-icon-wrapper {
+        left: -60px; } }
     header .header-icon-wrapper .toggle-back, header .header-icon-wrapper .toggle-nav {
       display: inline-block;
       padding: 0 10px; }
   header .header-icon {
-    width: 34px;
+    width: 26px;
     height: 42px; }
     @media screen and (min-width: 43.75em) {
       header .header-icon {
-        width: 44px;
+        width: 60px;
         height: 60px; } }
     header .header-icon:hover {
       cursor: pointer; }
@@ -284,14 +287,15 @@ header {
     header .header-icon.back:hover {
       transform: translateX(-5px); }
   header h2 {
-    margin-left: -20px;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-align: center;
-    line-height: 42px; }
+    visibility: hidden; }
     @media screen and (min-width: 43.75em) {
       header h2 {
-        line-height: 60px; } }
+        visibility: visible;
+        line-height: 60px;
+        margin-left: -20px;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center; } }
   header .first-name {
     color: #fff; }
   header .last-name {
@@ -319,8 +323,11 @@ header {
     position: relative;
     display: block;
     padding: 10px 15px;
-    font-size: 10px;
+    font-size: 7px;
     cursor: pointer; }
+    @media screen and (min-width: 43.75em) {
+      .dot-nav li a {
+        font-size: 10px; } }
     .dot-nav li a:hover i {
       opacity: 1;
       transform: scale(1.4); }
@@ -485,8 +492,11 @@ header {
         font-weight: 200; }
       .tile-nav .next-tile .content-wrapper .arrow-left, .tile-nav .next-tile .content-wrapper .arrow-right, .tile-nav .previous-tile .content-wrapper .arrow-left, .tile-nav .previous-tile .content-wrapper .arrow-right {
         display: inline-block;
-        width: 22px;
+        width: 15px;
         transition: transform 0.18s ease-in; }
+        @media screen and (min-width: 43.75em) {
+          .tile-nav .next-tile .content-wrapper .arrow-left, .tile-nav .next-tile .content-wrapper .arrow-right, .tile-nav .previous-tile .content-wrapper .arrow-left, .tile-nav .previous-tile .content-wrapper .arrow-right {
+            width: 22px; } }
       .tile-nav .next-tile .content-wrapper .page-description, .tile-nav .previous-tile .content-wrapper .page-description {
         display: inline-block;
         text-transform: uppercase; }

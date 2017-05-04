@@ -44,8 +44,11 @@
 
       .arrow-left, .arrow-right {
         display: inline-block;
-        width: 22px;
+        width: 15px;
         transition: transform $arrow-duration ease-in;
+        @media screen and (min-width: $bp-tablet) {
+          width: 22px;
+        }
       }
 
       .page-description {

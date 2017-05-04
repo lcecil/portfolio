@@ -17,8 +17,12 @@ $dot-duration: $transition-duration * 0.2;
     position: relative;
     display: block;
     padding: 10px 15px;
-    font-size: 10px;
+    font-size: 7px;
     cursor: pointer;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 10px;
+    }
+
 
     &:hover {
 
