@@ -68,8 +68,13 @@
   <script id="tile-template" type="x-template">
     <a href='<%= previousTemplateData.panel.pageLink %>' class='previous-tile'>
       <div class='content-wrapper'>
-        <h2 class='primary-header'><%= previousTemplateData.panel.primaryHeader %></h2>
-        <h3 class='secondary-header'><%= previousTemplateData.panel.secondaryHeader %></h3>
+        <% if (previousTemplateData.panel.tilePrimaryHeader) { %>
+          <h2 class='primary-header'><%= previousTemplateData.panel.tilePrimaryHeader %></h2>
+          <h3 class='secondary-header'><%= previousTemplateData.panel.tileSecondaryHeader %></h3>
+        <% } else { %>
+          <h2 class='primary-header'><%= previousTemplateData.panel.primaryHeader %></h2>
+          <h3 class='secondary-header'><%= previousTemplateData.panel.secondaryHeader %></h3>
+        <% } %>
         <svg class="arrow-left" viewBox="0 0 11 7">
           <path class="line" d="M3.5,6.6L0.4,3.5"/>
           <path class="line" d="M10.4,3.5h-10"/>
@@ -82,8 +87,13 @@
     </a>
     <a href='<%= nextTemplateData.panel.pageLink %>' class='next-tile'>
       <div class='content-wrapper'>
-        <h2 class='primary-header'><%= nextTemplateData.panel.primaryHeader %></h2>
-        <h3 class='secondary-header'><%= nextTemplateData.panel.secondaryHeader %></h3>
+        <% if (nextTemplateData.panel.tilePrimaryHeader) { %>
+          <h2 class='primary-header'><%= nextTemplateData.panel.tilePrimaryHeader %></h2>
+          <h3 class='secondary-header'><%= nextTemplateData.panel.tileSecondaryHeader %></h3>
+        <% } else { %>
+          <h2 class='primary-header'><%= nextTemplateData.panel.primaryHeader %></h2>
+          <h3 class='secondary-header'><%= nextTemplateData.panel.secondaryHeader %></h3>
+        <% } %>
         <p class='page-description'>
         Read More
         </p>

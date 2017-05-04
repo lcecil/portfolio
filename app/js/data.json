@@ -3,6 +3,8 @@
     "panel": {
       "primaryHeader": "UX Design",
       "secondaryHeader": "and Research",
+      "tilePrimaryHeader": "About",
+      "tileSecondaryHeader": "Laura",
       "pageDescription": "Techniques, methodologies, and designs for a wide range of projects and problems.",
       "pageLink": "#/home/details",
       "pageLinkLabel": "About Laura"
